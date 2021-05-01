@@ -1,0 +1,24 @@
+.dropzone{
+    margin: 12px auto;
+    width: 90%;
+    height: 50%;
+    border: 2px dashed #ccc;
+    color: #ccc;
+    text-align: center;
+    line-height: 200px;
+    font-size: 22px;
+}
+
+.dropzone.dragover{
+    border-color: #000;
+    color: #000;
+}
+
+#uploads{
+    font-size: 8px;
+    margin-left: 14px;
+}
+
+#fileUploadBtn{
+    margin-left: 14px;
+}

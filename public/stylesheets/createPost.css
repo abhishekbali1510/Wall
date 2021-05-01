@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+body{
+    background-color: #F3F2EF;
+    font-family: 'Lexend', sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+#walls{
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+#header{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 6%;
+    padding: 8px;
+    font-size: 2.4em;
+    font-weight: bold;
+}
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+    height: 55%;  
+    display: flex;
+    justify-content: space-between;
+}
+
+#card1{
+    width: 75%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card1 .btnholder{
+    width: 100%;
+}
+
+#card1 .btnholder button{
+    width: 50%;
+    float: left;
+    height: 50px;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+}
+
+#card1 .btnholder button:hover{
+    background-color: #000F08;
+    color: #F3F2EF;
+}
+
+button#textpost{
+    border-radius: 20px 0px 0px 0px;
+}
+
+button#mediapost{
+    border-radius: 0px 20px 0px 0px;
+}
+
+#card1 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#card1 form .row1{
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#card1 form .row1 input, #card1 form .row1 select{
+    width: 48%;
+    font-size: 16px;
+    padding: 12px;
+}
+
+#card1 form textarea{
+    width: 94%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+    padding: 5px;
+}
+
+#card1 form input[type="button"]{
+    width: 11%;
+    margin: 10px 20px;
+    align-self: flex-end;
+    font-size: 14px;
+    padding: 8px;
+}
+
+#card2{
+    width: 20%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer{
+    display: none;
+}
+
+@media(max-width: 500px){
+
+    .container{
+        flex-direction: column;
+        width: 80%;
+        margin-top: -8%;
+    }
+
+    #card1{
+        width: 100%;
+        margin: 40px 0;
+        margin-bottom: 20px;
+    }
+
+    #card1 form input[type="button"]{
+        width: 30%;
+        margin: 10px 20px;
+        align-self: flex-end;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #card2{
+        width: 100%;
+    }
+
+    
+    .footer{
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

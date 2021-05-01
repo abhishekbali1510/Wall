@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.dropdown{
+    height: 72px;
+    background: #000F08;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    align-items: center;
+    margin: auto;
+}
+
+.projects{
+    width: 30%;
+}
+
+#prj img{
+    height: 50px;
+    width: 50px;
+}
+
+.projects{
+    position: relative;
+}
+
+.projects ul{
+    position: absolute;
+    background: rgb(16, 187, 234);
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    border-radius: 5px;
+    display: none;
+    transition: all 0.4s ease;
+}
+
+.projects a{
+    color: black;
+    text-decoration: none;
+}
+
+.projects li{
+    background: rgb(16, 187, 234);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects li:hover{
+    background-color: white;
+}
+
+.dropdown button ,
+.home{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown button:hover,
+.home:hover{
+    color: rgb(224, 224, 224);
+}
+
+.projects input{
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    left: 83px;
+    border-radius: 50px;
+    padding: 24px;
+    font-size: 18px;
+}
+
+.projects input:focus{
+    outline: none;
+}
+
+#walls{
+    font-size: 48px;
+    width: 40%; 
+    text-align: center;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+#walls a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.shortcuts{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shortcuts img{
+    height: 50px;
+    width: 50px;
+    margin-left: 24px;
+}
+
+@media(max-width: 500px){
+    .projects, .shortcuts{
+        display: none;
+    }
+
+    #walls{
+        width: 100%;
+    }
+}
