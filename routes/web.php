@@ -29,3 +29,5 @@ route::post('/loginCheck',[UserController::class,'check']);
 route::view('/register','register');
 
 Route::post('/verify',[UserController::class,'create']);
+
+Route::get('/test',[UserController::class,'test']);

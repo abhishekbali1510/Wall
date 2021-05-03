@@ -92,6 +92,11 @@ class UserController extends Controller
 
     }
 
+    public function test()
+    {
+        return print_r(User::find(1));
+    }
+
     public function index()
     {
         //
