@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- include topbar     -->
+<x-topbar />
 
 <link rel="stylesheet" href="stylesheets/register.css">
 
@@ -11,9 +12,10 @@
         {{@csrf_field()}}
         <input class="field" type="text" name="data" placeholder="Enter Email or Username">
         <input class="field" type="password" name="password" placeholder="Enter Password">
-        <br>
-        {{session('error')}}
-        <input type="submit" value="LogIn">
+        
+        <span class="error">{{session('error')}}</span>
+        
+         <input type="submit" value="LogIn">
     </form>
     
     <a href="404.html">Forgot Username?</a>
