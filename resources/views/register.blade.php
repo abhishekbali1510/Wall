@@ -8,7 +8,7 @@
 
 <div class="container">
     <h1>Register</h1>
-    <form id="registerForm" method="post" action="/verify">
+    <form id="registerForm" method="post" action="/registerCheck">
         {{@csrf_field()}}
         <input class="field" type="text" name="userName" placeholder="Username">
       

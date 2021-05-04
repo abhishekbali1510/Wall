@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
@@ -19,6 +21,7 @@ class UserController extends Controller
         //return $r->post();
         //return User::all();
         $dataId=$r->input('data');
+        $r->session()->put('abhi',$dataId);
         $dataPass=$r->input('password');
         $checkEmail = User::where('email',$dataId)->exists();
         $checkUser = User::where('userName',$dataId)->exists();
@@ -47,7 +50,7 @@ class UserController extends Controller
     }
 
 
-    public function create(Request $r)
+    public function registerCheck(Request $r)
     {
         $r->validate([
             'userName'=>'required|min:7|max:30',
@@ -78,23 +81,64 @@ class UserController extends Controller
         }
         else
         {
-            $newUser=new User;
-           // $newUser->id=nextval('"users_userId_seq"'::regclass);
-            $newUser->userName=$r->input('userName');
-            $newUser->email=$r->input('email');
-            $newUser->password=$r->input('password');
-            $newUser->save();
-            $r->session()->put('login','true');
-            return redirect('/');
+            $r->session()->put('mail',$r->input('email'));
+            $r->session()->put('userName',$r->input('userName'));
+            $r->session()->put('password',$r->input('password'));
+            $r->session()->put('register','true');
+            $r->session()->put('pin',rand(1001,9999));
+            $data=['pin'=>$r->session()->get('pin')];
+            $users['to']=$r->session()->get('mail');
+            Mail::send('mail',$data,function($messages) use ($users)
+            {
+                $messages->to($users['to']);
+                $messages->subject('Registration code');
+            });
+            error_log($data['pin']);
+            return redirect('/verify');
+        
         }
 
 
 
     }
 
-    public function test()
+    public function otp(Request $r)
     {
-        return print_r(User::find(1));
+        if($r->session()->has('register'))
+        {   
+            return view('verify');
+        }
+        else
+        {
+            return redirect('/register');
+        }
+    }
+
+    public function checkOtp(Request $r)
+    {
+        if($r->session()->get('pin')==$r->input('otp'))
+        {
+            $newUser=new User;
+            // $newUser->id=nextval('"users_userId_seq"'::regclass);
+            $newUser->userName=$r->session()->get('userName');
+            $newUser->email=$r->session()->get('mail');
+            $newUser->password=$r->session()->get('password');
+            $newUser->save();
+            $r->session()->put('login','true');
+            $r->session()->forget('register');
+            return redirect('/');
+        }
+        else
+        {
+            $r->session()->flash('wrongOtp','invalid otp');
+            return redirect('/verify');
+        }
+       
+    }
+
+    public function test(Request $r)
+    {
+        return $r->session()->get('abhi');
     }
 
     public function index()
@@ -102,66 +146,5 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $user)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User $user)
-    {
-        //
-    }
 }
