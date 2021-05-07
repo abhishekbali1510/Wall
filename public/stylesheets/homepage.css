@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    background: #F3F2EF;
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+input{
+    display: block;
+    margin: 12px auto;
+    padding: 4px;
+}
+
+input:focus{
+    outline-color: rgb(69, 69, 185);
+}
+
+/* input[type="checkbox"]{
+    display: inline;
+    margin: 5px;
+}
+
+span#showtxt{
+    font-size: 14px;
+} */
+
+h1#walls{
+    font-family: Reem Kufi;
+    font-size: 144px;
+    color: #60495A;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+}
+
+p#sub{
+    margin-top: -40px;
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #60495A;
+    padding-left: 20px;
+}
+
+.left{
+    padding: 30px;
+    width: 50vw;
+    margin: 40px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFFFFF;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    margin-bottom:3em;
+    border-radius: 10px;
+    background-color: #ffff;
+    padding: 2rem 3rem;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"]{
+  padding: 15px 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover{
+    border: 1px solid rgb(69, 69, 185);
+}
+
+input[type="submit"]{
+    background-color: rgb(69, 69, 185);
+    color: white;
+    padding: 18px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    border: 2px solid rgb(69, 69, 185);
+}
+
+input[type="submit"]:hover{
+    color: rgb(69, 69, 185);
+    background-color: #fff; 
+}
+
+.forget-pass{
+    text-align: center;
+    display: block;
+}
+
+hr{
+    margin: 14px 0;
+}
+
+.cta-btn{
+    text-align: center;
+    background-color: rgb(69, 69, 185);
+    color: white;
+    padding: 18px 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgb(69, 69, 185);
+}
+
+.cta-btn:hover{
+    color: rgb(69, 69, 185);
+    background-color: #fff;
+}
+
+@media(max-width: 500px){
+    .main-container{
+        justify-content: center;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    h1#walls{
+        text-align: center;
+        font-size: 4em;
+    }
+    
+    p#sub{
+        display: none;
+        font-size: 1.2em;
+    }
+
+    .right{
+        margin-top: -100px;
+        width: 350px;
+    }
+}
+
+@media(max-width: 768px){
+    h1#walls{
+        padding-left: 0;
+        font-size: 7em;
+    }
+}

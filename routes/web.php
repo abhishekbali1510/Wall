@@ -35,3 +35,5 @@ Route::get('/test',[UserController::class,'test']);
 Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
+
+route::view('/','homepage');

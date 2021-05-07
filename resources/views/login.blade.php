@@ -18,8 +18,8 @@
          <input type="submit" value="LogIn">
     </form>
     
-    <a href="404.html">Forgot Username?</a>
-    <a href="404.html">Forgot Password?</a>
+    <a class="forget" href="404.html">Forgot Username?</a>
+    <a class="forget" href="404.html">Forgot Password?</a>
 </div>
 
 </body>
