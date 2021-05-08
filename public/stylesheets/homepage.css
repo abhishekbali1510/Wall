@@ -9,14 +9,16 @@
 
 body{
     position: relative;
+    overflow: hidden;
 }
 
 a{
     text-decoration: none;
+    color: #000;
 }
 
 html{
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);;
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 }
 
 .main-container{
@@ -71,10 +73,10 @@ p#sub{
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    color: rgb(69, 69, 185);
-    /* color: #fff; */
+    /* color: rgb(69, 69, 185); */
+    color: #fff;
     padding-left: 20px;
-    /* background: rgba(69, 69, 185); */
+    background: rgba(69, 69, 185);
 }
 
 .left{
@@ -92,10 +94,17 @@ p#sub{
     margin-right: auto;
     margin-top: 3em;
     margin-bottom:3em;
-    border-radius: 10px;
-    background-color: #ffff;
     padding: 2rem 3rem;
-    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px;
+    background-color: #ffff;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1); */
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 input[type="text"],
@@ -125,12 +134,11 @@ input[type="submit"]{
     border-radius: 10px;
     border: none;
     font-size: 16px;
-    border: 2px solid rgb(69, 69, 185);
 }
 
-input[type="submit"]:hover{
-    color: rgb(69, 69, 185);
-    background-color: #fff; 
+input[type="submit"]:hover, .cta-btn:hover{
+    color: #fff;
+    background-color: rgb(69, 69, 185, 0.8); 
 }
 
 .forget-pass{
@@ -149,12 +157,6 @@ hr{
     padding: 18px 20px;
     width: 100%;
     border-radius: 10px;
-    border: 2px solid rgb(69, 69, 185);
-}
-
-.cta-btn:hover{
-    color: rgb(69, 69, 185);
-    background-color: #fff;
 }
 
 @keyframes move {

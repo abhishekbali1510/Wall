@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body{
-    background-color: #F3F2EF;
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 }
 
 input:focus{
@@ -10,6 +10,7 @@ input:focus{
 
 h1,a{
     font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
 a{
@@ -26,18 +27,23 @@ a{
 .container{
     margin: 0 auto;
     margin-top: 6%;
-    /* padding-top: 20px;
-    padding-bottom: 20px; */
     width: 50%;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+/*
     background: #FFFFFF;
     box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 20px; */
+
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .container a.forget{
@@ -69,10 +75,10 @@ a{
 }
 
 #registerForm input[type="text"]:hover,
-#registerForm input[type="password"]:hover,
-#registerForm input[type="email"]:hover{
+#registerForm input[type="password"]:hover{
     border: 1px solid rgb(69, 69, 185);
 }
+
 
 #registerForm input[type="submit"]{
     background-color: rgb(69, 69, 185);
@@ -84,12 +90,12 @@ a{
     border-radius: 10px;
     border: none;
     font-size: 16px;
-    border: 2px solid rgb(69, 69, 185);
+    /* border: 2px solid rgb(69, 69, 185); */
 }
 
 #registerForm input[type="submit"]:hover{
-    color: rgb(69, 69, 185);
-    background-color: #fff; 
+    color: #fff;
+    background-color: rgb(69, 69, 185, 0.8);
 }
 
 @media(max-width: 500px){

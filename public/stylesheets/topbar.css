@@ -12,10 +12,11 @@ body{
 
 .dropdown{
     height: 72px;
-    background: #000F08;
+    background: #4B4BBB;
     display: flex;
     justify-content: space-between;
     padding: 24px;
+    padding-top: 30px;
     align-items: center;
     margin: auto;
 }
@@ -100,10 +101,11 @@ body{
     font-size: 48px;
     width: 40%; 
     text-align: center;
-    font-family: 'Reem Kufi', sans-serif;
+    
 }
 
 #walls a{
+    font-family: 'Reem Kufi', sans-serif;
     text-decoration: none;
     color: #fff;
 }
@@ -115,9 +117,14 @@ body{
 }
 
 .shortcuts img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin-left: 24px;
+    transition: all .2s ease-in-out;
+}
+
+.shortcuts img:hover{
+    transform: scale(1.4);
 }
 
 @media(max-width: 500px){
