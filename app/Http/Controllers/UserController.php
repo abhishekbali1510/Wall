@@ -12,7 +12,7 @@ class UserController extends Controller
 
     public function login()
     {
-        return view('login');
+        return view('signIn.login');
     }
 
     public function check(Request $r)   // to check login credentials
@@ -88,7 +88,7 @@ class UserController extends Controller
             $r->session()->put('pin',rand(1001,9999));
             $data=['pin'=>$r->session()->get('pin')];
             $users['to']=$r->session()->get('mail');
-            Mail::send('mail',$data,function($messages) use ($users)
+            Mail::send('signUp.mail',$data,function($messages) use ($users)
             {
                 $messages->to($users['to']);
                 $messages->subject('Registration code');
@@ -106,7 +106,7 @@ class UserController extends Controller
     {
         if($r->session()->has('register'))
         {   
-            return view('verify');
+            return view('signUp.verify');
         }
         else
         {

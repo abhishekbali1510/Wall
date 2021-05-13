@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('topbar.php'); ?>    
+<!-- include('topbar.php');      -->
 
 <link rel="stylesheet" href="../stylesheets/createPost.css">
-<link rel="stylesheet" href="../stylesheets/upload-style.css">
 
 <div id="header">Create Post</div> 
 <!-- change UserName with actual value. -->
 <div class="container">
     <div id="card1">
         <div class="btnholder">
-            <a href="createPost.php"><button id="textpost">Text Post</button></a>
-            <button id="mediapost">Media Post</button>
+            <button id="textpost">Text Post</button>
+            <a href="createMediaPost.php"><button id="mediapost">Media Post</button></a>
         </div>
         <form>
             <div class="row1">
@@ -24,12 +23,8 @@
                     <option value="audi">Discussions</option>
                 </select>
             </div>
-            <div id="uploads"></div>
-            <div class="dropzone" id="dropzone">
-                Drop files fere to upload
-            </div>
+            <textarea name="content" id="content-field" cols="30" rows="9" placeholder="What you gonna share today?"></textarea>
             <br>
-            <input type="file" id="fileUploadBtn">
             <input type="button" value="Post">
         </form>
     </div>
@@ -39,6 +34,5 @@
 
     <div class="footer">Give your valuable feedback <a href="#">here</a>.</div>
 </div>
-<script src="../scripts/uploadScript.js" type="text/javascript"></script>
 </body>
 </html>

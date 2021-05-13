@@ -26,7 +26,7 @@ route::get('/login',[UserController::class,'login']);
 
 route::post('/loginCheck',[UserController::class,'check']);
 
-route::view('/register','register');
+route::view('/register','signUp.register');
 
 Route::post('/registerCheck',[UserController::class,'registerCheck']);
 
@@ -35,3 +35,8 @@ Route::get('/test',[UserController::class,'test']);
 Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
+
+Route::view('/test2','createPost');
+
+
+Route::view('/test3','UserProfile');

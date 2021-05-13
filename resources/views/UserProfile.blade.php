@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('topbar.php'); ?>    
+ <!-- include('topbar.php');      -->
+ <x-topbar/>
 
 <link rel="stylesheet" href="../stylesheets/UserProfile.css">
 
