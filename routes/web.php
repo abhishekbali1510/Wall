@@ -40,3 +40,4 @@ Route::view('/test2','createPost');
 
 
 Route::view('/test3','UserProfile');
+route::view('/','homepage');
