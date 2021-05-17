@@ -1,24 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "";
-$password = "";
-$dbname = "test";
-
-try {
-    $msg = "uI";
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO `user`(`id`, `name`, `msg`) VALUES  (NULL,'shivam','" . $msg . "')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    //echo "New record created successfully";
-} catch (PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-}
-
-$conn = null;
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,6 +5,7 @@ $conn = null;
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -57,7 +37,10 @@ $conn = null;
 
             </ul>
         </div>
-        <form action="msg.php" id="myForm" method="post">
+
+        <!-- form start -->
+        <form action="/msgSend" id="myForm" method="post">
+            {{@csrf_field()}}
             <input type="text" name="msg" id="msg">
             <label for="name">Message</label>
             <!--submit -->
@@ -68,9 +51,9 @@ $conn = null;
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="msginsert.js"></script>
-        <script src="displaychat.js"></script>
-        <script src="js/sidebar.js"></script>
+        <script src="scripts/msginsert.js"></script>
+        <script src="scripts/displaychat.js"></script>
+        
         <script>
             function w3_open() {
                 document.getElementById("main").style.marginLeft = "25%";

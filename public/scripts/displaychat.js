@@ -1,5 +1,4 @@
 //var method = "POST";
-
 var scrolled = false; //to check if user is crolling 
 function updateScroll(){
    
@@ -21,15 +20,25 @@ $("#msg").on('scroll', function(){
 function displayALL(data) {
     $("#chat").empty();
     for (var i = 0; i < data.length; i++) { 
-        $("#chat").append("<li>" +data[i].name+" : "+ data[i].msg +"<br>" +data[i].time+ "</li>") };
+        $("#chat").append("<li>" +data[i].content+"</li>") };
 }
 
-var URL = "displaychat.php";
+
+$.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+
+
+
+//var URL = "message/displaychat.blade.php";
 const dchat = async () => {
-    const res = await fetch("displaychat.php");
+    const res = await fetch('/test4');
     var data ="";
     data = await res.json();
-    //  console.log(data);
+    console.log(res); 
     return data;
 }
 
@@ -57,6 +66,7 @@ setInterval(function () {
 
         })
         .catch(data => {
+            $("#chat").append("<li>" +"error"+"   </li>") 
             console.log("error sql yahase: " + data);
 
         });

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MessageController;
 use Illuminate\Http\Request;
 
 /*
@@ -15,12 +16,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function (Request $r) {
-    if($r->session()->has('login'))
-    return view('welcome');
-    else
-    return "access denied";
-});
+// Route::get('/', function (Request $r) {
+//     if($r->session()->has('login'))
+//     return view('welcome');
+//     else
+//     return "access denied";
+// });
 
 route::get('/login',[UserController::class,'login']);
 
@@ -41,3 +42,9 @@ Route::view('/test2','createPost');
 
 Route::view('/test3','UserProfile');
 route::view('/','homepage');
+
+Route::view('/msg','message.index');
+Route::post('/msgSend',[MessageController::class,'index']);
+
+Route::get('/test4',[MessageController::class,'show']);
+

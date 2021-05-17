@@ -27,7 +27,7 @@
                 <a class="forget-pass" href="404.html">Forgot Password?</a>
             </form>
             <hr>
-            <a class="cta-btn" href="404.html">Create New Account</a>
+            <a class="cta-btn" href="/register">Create New Account</a>
         </div>
     </div>
 </body>
