@@ -48,3 +48,4 @@ Route::post('/msgSend',[MessageController::class,'index']);
 
 Route::get('/test4',[MessageController::class,'show']);
 
+Route::view('/test5','userProfile.userProfile');

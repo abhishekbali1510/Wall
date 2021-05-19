@@ -13,7 +13,7 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="stylesheet/user-profile.css" />
+    <link rel="stylesheet" href="stylesheet/UserProfile.css" />
   </head>
 
   <body style="background : linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);">
