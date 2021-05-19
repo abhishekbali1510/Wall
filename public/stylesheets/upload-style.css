@@ -22,3 +22,19 @@
 #fileUploadBtn{
     margin-left: 14px;
 }
+
+#card1 .btnholder button#mediapost{
+    border-radius: 0px 10px 0px 0px;
+    background-color: rgb(69, 69, 185);
+    color: #fff;
+}
+
+#card1 .btnholder button#textpost{
+    background-color: #fff;
+    color: #000;
+}
+
+#card1 .btnholder button#textpost:hover{
+    background-color: rgb(69, 69, 185);
+    color: #fff;
+}

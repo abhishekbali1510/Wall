@@ -37,8 +37,8 @@ Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
 
-Route::view('/test2','createPost');
-
+Route::view('/create','createPost');
+Route::view('/test22','createMediaPost');
 
 Route::view('/test3','UserProfile');
 route::view('/','homepage');
