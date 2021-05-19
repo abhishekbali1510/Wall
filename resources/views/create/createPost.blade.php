@@ -11,7 +11,7 @@
     <div id="card1">
         <div class="btnholder">
             <button id="textpost">Text Post</button>
-            <a href="createMediaPost.php"><button id="mediapost">Media Post</button></a>
+            <a href="/createMedia"><button id="mediapost">Media Post</button></a>
         </div>
         <form>
             <div class="row1">

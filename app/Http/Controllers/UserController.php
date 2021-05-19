@@ -21,7 +21,7 @@ class UserController extends Controller
         //return $r->post();
         //return User::all();
         $dataId=$r->input('data');
-        $r->session()->put('abhi',$dataId);
+        // $r->session()->put('abhi',$dataId);
         $dataPass=$r->input('password');
         $checkEmail = User::where('email',$dataId)->exists();
         $checkUser = User::where('userName',$dataId)->exists();
@@ -29,22 +29,27 @@ class UserController extends Controller
         {
             $checkPass=User::where('email',$dataId)->value('password');
             $checkPass2=User::where('userName',$dataId)->value('password'); 
-            echo $checkPass;
+            
             if($dataPass==$checkPass||$dataPass==$checkPass2)
             {
+                if($checkEmail==1)
+                $userSession=User::where('email',$dataId)->value('username');
+                else
+                $userSession=$dataId;
                 $r->session()->put('login','true');
-                return redirect('/');
+                $r->session()->put('userSession',$userSession);
+                return redirect('/main');
             }
             else
             {
                 $r->session()->flash('error','wrong password');
-                return redirect('/login');
+                return redirect('/');
             }
         }
         else
         {
             $r->session()->flash('error',' not registered');
-            return redirect('/login');
+            return redirect('/');
         }
 
     }
@@ -126,6 +131,8 @@ class UserController extends Controller
             $newUser->save();
             $r->session()->put('login','true');
             $r->session()->forget('register');
+            $r->session()->forget('password');
+            $r->session()->forget('pin');
             return redirect('/');
         }
         else
@@ -141,10 +148,6 @@ class UserController extends Controller
         return $r->session()->get('abhi');
     }
 
-    public function index()
-    {
-        //
-    }
 
     
 }

@@ -16,12 +16,7 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function (Request $r) {
-//     if($r->session()->has('login'))
-//     return view('welcome');
-//     else
-//     return "access denied";
-// });
+
 
 route::get('/login',[UserController::class,'login']);
 
@@ -31,14 +26,14 @@ route::view('/register','signUp.register');
 
 Route::post('/registerCheck',[UserController::class,'registerCheck']);
 
-Route::get('/test',[UserController::class,'test']);
+// Route::get('/test',[UserController::class,'test']);
 
 Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
 
-Route::view('/create','createPost');
-Route::view('/test22','createMediaPost');
+Route::view('/create','create.createPost');
+Route::view('/createMedia','create.createMediaPost');
 
 Route::view('/test3','UserProfile');
 route::view('/','homepage');
@@ -46,6 +41,6 @@ route::view('/','homepage');
 Route::view('/msg','message.index');
 Route::post('/msgSend',[MessageController::class,'index']);
 
-Route::get('/test4',[MessageController::class,'show']);
+Route::get('/msgShow',[MessageController::class,'show']);
 
 Route::view('/test5','userProfile.userProfile');

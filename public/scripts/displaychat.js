@@ -35,7 +35,7 @@ $.ajaxSetup({
 
 //var URL = "message/displaychat.blade.php";
 const dchat = async () => {
-    const res = await fetch('/test4');
+    const res = await fetch('/msgShow');
     var data ="";
     data = await res.json();
     console.log(res); 

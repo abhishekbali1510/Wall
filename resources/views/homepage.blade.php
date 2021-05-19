@@ -19,11 +19,15 @@
             <p id="sub">A private social networking platform based on YOUR INTERESTS!</p>
         </div>
         <div class="right">
-            <form id="registerForm">
+            <form id="registerForm" method="post" action="/loginCheck" >
+            {{@csrf_field()}}
                 <input class="field" type="text" name="data" placeholder="Enter Email or Username">
                 <input class="field" type="password" name="password" placeholder="Enter Password">
                 <!-- <input type="checkbox" onclick="showPass()"><span id="showtxt">Show Password</span> -->
                 <input type="submit" value="Log In">
+
+                <span class="error">{{session('error')}}</span>
+
                 <a class="forget-pass" href="404.html">Forgot Password?</a>
             </form>
             <hr>
