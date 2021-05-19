@@ -13,11 +13,12 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="stylesheet/UserProfile.css" />
+    <link rel="stylesheet" href="stylesheets/UserProfile.css" />
   </head>
 
   <body style="background : linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);">
-    <div id="id01" class="w3-modal">
+  <x-topbar />
+  <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
     
           <div class="w3-center"><br>
