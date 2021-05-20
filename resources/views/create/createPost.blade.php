@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- include('topbar.php');      -->
-<x-topbar />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="stylesheet" href="../stylesheets/createPost.css">
 
 <div id="header">Create Post</div> 

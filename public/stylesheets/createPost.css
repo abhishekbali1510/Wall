@@ -143,11 +143,11 @@ button#mediapost{
 @media(max-width: 500px){
     .container{
         flex-direction: column;
-        /* width: 80%;
-        margin-top: -8%; */
+        width: 80%;
+        margin-top: -8%;
     }
 
-    /* #card1{
+    #card1{
         width: 100%;
         margin: 40px 0;
         margin-bottom: 20px;
@@ -161,6 +161,10 @@ button#mediapost{
         padding: 8px;
     }
 
+    #card1 form .row1{
+        flex-wrap: wrap;
+    }
+
     #card2{
         width: 100%;
     }
@@ -170,5 +174,5 @@ button#mediapost{
         display: block;
         margin: 0 auto;
         margin-top: 20px;
-    } */
+    }
 }
