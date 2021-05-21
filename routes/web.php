@@ -46,3 +46,4 @@ Route::get('/msgShow',[MessageController::class,'show']);
 Route::view('/test5','userProfile.userProfile');
 Route::view('/forgot','forgotPass');
 Route::view('/reset','resetPass');
+Route::view('/createWall','createWall');
