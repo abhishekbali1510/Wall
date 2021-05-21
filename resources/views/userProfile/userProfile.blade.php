@@ -85,9 +85,9 @@
                     width="150"
                   />
                   <div class="mt-3">
-                    <h4 class="w3-hover-text-aqua">Shivam Garg</h4>
-                    <p class="text-secondary mb-1">User_name</p>
-                    <p class="text-muted font-size-sm">
+                    <h4 class="w3-hover-text-aqua font-weight-bold">Shivam Garg</h4>
+                    <p class="mb-1">User_name</p>
+                    <p class="font-weight-bold font-size-sm">
                       Email@email
                     </p>
                     <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
@@ -107,7 +107,7 @@
                     justify-content-between
                     align-items-center
                     flex-wrap
-                    w3-hover-light-blue
+                    -light-bluew3-hover
                   "
                 >
                   <h6 class="mb-0">
@@ -277,14 +277,14 @@
             </div>
           </div>
           <div class="col-md-8" ">
-            <div class="card mb-3 glass w3-hover-aqua"  style=" margin-bottom: 100px ;">
+            <div class="card mb-3 glass font-weight-bold "  style=" margin-bottom: 100px ;">
               <div class="card-body">
                 
                
                 
                 <div class="row">
                     <div class="col-sm-3">
-                      <h4 class="mb-0">Bio
+                      <h4 class="mb-0 font-weight-bold">Bio
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
                           <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
                         </svg>
@@ -296,7 +296,7 @@
                 <hr />
                 <div class="row m-2">
                   <div class="col-sm-3">
-                    <h6 class="mb-0">Bio Disc</h6>
+                    <h6 class="mb-0 ">Bio Disc</h6>
                   </div>
                  
                 </div>
@@ -333,16 +333,16 @@
             <div class="row gutters-sm" style="margin-top: 100px;">
               <div class="col-sm-6 mb-3">
                 <div class="card scroll glass"  >
-                  <div class="card-body w3-hover-aqua">
+                  <div class="card-body font-weight-bold">
                     <h6 class="d-flex align-items-center mb-3">
-                      <i class="material-icons text-info mr-2">Walls</i
-                      >Joined
+                      <i class=" w3-text-black mr-2" style ="font-size:20px"> <b>Walls Joined</b></i
+                      >
                     </h6>
                    <ul style="list-style: none;">
-                       <li><a href="" class="w3-text-black">WallNAME</a></li>
-                       <li><a href="" class="w3-text-black">WallNAME</a></li>
-                       <li><a href="" class="w3-text-black">Wallname</li>
-                       <li><a href="" class="w3-text-black">WallNAME</a></li>
+                       <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
+                       <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
+                       <li><a href="" class="w3-text-black font-weight-light">Wallname</li>
+                       <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
                    </ul>
                    
                   </div>
@@ -352,8 +352,8 @@
                 <div class="card scroll glass post">
                   <div class="card-body">
                     <h6 class="d-flex align-items-center mb-3">
-                      <i class="material-icons text-info mr-2">Post created</i
-                      >Project Status
+                      <i class=" w3-text-black mr-2" style ="font-size:20px"><b>Post created</b></i
+                      >
                     </h6>
                     <ul style="list-style: none;">
                       <li><a href="" class="w3-text-black">WallNAME</a></li>
