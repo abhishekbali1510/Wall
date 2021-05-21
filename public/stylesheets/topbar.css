@@ -138,3 +138,6 @@ body{
         width: 100%;
     }
 }
+#navbar{
+    top:0;
+}

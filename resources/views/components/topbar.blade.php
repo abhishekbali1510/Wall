@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../stylesheets/topbar.css">
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="dropdown">
             <div class="projects">
                 <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>

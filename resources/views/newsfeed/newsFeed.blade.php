@@ -20,7 +20,7 @@
 
       <div class="row gutters-sm">
 
-        <div class="w3-sidebar w3-bar-block round ml-4" style="width:25%">
+        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem">
           <h3 class="w3-bar-item">Menu</h3>
           <a href="#" class="w3-bar-item w3-button">Wall 1</a>
           <a href="#" class="w3-bar-item w3-button">Wall 2</a>
@@ -43,7 +43,7 @@
           </div> 
 
         </div> -->
-        <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 w3-white ">
+        <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 glass ">
           <div class="container">
             <div class="row">
               <div class="post col-12 ">
@@ -55,8 +55,8 @@
               </div>
             </div>
             <div class="row">
-            <div class="col-6 p-3 text-center">Comment</div>
-            <div class="col-6 p-3 text-center" >Share</div>
+              <div class="col-6 p-3 text-center">Comment</div>
+              <div class="col-6 p-3 text-center">Share</div>
 
             </div>
           </div>
@@ -74,14 +74,14 @@
               </div>
             </div>
             <div class="row">
-            <div class="col-6 p-3 text-center">Comment</div>
-            <div class="col-6 p-3 text-center" >Share</div>
+              <div class="col-6 p-3 text-center">Comment</div>
+              <div class="col-6 p-3 text-center">Share</div>
 
             </div>
           </div>
 
         </div>
-        
+
         <!-- <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 w3-white ">
 
           <div class="post">
@@ -111,6 +111,18 @@
       </div>
     </div>
   </div>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
 </body>
 
 </html>
