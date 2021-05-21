@@ -4,15 +4,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
     height: 100vh;
+   
 }
 
 .dropdown{
     height: 72px;
-   
+    
     display: flex;
     justify-content: space-between;
     padding: 24px;
