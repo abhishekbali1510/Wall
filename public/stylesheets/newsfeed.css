@@ -1,0 +1,28 @@
+body{
+    background :linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+.round{
+    border-radius: 0.625rem;;
+}
+
+.post{
+    margin: 2.5rem;
+}
+
+img{
+    max-width: 33.125rem;
+    max-height: fit-content;
+}
+
+.glass{
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container-fluid{
+    margin-top: 90px !important;
+}

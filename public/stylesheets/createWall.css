@@ -1,0 +1,141 @@
+#header{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 8px;
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 60%;
+    height: 65%;  
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+#wallForm {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 40%;
+    margin: 18px 0;
+}
+
+#wallForm input{
+    display: block;
+}
+
+#wallForm input[type="text"]{
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#wallForm input[type="text"]:hover{
+    border: 1px solid rgb(69, 69, 185);
+}
+
+
+#wallForm input[type="submit"]{
+    background-color: rgb(69, 69, 185);
+    color: white;
+    padding: 18px 20px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+#wallForm input[type="submit"]:hover{
+    color: #fff;
+    background-color: rgb(69, 69, 185, 0.8);
+}
+
+textarea{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: "Cabin",Arial,sans-serif;
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* profile pic start */
+.profile-pic {
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+form input[type="file"]#fileToUpload {
+          display: none;
+          cursor: pointer;
+ }
+ /* profile pic end */
+
+ @media(max-width: 500px){
+    .container{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    form input[type="button"]{
+        width: 30%;
+        margin: 10px 20px;
+        align-self: flex-end;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #wallForm input[type="text"]{
+        width: 150%;
+        align-self: center;
+    }
+
+    textarea{
+        width: 150%;
+        align-self: center;
+        margin: 0;
+        margin-bottom: inherit;
+    }
+
+    .profile-pic{
+        height: 100px;
+        width: 100px;
+    } 
+ }
