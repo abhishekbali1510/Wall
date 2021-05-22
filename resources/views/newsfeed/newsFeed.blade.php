@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Walls</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -82,7 +82,7 @@
 
         </div>
 
-        <!-- <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 w3-white ">
+        <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 w3-white ">
 
           <div class="post">
             <h3>Post heading</h3>
@@ -90,6 +90,7 @@
           </div>
 
         </div>
+        
         <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 w3-white ">
 
           <div class="post">
@@ -112,16 +113,18 @@
     </div>
   </div>
   <script>
+    console.log("runs");
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
       var currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+        document.getElementById("topbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-50px";
+        document.getElementById("topbar").style.top = "-72px";
       }
       prevScrollpos = currentScrollPos;
     }
+    console.log("ends");
   </script>
 </body>
 

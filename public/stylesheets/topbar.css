@@ -14,7 +14,6 @@ body{
 
 .dropdown{
     height: 72px;
-    
     display: flex;
     justify-content: space-between;
     padding: 24px;
@@ -22,6 +21,17 @@ body{
     align-items: center;
     margin: auto;
 }
+
+#topbar {
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 2;
+  }
+  
 
 .projects{
     width: 30%;
