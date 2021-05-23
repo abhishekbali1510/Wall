@@ -6,10 +6,12 @@
 <div class="container">
     <h1>Forgot Password?</h1>
     
-    <form id="registerForm" method="post" action="checkOtp">
+    <form id="registerForm" method="post" action="/recoverPass">
+        {{@csrf_field()}}
         <input class="field" type="email" name="email" placeholder="Enter your email">
         <input type="submit" value="Recover Password">
         <span class="error">
+        {{session('error')}}
         </span>
     </form>
 </div>

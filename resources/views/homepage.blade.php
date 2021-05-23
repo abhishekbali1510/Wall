@@ -29,7 +29,7 @@
 
                 <span class="error">{{session('error')}}</span>
 
-                <a class="forget-pass" href="404.html">Forgot Password?</a>
+                <a class="forget-pass" href="/forgot">Forgot Password?</a>
             </form>
             <hr>
             <a class="cta-btn" href="/register">Create New Account</a>

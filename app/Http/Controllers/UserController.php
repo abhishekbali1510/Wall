@@ -148,6 +148,47 @@ class UserController extends Controller
         return $r->session()->get('abhi');
     }
 
+    public function recover(Request $rqst)
+    {
+        $email=$rqst->input('email');
+        $rqst->session()->put('email',$email);
+        $checkEmail=User::where('email',$email)->exists();
+        if($checkEmail==1)
+        {
+            $rqst->session()->put('pin',rand(1001,9999));
+            $data=['pin'=>$rqst->session()->get('pin')];
+            $users['to']=$email;
+            Mail::send('signUp.mail',$data,function($messages) use ($users)
+            {
+                $messages->to($users['to']);
+                $messages->subject('Registration code');
+            });
+            return redirect('/reset');
+        }
+        else
+        {
+            $rqst->session()->flash('error','email not registered');
+            return redirect('/forgot');
+        }
+    }
 
+    public function update(Request $rqst)
+    {
+        $otp=$rqst->input('otp');
+        $newPass=$rqst->input('newPass');
+        if($otp==$rqst->session()->get('pin'))
+        {
+            $user=User::where('email',$rqst->session()->get('email'))-> first();
+            $user->password=$newPass;
+            $user->save();
+            return redirect('/done');
+
+        }
+        else
+        {
+            $rqst->session()->flash('error','invalid OTP');
+            return redirect('/reset');
+        }
+    }
     
 }
