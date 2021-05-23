@@ -43,7 +43,7 @@ Route::post('/msgSend',[MessageController::class,'index']);
 
 Route::get('/msgShow',[MessageController::class,'show']);
 
-Route::view('/test5','userProfile.userProfile');
+Route::view('/user','userProfile.userProfile');
 
 Route::view('/forgot','forgotPass');
 
