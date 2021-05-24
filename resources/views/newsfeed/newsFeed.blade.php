@@ -68,6 +68,7 @@
 
               </div>
             </div>
+            <hr>
             <div class="row">
               <div class="col-6 p-3 text-center">Comment</div>
               <div class="col-6 p-3 text-center">Share</div>
@@ -76,27 +77,7 @@
           </div>
 
         </div>
-        <!-- mediapost div end -->
-        <!-- <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 glass ">
-          <div class="container">
-            <div class="row">
-              <div class="post col-12 ">
-                
-                <h3>Post heading</h3>
-                <p>post caption</p>
-                 <img src="https://wallpapercave.com/wp/yEJgDW8.jpg" class="w3-responsive" alt=""> 
-                </hr>
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6 p-3 text-center">Comment</div>
-              <div class="col-6 p-3 text-center">Share</div>
-
-            </div>
-          </div>
-
-        </div> -->
+       
         <!-- post without media  -->
         <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 glass ">
 
@@ -114,9 +95,15 @@
                 <hr>
                 <!-- user info end -->
             <h3>Post heading</h3>
-            <p>post caption</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+           
           </div>
+          <hr>
+          <div class="row">
+              <div class="col-6 p-3 text-center">Comment</div>
+              <div class="col-6 p-3 text-center">Share</div>
 
+            </div>
         </div>
 
         <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 glass ">
@@ -137,7 +124,13 @@
             <h3>Post heading</h3>
             <p>post caption</p>
           </div>
+          <hr>
+          <div class="row">
+              <div class="col-6 p-3 text-center">Comment</div>
+              <div class="col-6 p-3 text-center">Share</div>
 
+            </div>
+        </div>
         </div>
         <div class="offset-5 col-sm-11 col-md-6 h-100 mb-3 p-2 glass ">
 
@@ -157,8 +150,14 @@
             <h3>Post heading</h3>
             <p>post caption</p>
           </div>
+          <hr>
+          <div class="row">
+              <div class="col-6 p-3 text-center">Comment</div>
+              <div class="col-6 p-3 text-center">Share</div>
 
-        </div> -->
+            </div>
+        </div>
+        </div> 
 
 
       </div>
