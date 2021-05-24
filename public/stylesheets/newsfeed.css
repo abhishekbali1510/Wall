@@ -26,3 +26,34 @@ img{
 .container-fluid{
     margin-top: 90px !important;
 }
+
+.mart-05{
+    margin-top: 0.5rem;
+}
+
+hr{
+    border-top-right-radius: 1px solid rgb(128, 128, 128);
+    width: 75%;
+}
+.post-dp{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 1.4rem;
+}
+
+.post-dp-div{
+    width: 3.1rem;
+    height: 4.8rem;
+}
+.post-info-div{
+    height: 2.6rem;
+
+}
+.post-info{
+    margin-top: 0.8rem;
+}
+
+.info-link{
+    /* text-decoration: none; */
+    color: black;
+}
