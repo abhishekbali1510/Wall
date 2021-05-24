@@ -28,8 +28,8 @@
             <div class="dropzone" id="dropzone">
                 Drop files fere to upload
             </div>
-            <br>
             <input type="file" id="fileUploadBtn">
+            <input type="text" name="caption" id="caption-field" placeholder="Enter Caption">
             <input type="button" value="Post">
         </form>
     </div>

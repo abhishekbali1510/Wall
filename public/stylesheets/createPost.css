@@ -27,7 +27,7 @@ input:focus{
 .container{
     margin: 0 auto;
     width: 70%;
-    height: 55%;  
+    height: 58%;  
     display: flex;
     justify-content: space-between;
 }
@@ -138,6 +138,13 @@ button#mediapost{
 
 .footer{
     display: none;
+}
+
+#card1 form input[type="text"]#caption-field{
+    margin: 10px 0;
+    width: 90%;
+    font-size: 16px;
+    padding: 12px;
 }
 
 @media(max-width: 500px){

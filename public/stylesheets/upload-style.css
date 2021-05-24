@@ -1,11 +1,11 @@
 .dropzone{
     margin: 12px auto;
     width: 90%;
-    height: 50%;
+    height: 35%;
     border: 2px dashed #ccc;
     color: #ccc;
     text-align: center;
-    line-height: 200px;
+    line-height: 140px;
     font-size: 22px;
 }
 
@@ -20,6 +20,7 @@
 }
 
 #fileUploadBtn{
+    margin: 10px 0;
     margin-left: 14px;
 }
 
