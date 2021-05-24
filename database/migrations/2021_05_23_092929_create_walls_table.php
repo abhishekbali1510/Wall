@@ -14,7 +14,10 @@ class CreateWallsTable extends Migration
     public function up()
     {
         Schema::create('walls', function (Blueprint $table) {
-            $table->id();
+            $table->id('wallId');
+            $table->string('name');
+            $table->string('bio');
+            
             $table->timestamps();
         });
     }

@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="stylesheets/createWall.css">
 <div id="header">Create Wall</div> 
 <div class="container">
-    <form id="wallForm" method="post" action="loginCheck">
+    <form id="wallForm" method="post" action="/insertWall">
+    {{@csrf_field()}}
     <label for="fileToUpload">
     <div class="profile-pic" style="background-image: url('https://yt3.ggpht.com/ytc/AAUvwnhofZsxbf-Ba_s1UKxjkoEvkMsgM0kOzgLTDLmIwQ=s176-c-k-c0x00ffffff-no-rj')">
       <span class="glyphicon glyphicon-camera"></span>
@@ -16,10 +17,12 @@
   </div>
   </label>
   <input type="file" name="fileToUpload" id="fileToUpload">
-        <input class="field" type="text" name="data" placeholder="Enter Wall name">
-        <textarea name="content" id="content-field" cols="30" rows="3" placeholder="Tell us about your wall"></textarea>
+        <input class="field" type="text" name="wallName" placeholder="Enter Wall name">
+        <textarea name="bio" id="content-field" cols="30" rows="3" placeholder="Tell us about your wall"></textarea>
         
-        <span class="error"></span>
+        <span class="error">
+        
+        </span>
         
          <input type="submit" value="Create Wall">
     </form>
