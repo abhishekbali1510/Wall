@@ -14,19 +14,25 @@
             <button id="textpost">Text Post</button>
             <a href="/createMedia"><button id="mediapost">Media Post</button></a>
         </div>
-        <form>
+        <form method="POST" action="/create">
+        {{@csrf_field()}}
             <div class="row1">
                 <input type="text" name="title" id="title-field" placeholder="Title of post">
-                <select name="wall" id="wall-field">
-                    <option value="volvo">Networking</option>
-                    <option value="saab">Hacking</option>
-                    <option value="opel">Design</option>
-                    <option value="audi">Discussions</option>
+                @error('title')
+                    {{$message}}
+                @enderror
+                <select name="wallName" id="wall-field">
+                @foreach($walls as $wall)
+                    <option value="{{$wall->name}}">{{$wall->name}}</option>
+                @endforeach
                 </select>
             </div>
             <textarea name="content" id="content-field" cols="30" rows="9" placeholder="What you gonna share today?"></textarea>
             <br>
-            <input type="button" value="Post">
+            @error('content')
+                {{$message}}
+            @enderror
+            <input type="submit" value="Post">
         </form>
     </div>
     <div id="card2">

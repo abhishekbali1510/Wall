@@ -3,83 +3,66 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Wall;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    
+    public function show()
     {
-        //
+        $walls=Wall::all();
+        return view('create.createPost',['walls'=>$walls]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function showMedia()
     {
-        //
+        $walls=Wall::all();
+        return view('create.createMediaPost',['walls'=>$walls]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        //
+        $r->validate([
+            'title'=>'required',
+            'wallName'=>'required',
+            'content'=>'required',
+        ]);
+        $title=$r->input('title');
+        $wallName=$r->input('wallName');
+        $content=$r->input('content');
+
+
+        $post= new Post;
+        $post->title=$title;
+        $post->wallName=$wallName;
+        $post->content=$content;
+        $post->save();
+        return redirect('/home');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Post $post)
+    public function storeMedia(Request $r)
     {
-        //
-    }
+        $r->validate([
+            'title'=>'required',
+            
+        ]);
+        $title=$r->input('title');
+        $wallName=$r->input('wallName');
+        $imgName=($wallName.".".$title);
+        $r->file('img')->storeAs('public/images/posts',$imgName);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Post $post)
-    {
-        //
+        $post= new Post;
+        $post->title=$title;
+        $post->wallName=$wallName;
+        if(!empty($r->input('content')))
+        {
+            $content=$r->input('content');
+            $post->content=$content;
+        }
+        $post->imgName=$imgName;
+        
+        $post->save();
+        return redirect('/home');
     }
 }

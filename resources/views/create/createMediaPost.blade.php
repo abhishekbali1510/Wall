@@ -14,23 +14,23 @@
             <a href="/create"><button id="textpost">Text Post</button></a>
             <button id="mediapost">Media Post</button>
         </div>
-        <form>
+        <form method="POST" action="/createMedia" enctype="multipart/form-data">
+        {{csrf_field()}}
             <div class="row1">
                 <input type="text" name="title" id="title-field" placeholder="Title of post">
-                <select name="wall" id="wall-field">
-                    <option value="volvo">Networking</option>
-                    <option value="saab">Hacking</option>
-                    <option value="opel">Design</option>
-                    <option value="audi">Discussions</option>
+                <select name="wallName" id="wall-field">
+                @foreach($walls as $wall)
+                    <option value="{{$wall->name}}">{{$wall->name}}</option>
+                @endforeach
                 </select>
             </div>
             <div id="uploads"></div>
             <div class="dropzone" id="dropzone">
                 Drop files fere to upload
             </div>
-            <input type="file" id="fileUploadBtn">
+            <input type="file" name="img" id="fileUploadBtn">
             <input type="text" name="caption" id="caption-field" placeholder="Enter Caption">
-            <input type="button" value="Post">
+            <input type="submit" value="Post">
         </form>
     </div>
     <div id="card2">

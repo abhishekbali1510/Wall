@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WallController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\FeedController;
 use Illuminate\Http\Request;
 
 /*
@@ -32,8 +35,8 @@ Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
 
-Route::view('/create','create.createPost');
-Route::view('/createMedia','create.createMediaPost');
+Route::get('/create',[PostController::class,'show']);
+Route::get('/createMedia',[PostController::class,'showMedia']);
 
 Route::view('/test3','UserProfile');
 route::view('/','homepage');
@@ -51,10 +54,14 @@ Route::view('/reset','resetPass');
 
 Route::view('/createWall','createWall');
 
-Route::view('/home','newsfeed.newsFeed');
+Route::get('/home',[FeedController::class,'index']);
 
 Route::post('/recoverPass',[UserController::class,'recover']);
 
 Route::post('/updatePass',[UserController::class,'update']);
 
+Route::post('/createWall',[WallController::class,'store']);
 
+Route::post('/create',[PostController::class,'store']);
+
+Route::post('/createMedia',[PostController::class,'storeMedia']);
