@@ -10,7 +10,8 @@ class FeedController extends Controller
 {
     public function index()
     {
-        $posts=Post::all();
-        return view('newsfeed.newsFeed',['posts'=>$posts]);
+    //     $posts=Post::all();
+    //     return view('newsfeed.newsFeed',['posts'=>$posts]);
+            return view('newsfeed.newsFeed');
     }
 }

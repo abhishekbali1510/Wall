@@ -1,12 +1,14 @@
 body{
     background :linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+    overflow-x: hidden;
 }
 .round{
     border-radius: 0.625rem;;
 }
 
 .post{
-    margin: 2.5rem;
+    margin: 0.1rem;
 }
 
 img{
@@ -29,6 +31,7 @@ img{
 
 .mart-05{
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 hr{
@@ -57,3 +60,30 @@ hr{
     /* text-decoration: none; */
     color: black;
 }
+
+
+@media screen and (min-width:600px){
+    #fixedButton {
+       display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .c-90 {
+        width: 90%;
+        margin-left: 1rem;
+    }
+    #sideBar{
+        display: none;
+    }
+    #fixedButton {
+        position: fixed;
+        bottom: 30px;
+        right: 40px; 
+    }
+    .iconSideBar{
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+  }
