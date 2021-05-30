@@ -33,7 +33,7 @@ return [
     |
     */
 
-    $url = parse_url("postgres://jgzeyssunrnnyx:76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f@ec2-18-214-140-149.compute-1.amazonaws.com:5432/da5q49gevkf5sf");
+    $url = $url["postgres://jgzeyssunrnnyx:76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f@ec2-18-214-140-149.compute-1.amazonaws.com:5432/da5q49gevkf5sf"];
 
     $host = $url["ec2-18-214-140-149.compute-1.amazonaws.com"];
     $username = $url["jgzeyssunrnnyx"];
