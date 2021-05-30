@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'pgsql',
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,12 +33,12 @@ return [
     |
     */
 
-    $url = $url["postgres://jgzeyssunrnnyx:76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f@ec2-18-214-140-149.compute-1.amazonaws.com:5432/da5q49gevkf5sf"];
+    // $url = $url["postgres://jgzeyssunrnnyx:76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f@ec2-18-214-140-149.compute-1.amazonaws.com:5432/da5q49gevkf5sf"];
 
-    $host = $url["ec2-18-214-140-149.compute-1.amazonaws.com"];
-    $username = $url["jgzeyssunrnnyx"];
-    $password = $url["76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f"];
-    $database = "da5q49gevkf5sf";
+    // $host = $url["ec2-18-214-140-149.compute-1.amazonaws.com"];
+    // $username = $url["jgzeyssunrnnyx"];
+    // $password = $url["76aee8fe1668c88eadb79aa82e35d6aed6f9cab202fdcf85e71941257861400f"];
+    // $database = "da5q49gevkf5sf";
 
 
 
@@ -74,16 +74,16 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            // 'url' => env('DATABASE_URL'),
-            // 'host' => env('DB_HOST', '127.0.0.1'),
-            'host' => $host,
-            //'port' => env('DB_PORT', '5432'),
-            // 'database' => env('DB_DATABASE', 'forge'),
-            'database' => $database,
-            // 'username' => env('DB_USERNAME', 'forge'),
-            'username' => $username,
-            // 'password' => env('DB_PASSWORD', ''),
-            'password' => $password,
+             'url' => env('DATABASE_URL'),
+             'host' => env('DB_HOST', '127.0.0.1'),
+            // 'host' => $host,
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            // 'database' => $database,
+            'username' => env('DB_USERNAME', 'forge'),
+            // 'username' => $username,
+            'password' => env('DB_PASSWORD', ''),
+            // 'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
