@@ -61,6 +61,26 @@ hr{
     color: black;
 }
 
+/* freakingud */
+
+.fa {
+    font-size: 30px !important;
+    cursor: pointer;
+    user-select: none;
+    /* color: #fff; */
+  }
+  
+  .fa:hover {
+    color: rgb(151, 145, 145);
+  }
+
+  .likesNo{
+      padding-left: 4px;
+      padding-bottom: 5px;
+  }
+
+/* freakingud */
+
 
 @media screen and (min-width:600px){
     #fixedButton {

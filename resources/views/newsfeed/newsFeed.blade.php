@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="stylesheets/newsfeed.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -94,11 +95,11 @@
             <hr>
             <div class="row">
 
-              <div class="col-3 p-2 text-center">Like</div>
+              <div class="col-3 p-2 text-center"><i onclick="myFunction(this)" class="fa fa-thumbs-up"></i><span class="likesNo">20</span></div>
               <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-              <div class="offset-1 col-3 p-2 text-center">Comment</div>
-              <div class="offset-1 col-3 p-2 text-center">Share</div>
+              <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-comment"></i></div>
+              <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
 
             </div>
           </div>
@@ -133,11 +134,11 @@
             <hr>
             <div class="row">
 
-              <div class="col-3 p-2 text-center">Like</div>
+              <div class="col-3 p-2 text-center"><i onclick="myFunction(this)" class="fa fa-thumbs-up"></i></div>
               <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-              <div class="offset-1 col-3 p-2 text-center">Comment</div>
-              <div class="offset-1 col-3 p-2 text-center">Share</div>
+              <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-comment"></i></div>
+              <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
 
             </div>
           </div>
@@ -169,6 +170,11 @@
       prevScrollpos = currentScrollPos;
     }
     console.log("ends");
+
+    function myFunction(x) {
+      x.classList.toggle("fa-thumbs-down");
+    }
+
   </script>
 </body>
 
