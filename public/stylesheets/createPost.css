@@ -105,7 +105,7 @@ button#mediapost{
 }
 
 #card1 form input[type="submit"]{
-    width: 11%;
+    width: auto;
     margin: 10px;
     margin-top: 0;
     align-self: flex-end;
