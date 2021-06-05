@@ -10,8 +10,11 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    public function login()
+    public function login(Request $r)
     {
+        if($r->session()->get('login')=="true")
+        return redirect('/home');
+        else
         return view('signIn.login');
     }
 
@@ -37,8 +40,8 @@ class UserController extends Controller
                 else
                 $userSession=$dataId;
                 $r->session()->put('login','true');
-                $r->session()->put('userSession',$userSession);
-                return redirect('/main');
+                $r->session()->put('user',$userSession);
+                return redirect('/home');
             }
             else
             {
@@ -129,10 +132,12 @@ class UserController extends Controller
             $newUser->email=$r->session()->get('mail');
             $newUser->password=$r->session()->get('password');
             $newUser->save();
-            $r->session()->put('login','true');
+            // $r->session()->put('login','true');
             $r->session()->forget('register');
             $r->session()->forget('password');
             $r->session()->forget('pin');
+            $r->session()->forget('mail');
+            $r->session()->forget('username');
             return redirect('/');
         }
         else
@@ -163,6 +168,7 @@ class UserController extends Controller
                 $messages->to($users['to']);
                 $messages->subject('Registration code');
             });
+            $rqst->session()->put('reset','true');
             return redirect('/reset');
         }
         else
@@ -181,7 +187,10 @@ class UserController extends Controller
             $user=User::where('email',$rqst->session()->get('email'))-> first();
             $user->password=$newPass;
             $user->save();
-            return redirect('/done');
+            $rqst->session()->forget('pin');
+            $rqst->session()->forget('email');
+            $rqst->session()->forget('reset');
+            return redirect('/');
 
         }
         else

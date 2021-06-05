@@ -25,11 +25,19 @@ route::get('/login',[UserController::class,'login']);
 
 route::post('/loginCheck',[UserController::class,'check']);
 
-route::view('/register','signUp.register');
+route::get('/register',function(){
+    if(session()->get('login')=="true")
+    return redirect('/home');
+    else
+    return view('signUp/register');
+});
 
 Route::post('/registerCheck',[UserController::class,'registerCheck']);
 
-// Route::get('/test',[UserController::class,'test']);
+Route::get('/logout',function(){
+    session()->forget('login');
+    return "Done";
+});
 
 Route::get('/verify',[UserController::class,'otp']);
 
@@ -39,7 +47,13 @@ Route::get('/create',[PostController::class,'show']);
 Route::get('/createMedia',[PostController::class,'showMedia']);
 
 Route::view('/test3','UserProfile');
-route::view('/','homepage');
+
+route::get('/',function(){
+    if(session()->get('login')=="true")
+    return redirect('/home');
+    else
+    return view('homepage');
+});
 
 Route::view('/msg','message.index');
 Route::post('/msgSend',[MessageController::class,'index']);
@@ -48,17 +62,29 @@ Route::get('/msgShow',[MessageController::class,'show']);
 
 Route::view('/user','userProfile.userProfile');
 
-Route::view('/forgot','forgotPass');
+Route::get('/forgot',function(){
+    if(session()->get('login')=="true")
+    return redirect('/home');
+    else
+    return view('forgotPass');
+});
 
-Route::view('/reset','resetPass');
+Route::post('/recoverPass',[UserController::class,'recover']);
+
+Route::get('/reset',function(){
+    if(session()->get('login')=="true")
+    return redirect('/home');
+    else if(session()->get('reset')=="true")
+    return view('resetPass'); 
+    else
+    return redirect('/');
+});
 
 Route::view('/createWall','createWall');
 
 Route::view('/post','postpage.postpage');
 
 Route::get('/home',[FeedController::class,'index']);
-
-Route::post('/recoverPass',[UserController::class,'recover']);
 
 Route::post('/updatePass',[UserController::class,'update']);
 
