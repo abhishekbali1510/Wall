@@ -18,7 +18,7 @@
                 </ul>
                 <input type="text" name="search" id="search" placeholder="Search..">
             </div>
-            <span id="walls"><a href="https://walls-network.herokuapp.com/home">WALLS</a></span>
+            <span id="walls"><a href="/home">WALLS</a></span>
             <div class="shortcuts">
                 <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
                 <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
