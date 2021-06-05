@@ -79,6 +79,12 @@ hr{
       padding-bottom: 5px;
   }
 
+  @media screen and (min-width:600px){
+    #fixedButton {
+       display: none;
+    }
+}
+
 /* freakingud end*/
 
 

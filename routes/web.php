@@ -54,6 +54,8 @@ Route::view('/reset','resetPass');
 
 Route::view('/createWall','createWall');
 
+Route::view('/post','postpage.postpage');
+
 Route::get('/home',[FeedController::class,'index']);
 
 Route::post('/recoverPass',[UserController::class,'recover']);
