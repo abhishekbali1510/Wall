@@ -10,13 +10,9 @@
 <div class="container">
     <form id="wallForm" method="post" action="/createWall" enctype="multipart/form-data" >
     {{@csrf_field()}}
-    <label for="fileToUpload">
-    <div class="profile-pic" style="background-image: url('https://yt3.ggpht.com/ytc/AAUvwnhofZsxbf-Ba_s1UKxjkoEvkMsgM0kOzgLTDLmIwQ=s176-c-k-c0x00ffffff-no-rj')">
-      <span class="glyphicon glyphicon-camera"></span>
-      <span>Change Image</span>
-  </div>
-  </label>
-  <input type="file" name="img" id="fileToUpload">
+    <input id="fileInp" type="file" accept="image/*" onchange="loadFile(event)">
+    <img src="../assets/Wall.png" id="output"/>
+
         <input class="field" type="text" name="wallName" placeholder="Enter Wall name">
         <textarea name="bio" id="content-field" cols="30" rows="3" placeholder="Tell us about your wall"></textarea>
         
@@ -26,6 +22,22 @@
         
          <input type="submit" value="Create Wall">
     </form>
+
+    <script>
+  var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+
+  var selector = document.getElementById('output');
+  selector.addEventListener("click", function(){
+  document.getElementById("fileInp").click();
+});
+</script>
     
 </div>
 </body>
