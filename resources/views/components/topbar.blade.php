@@ -23,6 +23,7 @@
                 <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
                 <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
                 <button><a href="404.html"><img src="../assets/Latest.png" alt="Trending"></a></button>
+                <button><a href="404.html"><img src="../assets/NewWall.png" style="height: 60px; width: 60px; margin-left: 18px;" alt="Trending"></a></button>
             </div>
             
         </div>

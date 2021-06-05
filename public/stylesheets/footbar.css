@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 600px) {
     #footbar{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         z-index: 4;
         display: flex;
