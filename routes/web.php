@@ -82,6 +82,8 @@ Route::get('/reset',function(){
 
 Route::view('/createWall','createWall');
 
+Route::view('/post','postpage.postpage');
+
 Route::get('/home',[FeedController::class,'index']);
 
 Route::post('/updatePass',[UserController::class,'update']);
