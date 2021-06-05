@@ -154,6 +154,11 @@ button#mediapost{
         margin-top: -8%;
     }
 
+    #header{
+        margin-top: 18%;
+        font-size: 1.5em;
+    }
+
     #card1{
         width: 100%;
         margin: 40px 0;
