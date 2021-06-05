@@ -12,10 +12,16 @@
   <link rel="stylesheet" href="stylesheets/newsfeed.css" />
   <link rel="stylesheet" href="stylesheets/postpage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/footbar.css">
 
 </head>
 
 <body>
+  <div id="footbar" class="glass">
+  <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
+                <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
+                <button><a href="404.html"><img src="../assets/Latest.png" alt="Trending"></a></button>
+  </div>
   <!-- modal -->
   <div id="id01" class="w3-modal">
     <div class=" w3-card-4 w3-animate-zoom" style="max-width:600px">
@@ -40,7 +46,7 @@
   <!-- post madal -->
 
   <div id="cmnt01" class="w3-modal">
-        <div class="container">
+        <div class="container" onclick="redirector()>
           <div class="main-body">
             
           
@@ -310,6 +316,10 @@
     function myFunction(x) {
       x.classList.toggle("fa-thumbs-down");
     }
+
+    function redirector() {
+    location.href("https://walls-network.herokuapp.com/create")
+}
   </script>
 </body>
 
