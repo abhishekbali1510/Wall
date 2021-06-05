@@ -1,0 +1,123 @@
+body{
+    background :linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+    overflow-x: hidden;
+}
+.round{
+    border-radius: 0.625rem;
+}
+
+.post{
+    margin: 0.1rem;
+}
+
+img{
+    max-width: 33.125rem;
+    max-height: fit-content;
+}
+
+h3.wallname{
+    margin: 6px;
+}
+
+p.wall-description{
+    padding: 12px;
+}
+
+.glass{
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.container-fluid{
+    margin-top: 90px !important;
+}
+
+.mart-05{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+hr{
+    border-top-right-radius: 1px solid rgb(128, 128, 128);
+    width: 75%;
+}
+.post-dp{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 1.4rem;
+}
+
+.post-dp-div{
+    width: 3.1rem;
+    height: 4.8rem;
+}
+.post-info-div{
+    height: 2.6rem;
+
+}
+.post-info{
+    margin-top: 0.8rem;
+}
+
+.info-link{
+    /* text-decoration: none; */
+    color: black;
+}
+
+/* freakingud start*/
+
+.fa {
+    font-size: 30px !important;
+    cursor: pointer;
+    user-select: none;
+    /* color: #fff; */
+  }
+  
+  .fa:hover {
+    color: rgb(151, 145, 145);
+  }
+
+  .likesNo{
+      padding-left: 4px;
+      padding-bottom: 5px;
+  }
+
+  @media screen and (min-width:600px){
+    #fixedButton {
+       display: none;
+    }
+}
+
+/* freakingud end*/
+
+
+@media screen and (min-width:600px){
+    #fixedButton {
+       display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .c-90 {
+        width: 90%;
+        margin-left: 1rem;
+    }
+    #sideBar{
+        display: none;
+    }
+    #fixedButton {
+        position: fixed;
+        bottom: 30px;
+        right: 40px; 
+    }
+    .iconSideBar{
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+  }

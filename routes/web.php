@@ -67,3 +67,5 @@ Route::post('/createWall',[WallController::class,'store']);
 Route::post('/create',[PostController::class,'store']);
 
 Route::post('/createMedia',[PostController::class,'storeMedia']);
+
+Route::view('/wall','wall');
