@@ -13,7 +13,7 @@
     <input id="fileInp" type="file" accept="image/*" onchange="loadFile(event)">
     <img src="../assets/Wall.png" id="output"/>
 
-        <input class="field" type="text" name="wallName" placeholder="Enter Wall name">
+        <input class="field" type="text" name='img' name="wallName" placeholder="Enter Wall name">
         <textarea name="bio" id="content-field" cols="30" rows="3" placeholder="Tell us about your wall"></textarea>
         
         <span class="error">
