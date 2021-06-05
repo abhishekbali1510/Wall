@@ -3,7 +3,8 @@
 
  <!-- include('topbar.php');   -->
  <meta content="width=device-width, initial-scale=1" name="viewport" />
-<link rel="stylesheet" href="../stylesheets/createPost.css">
+ <x-topbar /> 
+ <link rel="stylesheet" href="../stylesheets/createPost.css">
 <link rel="stylesheet" href="../stylesheets/upload-style.css">
 
 <div id="header">Create Post</div> 

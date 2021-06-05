@@ -1,7 +1,7 @@
 #header{
     width: 60%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 6%;
     padding: 8px;
     font-size: 2.4em;
     font-weight: bold;
@@ -70,43 +70,14 @@ textarea{
     margin-bottom: 8px;
 }
 
-/* profile pic start */
-.profile-pic {
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    height: 150px;
-    width: 150px;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    vertical-align: middle;
-    text-align: center;
-    color: transparent;
-    transition: all .3s ease;
-    text-decoration: none;
+img#output{
+    height: 130px;
+    width: 130px;
+    margin: 12px auto;
+    border-radius: 70px;
+    border: 2px dashed #000;
     cursor: pointer;
 }
-
-.profile-pic:hover {
-    background-color: rgba(0,0,0,.5);
-    z-index: 10000;
-    color: #fff;
-    transition: all .3s ease;
-    text-decoration: none;
-}
-
-.profile-pic span {
-    display: inline-block;
-    padding-top: 4.5em;
-    padding-bottom: 4.5em;
-}
-
-form input[type="file"]#fileToUpload {
-          display: none;
-          cursor: pointer;
- }
- /* profile pic end */
 
  @media(max-width: 500px){
     .container{
@@ -114,6 +85,11 @@ form input[type="file"]#fileToUpload {
         width: 80%;
     }
 
+    #header{
+        margin-top: 18%;
+        font-size: 1.5em;
+    }
+    
     form input[type="button"]{
         width: 30%;
         margin: 10px 20px;

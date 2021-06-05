@@ -17,6 +17,9 @@ class WallController extends Controller
         if($checkName!=1)
         {
             $r->file('img')->storeAs('public/images/wall',$name);
+
+            
+
             $wall=new Wall;
             $wall->name=$name;
             $wall->imgName=$name;
