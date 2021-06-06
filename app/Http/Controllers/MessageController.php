@@ -20,6 +20,10 @@ class MessageController extends Controller
         
         
     }
+    public function index2()
+    {
+        return "done";
+    }
 
     public function show()
     {

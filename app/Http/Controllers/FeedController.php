@@ -14,13 +14,14 @@ class FeedController extends Controller
         {
             
                 
-        //  $posts=Post::all();
-        //  return view('newsfeed.newsFeed',['posts'=>$posts]);
-            return view('newsfeed.newsFeed');
+            $posts=Post::all();
+            $walls=Wall::all();
+            return view('newsfeed.newsFeed',['posts'=>$posts,'walls'=>$walls]);
+            //return view('newsfeed.newsFeed');
         }  
         else
         {
             return redirect('/');
         }
     }
-}
+} 

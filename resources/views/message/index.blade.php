@@ -39,11 +39,11 @@
         </div>
 
         <!-- form start -->
-        <form action="/msgSend" id="myForm" method="post">
+        <form id="myForm" method="POST" action="/msgSend"  >
             {{@csrf_field()}}
             <input type="text" name="msg" id="msg">
             <label for="name">Message</label>
-            <!--submit -->
+            
             <button type="submit" id="sub">Send</button>
 
         </form>
