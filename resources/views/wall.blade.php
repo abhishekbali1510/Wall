@@ -178,12 +178,16 @@
 
       <div class="row gutters-sm">
 
-        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem" id="sideBar">
+        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 50px;" id="sideBar">
           <h3 class="w3-bar-item wallname">Wall Name</h3>
           <p class="wall-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore ipsa. Nobis ex mollitia aspernatur quibusdam, libero debitis dolor numquam officiis, voluptates porro quam quis, quia quas facere explicabo vitae?</p>
-          <a href="#" class="w3-bar-item w3-button">Wall 1</a>
-          <a href="#" class="w3-bar-item w3-button">Wall 2</a>
-          <a href="#" class="w3-bar-item w3-button">Wall 3</a>
+          <a href="#" class="w3-bar-item w3-button">Created by: User</a>
+          <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
+          <ul class="rules">
+            <strong>Wall Rules:</strong>
+            <li>Do not post abusive content!</li>
+            <li>Do not post NSFW!</li>
+          </ul>
         </div>
 
         <!-- create post link div -->

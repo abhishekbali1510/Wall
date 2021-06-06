@@ -11,6 +11,10 @@ body{
     margin: 0.1rem;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 img{
     max-width: 33.125rem;
     max-height: fit-content;
@@ -70,6 +74,15 @@ hr{
 }
 
 /* freakingud start*/
+
+.rules{
+    padding: 20px;
+}
+
+.rules li{
+    margin-left: 20px;
+    margin-top: 2px;
+}
 
 .fa {
     font-size: 30px !important;
