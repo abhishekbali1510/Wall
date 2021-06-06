@@ -11,14 +11,31 @@ class PostController extends Controller
     
     public function show()
     {
-        $walls=Wall::all();
-        return view('create.createPost',['walls'=>$walls]);
+        if(session()->get('login')=="true")
+        {
+            $walls=Wall::all();
+            return view('create.createPost',['walls'=>$walls]);
+        }
+        else
+        {
+            return redirect('/');   
+        }
+        
+        
     }
 
     public function showMedia()
     {
-        $walls=Wall::all();
-        return view('create.createMediaPost',['walls'=>$walls]);
+        if(session()->get('login')=="true")
+        {
+            $walls=Wall::all();
+            return view('create.createMediaPost',['walls'=>$walls]);
+        }
+        else
+        {
+            return redirect('/');   
+        }
+        
     }
 
     public function store(Request $r)

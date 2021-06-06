@@ -43,9 +43,6 @@ Route::get('/verify',[UserController::class,'otp']);
 
 Route::post('/checkOtp',[UserController::class,'checkOtp']);
 
-Route::get('/create',[PostController::class,'show']);
-Route::get('/createMedia',[PostController::class,'showMedia']);
-
 Route::view('/test3','UserProfile');
 
 route::get('/',function(){
@@ -55,12 +52,6 @@ route::get('/',function(){
     return view('homepage');
 });
 
-Route::view('/msg','message.index');
-Route::post('/msgSend',[MessageController::class,'index']);
-
-Route::get('/msgShow',[MessageController::class,'show']);
-
-Route::view('/user','userProfile.userProfile');
 
 Route::get('/forgot',function(){
     if(session()->get('login')=="true")
@@ -80,18 +71,59 @@ Route::get('/reset',function(){
     return redirect('/');
 });
 
-Route::view('/createWall','createWall');
+Route::post('/updatePass',[UserController::class,'update']);
 
-Route::view('/post','postpage.postpage');
+Route::get('/createWall',function(){
+    if(session()->get('login')=="true")
+    return view('createWall');
+    else
+    return redirect('/');
+});
+
+Route::post('/createWall',[WallController::class,'store']);
+
+Route::get('/wall',function(){
+    if(session()->get('login')=="true")
+    return view('showWall');
+    else
+    return redirect('/');
+});
 
 Route::get('/home',[FeedController::class,'index']);
 
-Route::post('/updatePass',[UserController::class,'update']);
+Route::get('/post',function()
+{
+    if(session()->get('login')=="true")
+    return view('postpage.postpage');
+    else
+    return redirect('/');
+});
 
-Route::post('/createWall',[WallController::class,'store']);
+Route::get('/create',[PostController::class,'show']);
+
+Route::get('/createMedia',[PostController::class,'showMedia']);
 
 Route::post('/create',[PostController::class,'store']);
 
 Route::post('/createMedia',[PostController::class,'storeMedia']);
 
-Route::view('/wall','wall');
+Route::get('/user',function()
+{
+    if(session()->get('login')=="true")
+    {
+        return view('userProfile.userProfile');
+    }
+    else
+    {
+        return redirect('/');   
+    }
+    
+});
+
+//above routes session done 
+Route::view('/msg','message.index');
+
+Route::post('/msgSend',[MessageController::class,'index']);
+
+Route::get('/msgShow',[MessageController::class,'show']);
+
