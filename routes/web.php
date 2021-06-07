@@ -104,14 +104,14 @@ Route::post('/createMedia',[PostController::class,'storeMedia']);
 
 Route::get('/user',function()
 {
-    if(session()->get('login')=="true")
-    {
+    // if(session()->get('login')=="true")
+    // {
         return view('userProfile.userProfile');
-    }
-    else
-    {
-        return redirect('/');   
-    }
+    // }
+    // else
+    // {
+    //     return redirect('/');   
+    // }
     
 });
 
@@ -123,4 +123,6 @@ Route::post('/msgSend',[MessageController::class,'index']);
 Route::get('/msgSend2',[MessageController::class,'index2']);
 
 Route::get('/msgShow',[MessageController::class,'show']);
+
+Route::view('/message','message.index2');
 

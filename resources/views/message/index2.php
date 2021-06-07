@@ -13,10 +13,10 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="stylesheet/chat-bootstrap.css" />
+    <link rel="stylesheet" href="stylesheets/chat-bootstrap.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="stylesheet/style.css" />
-    <link rel="stylesheet" href="stylesheet/w3.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/w3.css" />
 </head>
 <!--Coded With Love By Mutiullah Samim-->
 
@@ -158,6 +158,7 @@
                             </div>
                         </div>
                         <div class="card-body msg_card_body">
+                        <!-- received messaged div start -->
                             <div class="d-flex justify-content-start mb-4">
                                 <div class="msg_cotainer" id="chat-R">
 
@@ -167,12 +168,15 @@
                                     <span class="msg_time" id="time-R">8:40 AM, Today</span>
                                 </div>
                             </div>
+                            <!-- received msgs div end -->
+                            <!-- send msg div -->
                             <div class="d-flex justify-content-end mb-4">
                                 <div class="msg_cotainer_send" id="chat-S">
                                     Hi Shivam i am good tnx how about you?
                                     <span class="msg_time_send" id="time-S"></span>
                                 </div>
                             </div>
+                            <!-- send msg div  -->
                         </div>
                     </div>
                     <div class="card-footer">

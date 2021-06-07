@@ -24,3 +24,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .main-body{
     margin-top: 1rem;
 }
+
+.mart-6r{
+    margin-top: 6rem !important;
+}
