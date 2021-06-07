@@ -70,7 +70,7 @@
     </div>
   </div>
   <x-topbar />     
-    <div class="container">
+    <div class="container mart-6r">
       <div class="main-body">
 
         <div class="row gutters-sm">
