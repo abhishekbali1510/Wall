@@ -9,10 +9,10 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-  <link rel="stylesheet" href="stylesheets/wallTemplate.css" />
-  <link rel="stylesheet" href="stylesheets/postpage.css">
+  <link rel="stylesheet" href="../stylesheets/wallTemplate.css" />
+  <link rel="stylesheet" href="../stylesheets/postpage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="stylesheets/footbar.css">
+  <link rel="stylesheet" href="../stylesheets/footbar.css">
 
 </head>
 
@@ -179,8 +179,8 @@
       <div class="row gutters-sm">
 
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 50px;" id="sideBar">
-          <h3 class="w3-bar-item wallname">Wall Name</h3>
-          <p class="wall-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore ipsa. Nobis ex mollitia aspernatur quibusdam, libero debitis dolor numquam officiis, voluptates porro quam quis, quia quas facere explicabo vitae?</p>
+          <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
+          <p class="wall-description">{{$wall->bio}}</p>
           <a href="#" class="w3-bar-item w3-button">Created by: User</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
           <ul class="rules">

@@ -82,12 +82,7 @@ Route::get('/createWall',function(){
 
 Route::post('/createWall',[WallController::class,'store']);
 
-Route::get('/wall',function(){
-    if(session()->get('login')=="true")
-    return view('showWall');
-    else
-    return redirect('/');
-});
+Route::get('/wall/{wallName}',[WallController::class,'show']);
 
 Route::get('/home',[FeedController::class,'index']);
 

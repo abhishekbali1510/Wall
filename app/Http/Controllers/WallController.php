@@ -33,4 +33,24 @@ class WallController extends Controller
             return redirect('/createWall');
         }
     }
+    public function show($wallName)
+    {
+        if(session()->get('login')=="true")
+        {
+            if(wall::where('name',$wallName)->exists())
+            {
+                $wall=Wall::where('name',$wallName)->first();
+                return view('showWall',['wall'=>$wall]);
+            }
+            else
+            {
+                return view('errors.404');
+            }
+        }
+        else
+        {
+            return redirect('/');
+    
+        }
+    }
 }

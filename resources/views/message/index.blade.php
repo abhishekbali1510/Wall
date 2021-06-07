@@ -40,13 +40,15 @@
 
         <!-- form start -->
         <form id="myForm" method="POST" action="/msgSend"  >
-            {{@csrf_field()}}
+            
             <input type="text" name="msg" id="msg">
+            {{@csrf_field()}}
             <label for="name">Message</label>
             
             <button type="submit" id="sub">Send</button>
 
         </form>
+       
 
 
 
