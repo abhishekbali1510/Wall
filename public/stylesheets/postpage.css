@@ -116,7 +116,9 @@ input{
     border-radius: 20px;
     background-color: transparent;
 }
-
+.postHeading{
+    align-self: baseline;
+}
 @media screen and (max-width: 599px) {
     .li-cont{
         margin-bottom:30px;

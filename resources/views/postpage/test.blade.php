@@ -58,7 +58,7 @@
                     </div>
                   </div>
                   <!--user infor -->
-                  <h5 class="postHeading">Post heading</h5>
+                  <h6>Post heading</h6>
                 </div>
               </div>
               <div class="card-footer">
@@ -78,9 +78,8 @@
               </div>
             </div>
             <div class="card mt-3 cmnts-div scroll glass">
-              <!-- caption of post in first comment -->
-              <li class="cmnt-li ">
-                  <div class="container li-cont">
+              <li class="cmnt-li ">  // caption
+                <div class="container li-cont">
                   <!-- user info  -->
                   <div class="row">
                     <div class="cmnt-dp-div col-1 m-0">
@@ -95,8 +94,7 @@
                 </div>
               </li><br>
               <hr>
-              <!-- second comment : display comments of other users -->
-              <li class="cmnt-li "> 
+              <li class="cmnt-li "> //second commet (other users)
                 <div class="container li-cont">
                   <!-- user info  -->
                   <div class="row">
