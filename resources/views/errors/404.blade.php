@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="stylesheets/404.css" />
+	<link type="text/css" rel="stylesheet" href="../../stylesheets/404.css" />
 
 
 </head>
