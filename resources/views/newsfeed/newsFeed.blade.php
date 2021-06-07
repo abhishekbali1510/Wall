@@ -84,7 +84,7 @@
                       </div>
                     </div>
                   </div>
-                  <!--user infor -->
+                  <!--user info end -->
                  <hr>
                 </div>
               </div>
@@ -280,7 +280,7 @@
               <div class="col-3 p-2 text-center"><i onclick="myFunction(this)" class="fa fa-thumbs-up"></i></div>
               <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-              <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-comment"></i></div>
+              <div class="offset-1 col-3 p-2 text-center"><button onclick="document.getElementById('cmnt01').style.display='block'" class="cmnt-btn"><i class="fa fa-comment"></i></button></div>
               <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
 
             </div>
