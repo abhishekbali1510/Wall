@@ -30,8 +30,17 @@ class UserController extends Controller
         $checkUser = User::where('userName',$dataId)->exists();
         if($checkEmail==1||$checkUser==1)
         {
-            $checkPass=User::where('email',$dataId)->value('password');
-            $checkPass2=User::where('userName',$dataId)->value('password'); 
+            if($checkEmail==1)
+            {
+                $checkPass=User::where('email',$dataId)->value('password');
+                $checkPass2="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+            }
+            else
+            {
+                $checkPass2=User::where('userName',$dataId)->value('password'); 
+                $checkPass="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+            }
+            
             
             if($dataPass==$checkPass||$dataPass==$checkPass2)
             {
