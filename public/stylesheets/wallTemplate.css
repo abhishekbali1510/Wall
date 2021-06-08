@@ -21,11 +21,20 @@ img{
 }
 
 h3.wallname{
-    margin: 6px;
+    margin: auto 0;
 }
 
 p.wall-description{
     padding: 12px;
+}
+
+#wallHead{
+    display: flex;
+}
+  
+#wallImg{
+    height: 80px;
+    width: 80px;
 }
 
 .glass{

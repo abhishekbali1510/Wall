@@ -29,7 +29,10 @@
 
 
       <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
-      <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
+      <span id="wallHead">
+          <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
+          <img id="wallImg" src="https://i.pinimg.com/originals/98/0c/e1/980ce1fc4da397d69b6b1d1a656fccdf.png">
+        </span>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
         <p class="wall-description">{{$wall->bio}}</p>
         <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
@@ -183,7 +186,10 @@
       <div class="row gutters-sm">
 
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 50px;" id="sideBar">
+        <span id="wallHead">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
+          <img id="wallImg" src="https://i.pinimg.com/originals/98/0c/e1/980ce1fc4da397d69b6b1d1a656fccdf.png">
+        </span>
           <p class="wall-description">{{$wall->bio}}</p>
           <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
