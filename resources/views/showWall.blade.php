@@ -29,12 +29,16 @@
 
 
       <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
-        <h3 class="w3-bar-item">Animes</h3>
+      <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-
-        <a href="#" class="w3-bar-item w3-button">Wall 1</a>
-        <a href="#" class="w3-bar-item w3-button">Wall 2</a>
-        <a href="#" class="w3-bar-item w3-button">Wall 3</a>
+        <p class="wall-description">{{$wall->bio}}</p>
+        <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
+          <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
+          <ul class="rules">
+            <strong>Wall Rules:</strong>
+            <li>Do not post abusive content!</li>
+            <li>Do not post NSFW!</li>
+          </ul>
 
       </div><br>
     </div>

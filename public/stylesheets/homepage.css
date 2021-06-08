@@ -196,6 +196,6 @@ hr{
 @media(max-width: 768px){
     h1#walls{
         padding-left: 0;
-        font-size: 7em;
+        font-size: 4em;
     }
 }
