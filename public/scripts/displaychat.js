@@ -1,4 +1,5 @@
 //var method = "POST";
+var condi2="";
 const condition=async()=>
 {
     // 
@@ -10,6 +11,7 @@ console.log('respon json \n');
 // console.log(condi);
 // console.log("\n");
   condi = await res.json();
+  condi2=condi;
 console.log('response from condition \n');
  console.log(condi);
 return condi;
@@ -37,15 +39,17 @@ $("#msg").on('scroll', function(){
 function displayALL(data) {
     $("#chat").empty();
     var con = condition();
-    console.log(con[0].sender);
+    console.log("condi2");
+    console.log(condi2);
+    console.log(condi2[0].sender);
     console.log(data[0].senderId);
-    console.log(con[0].receiver);
-    console.log(data[0].senderId);
+    console.log(condi2[0].receiver);
+    console.log(data[0].receiverId);
     for (var i = 0; i < data.length; i++) { 
-        if(con[0].sender === data[i].senderId){
+        if(condi2[0].sender === data[i].senderId){
         $("#chat-R").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
     
-    else if(con[0].receiver === data[i].receiverId){
+    else if(condi2[0].receiver === data[i].receiverId){
         $("#chat-L").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
         
     

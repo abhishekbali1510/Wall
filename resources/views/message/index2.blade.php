@@ -160,9 +160,9 @@
                         <div class="card-body msg_card_body">
                         <!-- received messaged div start -->
                             <div class="d-flex justify-content-start mb-4">
-                                <div class="msg_cotainer" id="chat-R">
+                                <div class="msg_cotainer" >
 
-                                    <ul id="chat-R">
+                                    <ul id="chat-L">
                                         <li>Hi, how are you shivam?</li>
                                     </ul>
                                     <span class="msg_time" id="time-R">8:40 AM, Today</span>
@@ -173,7 +173,7 @@
                             <div class="d-flex justify-content-end mb-4">
                                 <div class="msg_cotainer_send" id="chat-S">
                                    
-                                    <ul id="chat-L">
+                                    <ul id="chat-R">
                                         <li>Hi, how are you shivam?</li>
                                     </ul>
                                     <span class="msg_time_send" id="time-S"></span>

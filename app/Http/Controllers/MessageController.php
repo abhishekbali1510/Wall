@@ -24,7 +24,7 @@ class MessageController extends Controller
 
     public function show()
     {
-        $allMessages = DB::select('select * from messages');
+        $allMessages = DB::select('select * from messages ');// fucking thing
         return json_encode($allMessages);
        //return view('message.displaychat',['datas'=>$allMessages]);
     }
