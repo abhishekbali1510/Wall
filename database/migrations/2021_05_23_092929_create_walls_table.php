@@ -18,6 +18,7 @@ class CreateWallsTable extends Migration
             $table->string('name');
             $table->string('bio');
             $table->string('imgName');
+            $table->string('createdBy');
             $table->timestamps();
         });
     }

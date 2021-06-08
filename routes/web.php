@@ -36,6 +36,7 @@ Route::post('/registerCheck',[UserController::class,'registerCheck']);
 
 Route::get('/logout',function(){
     session()->forget('login');
+    session()->forget('user');
     return "Done";
 });
 

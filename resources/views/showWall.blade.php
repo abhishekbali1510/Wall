@@ -181,7 +181,7 @@
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 50px;" id="sideBar">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
           <p class="wall-description">{{$wall->bio}}</p>
-          <a href="#" class="w3-bar-item w3-button">Created by: User</a>
+          <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
           <ul class="rules">
             <strong>Wall Rules:</strong>

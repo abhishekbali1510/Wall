@@ -24,6 +24,7 @@ class WallController extends Controller
             $wall->name=$name;
             $wall->imgName=$name;
             $wall->bio=$bio;
+            $wall->createdBy=$r->session()->get('user');
             $wall->save();
             return redirect('/home');
         }

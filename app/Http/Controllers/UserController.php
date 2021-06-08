@@ -40,7 +40,7 @@ class UserController extends Controller
                 else
                 $userSession=$dataId;
                 $r->session()->put('login','true');
-                $r->session()->put('user',$userSession);
+                $r->session()->put('user',$userSession);//permanent
                 return redirect('/home');
             }
             else
