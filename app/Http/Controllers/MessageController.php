@@ -22,9 +22,10 @@ class MessageController extends Controller
         
     }
 
-    public function show()
+    public function show(Request $r)
     {
-        $allMessages = DB::select('select * from messages ');// fucking thing
+        $allMessages = DB::select('select * from "messages" where "senderId" = ? and "receiverId" = ? or "senderId" = ? and "receiverId" = ?   ',[$r->session()->get('user'),$r->session()->get('receiver'),$r->session()->get('receiver'),$r->session()->get('user')]);// fucking thing
+        // return $r->session()->get('user');
         return json_encode($allMessages);
        //return view('message.displaychat',['datas'=>$allMessages]);
     }
