@@ -13,10 +13,10 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="stylesheets/chat-bootstrap.css" />
+    <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="stylesheets/w3.css" />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/w3.css" />
 </head>
 <!--Coded With Love By Mutiullah Samim-->
 
@@ -162,7 +162,7 @@
                             <div class="d-flex justify-content-start mb-4">
                                 <div class="msg_cotainer" id="chat-R">
 
-                                    <ul id="chat">
+                                    <ul id="chat-R">
                                         <li>Hi, how are you shivam?</li>
                                     </ul>
                                     <span class="msg_time" id="time-R">8:40 AM, Today</span>
@@ -172,7 +172,10 @@
                             <!-- send msg div -->
                             <div class="d-flex justify-content-end mb-4">
                                 <div class="msg_cotainer_send" id="chat-S">
-                                    Hi Shivam i am good tnx how about you?
+                                   
+                                    <ul id="chat-L">
+                                        <li>Hi, how are you shivam?</li>
+                                    </ul>
                                     <span class="msg_time_send" id="time-S"></span>
                                 </div>
                             </div>
@@ -180,9 +183,10 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <form action="msg.php" id="myForm" method="post">
+                        <form action="/../msgSend" id="myForm" method="post">
+                            {{@csrf_field()}}
                             <div class="input-group">
-                                <textarea name="" class="form-control type_msg col-sm-2" placeholder="Type your message..." name="msg" id="msg"></textarea>
+                                <textarea name="msg" class="form-control type_msg col-sm-2" placeholder="Type your message..." name="msg" id="msg"></textarea>
 
                                 <button type="submit" class="input-group-text send_btn" id="sub">
                                     <i class="fas fa-location-arrow">send</i>
@@ -195,8 +199,8 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="scripts/msginsert.js"></script>
-        <script src="scripts/displaychat.js"></script>
+        <script src="../scripts/msginsert.js"></script>
+        <script src="../scripts/displaychat.js"></script>
         <script src="js/sidebar.js"></script>
         <script>
             function w3_open() {

@@ -1,4 +1,21 @@
 //var method = "POST";
+const condition=async()=>
+{
+    // 
+    const res = await fetch('/testing');
+    var condi = "";
+// console.log("\n");
+console.log('respon json \n');
+
+// console.log(condi);
+// console.log("\n");
+  condi = await res.json();
+console.log('response from condition \n');
+ console.log(condi);
+return condi;
+}
+
+
 var scrolled = false; //to check if user is crolling 
 function updateScroll(){
    
@@ -19,8 +36,20 @@ $("#msg").on('scroll', function(){
 });
 function displayALL(data) {
     $("#chat").empty();
+    var con = condition();
+    console.log(con[0].sender);
+    console.log(data[0].senderId);
+    console.log(con[0].receiver);
+    console.log(data[0].senderId);
     for (var i = 0; i < data.length; i++) { 
-        $("#chat").append("<li>" +data[i].content+"</li>") };
+        if(con[0].sender === data[i].senderId){
+        $("#chat-R").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
+    
+    else if(con[0].receiver === data[i].receiverId){
+        $("#chat-L").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
+        
+    
+    }
 }
 
 
@@ -45,7 +74,14 @@ const dchat = async () => {
 console.log(1);
 //// on loading document and displayind data for first time
 console.log(2);
-
+condition()
+    .then((condi)=>{
+        console.log("then part");
+        console.log(condi);
+    })
+    .catch(condi=>{
+        console.log("condi error");
+    })
 setInterval(function () {
   //$("li:last-child").empty();
     dchat()

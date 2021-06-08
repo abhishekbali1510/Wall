@@ -121,9 +121,9 @@ Route::view('/msg','message.index');
 
 Route::post('/msgSend',[MessageController::class,'index']);
 
-Route::get('/msgSend2',[MessageController::class,'index2']);
-
 Route::get('/msgShow',[MessageController::class,'show']);
 
-Route::view('/message','message.index2');
+Route::get('/message/{receiver?}',[MessageController::class,'newindex']);
+
+Route::get('/testing',[messageController::class,'test']);
 
