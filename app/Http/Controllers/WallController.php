@@ -17,9 +17,8 @@ class WallController extends Controller
         if($checkName!=1)
         {
             $r->file('img')->storeAs('public/images/wall',$name);
-            $cloudinary->uploadApi()->upload($r->file('img'), [
-                "folder" => "wall-files/wall/", 
-                "public_id" => $name]);
+            $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+
             
 
             $wall=new Wall;
