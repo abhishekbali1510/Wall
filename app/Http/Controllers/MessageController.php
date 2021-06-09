@@ -34,6 +34,8 @@ class MessageController extends Controller
         $r->session()->put('receiver',$receiver);
         $users=User::all();
         return view('message.index2',['users'=>$users]);
+        // return view('message.index2');
+
     }
 
     public function test(Request $r)

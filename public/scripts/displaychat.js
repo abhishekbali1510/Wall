@@ -33,7 +33,7 @@ function updateScroll(){
 }
 }
 
-$("#msg").on('scroll', function(){
+$("#chat-F").on('scroll', function(){
     scrolled=true;
 });
 function displayALL(data) {
@@ -117,7 +117,7 @@ setInterval(function () {
 
         });
 }, 1000);
-$("#msg").click(function(){
+$("#chat-F").click(function(){
     this.scrollTop = this.scrollHeight - this.clientHeight;
     //scrolled =false;
     scrolled=false;
