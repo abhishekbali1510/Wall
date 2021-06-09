@@ -17,8 +17,7 @@ class MessageController extends Controller
         $newMsg->receiverId=$rst->session()->get('receiver');
         $newMsg->content=$rst->input('msg');
         $newMsg->save();
-        return redirect('/message');
-        
+        return back();
         
     }
 

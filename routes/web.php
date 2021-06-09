@@ -117,7 +117,7 @@ Route::get('/user',function()
 });
 
 //above routes session done 
-Route::view('/msg','message.index');
+// Route::view('/msg','message.index');
 
 Route::post('/msgSend',[MessageController::class,'index']);
 

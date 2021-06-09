@@ -3,6 +3,7 @@
 
 <head>
     <title>Chat</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -157,26 +158,21 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-body msg_card_body">
-                        <!-- received messaged div start -->
-                            <div class="d-flex justify-content-start mb-4">
-                                <div class="msg_cotainer" >
-
-                                    <ul id="chat-L">
-                                        <li>Hi, how are you shivam?</li>
-                                    </ul>
-                                    <span class="msg_time" id="time-R">8:40 AM, Today</span>
+                       
+                        <div class="card-body msg_card_body" id="chat-F">
+                            <!-- received messaged div start -->
+                            <div class='d-flex justify-content-start mb-4'>
+                                <div class='msg_cotainer'>
+                                    <p>Hi there</p>
+                                    <span class='msg_time' id='time-R'>8:40 AM, Today</span>
                                 </div>
                             </div>
                             <!-- received msgs div end -->
                             <!-- send msg div -->
-                            <div class="d-flex justify-content-end mb-4">
-                                <div class="msg_cotainer_send" id="chat-S">
-                                   
-                                    <ul id="chat-R">
-                                        <li>Hi, how are you shivam?</li>
-                                    </ul>
-                                    <span class="msg_time_send" id="time-S"></span>
+                            <div class='d-flex justify-content-end mb-4'>
+                                <div class='msg_cotainer_send' id='chat-S'>
+                                    <p>Hi, how are you shivam?</p>
+                                    <span class='msg_time_send' id='time-S'></span>
                                 </div>
                             </div>
                             <!-- send msg div  -->

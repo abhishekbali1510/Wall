@@ -37,7 +37,7 @@ $("#msg").on('scroll', function(){
     scrolled=true;
 });
 function displayALL(data) {
-    $("#chat").empty();
+    $("#chat-F").empty();
     var con = condition();
     // console.log("condi2");
     console.log(condi2);
@@ -45,14 +45,20 @@ function displayALL(data) {
     // console.log(data[0].senderId);
     // console.log(condi2[0].receiver);
     // console.log(data[0].receiverId);
-    for (var i = 0; i < data.length; i++) { 
-        if(condi2[0].sender === data[i].senderId){
-        $("#chat-R").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
-    
-    else if(condi2[0].receiver === data[i].senderId){
-        $("#chat-L").append("<li>" +data[i].content+"</li>"); } //chat- :: right side fo chat
-        
-    
+    for (var i = 0; i < data.length; i++) {
+        if (condi2[0].sender === data[i].senderId) {
+            console.log("sender cond.");
+            $("#chat-F").append("<div class='d-flex justify-content-end mb-4'> <div class='msg_cotainer_send' id='chat-S'> <p>" + data[i].content + "</p> <span class='msg_time_send' id='time-S'> </span> </div> </div>");
+           
+        } //chat- :: Left side fo chat
+
+        else if (condi2[0].receiver === data[i].senderId) {
+            console.log("receiver cond.");
+            $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>" + data[i].content + "</p><span class='msg_time' id='time-R'>8:40 AM, Today</span></div></div>");
+           
+        } //chat- :: right side fo chat
+
+
     }
 }
 
