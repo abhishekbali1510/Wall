@@ -1,62 +1,61 @@
-body{
-    background :linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+body {
+    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 
     overflow-x: hidden;
 }
-.round{
-    border-radius: 0.625rem;;
+.round {
+    border-radius: 0.625rem;
 }
 
-.post{
+.post {
     margin: 0.1rem;
 }
 
-img{
+img {
     max-width: 33.125rem;
     max-height: fit-content;
 }
 
-.glass{
-    background: rgba( 255, 255, 255, 0.4 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+.glass {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.container-fluid{
+.container-fluid {
     margin-top: 90px !important;
 }
 
-.mart-05{
+.mart-05 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-hr{
+hr {
     border-top-right-radius: 1px solid rgb(128, 128, 128);
     width: 75%;
 }
-.post-dp{
+.post-dp {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 1.4rem;
 }
 
-.post-dp-div{
+.post-dp-div {
     width: 3.1rem;
     height: 4.8rem;
 }
-.post-info-div{
+.post-info-div {
     height: 2.6rem;
-
 }
-.post-info{
+.post-info {
     margin-top: 0.8rem;
 }
 
-.info-link{
+.info-link {
     /* text-decoration: none; */
     color: black;
 }
@@ -68,31 +67,30 @@ hr{
     cursor: pointer;
     user-select: none;
     /* color: #fff; */
-  }
-  
-  .fa:hover {
+}
+
+.fa:hover {
     color: rgb(151, 145, 145);
-  }
+}
 
-  .likesNo{
-      padding-left: 4px;
-      padding-bottom: 5px;
-  }
+.likesNo {
+    padding-left: 4px;
+    padding-bottom: 5px;
+}
 
-  @media screen and (min-width:600px){
+@media screen and (min-width: 600px) {
     #fixedButton {
-       display: none;
-       bottom: 60px;
-       right: 10px;
+        display: none;
+        bottom: 60px;
+        right: 10px;
     }
 }
 
 /* freakingud end*/
 
-
-@media screen and (min-width:600px){
+@media screen and (min-width: 600px) {
     #fixedButton {
-       display: none;
+        display: none;
     }
 }
 
@@ -101,17 +99,17 @@ hr{
         width: 90%;
         margin-left: 1rem;
     }
-    #sideBar{
+    #sideBar {
         display: none;
     }
     #fixedButton {
         position: fixed;
-        top: 75px;
-        left: 10px;
+        bottom: 90px;
+        right: 10px;
     }
-    .iconSideBar{
+    .iconSideBar {
         width: 20px;
         height: 20px;
         border-radius: 10px;
     }
-  }
+}
