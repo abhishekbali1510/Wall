@@ -20,10 +20,11 @@
             </div>
             <span id="walls"><a href="/home">WALLS</a></span>
             <div class="shortcuts">
+            <button><a href="404.html"><img src="../assets/Chat.png" alt="Chat"></a></button>
                 <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
-                <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
-                <button><a href="404.html"><img src="../assets/Latest.png" alt="Trending"></a></button>
-                <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 60px; width: 60px; margin-left: 18px;" alt="Trending"></a></button>
+                <button><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
+                <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>
+                <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 60px; width: 60px; margin-left: 18px;" alt="New Wall"></a></button>
             </div>
             
         </div>
