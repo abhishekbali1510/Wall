@@ -1,6 +1,10 @@
 .wrapper {
     display: block;
 }
+a:hover{
+    color: white;
+    text-decoration: none;
+}
 
 #sidebar {
     min-width: 250px;

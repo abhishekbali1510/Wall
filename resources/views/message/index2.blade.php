@@ -73,7 +73,7 @@
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
-                                                <span>{{$user->userName}}</span>
+                                                <span><a href="/message/{{$user->userName}}">{{$user->userName}}</a></span>
                                                 <!-- <p>Shivam is online</p> -->
                                             </div>
                                         </div>
@@ -165,7 +165,7 @@
                             <!-- received messaged div start -->
                             <div class='d-flex justify-content-start mb-4'>
                                 <div class='msg_cotainer'>
-                                    <p>Hi there</p>
+                                    <!-- <p>Hi there</p> -->
                                     <span class='msg_time' id='time-R'>8:40 AM, Today</span>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                             <!-- send msg div -->
                             <div class='d-flex justify-content-end mb-4'>
                                 <div class='msg_cotainer_send' id='chat-S'>
-                                    <p>Hi, how are you shivam?</p>
+                                    <!-- <p>Hi, how are you shivam?</p> -->
                                     <span class='msg_time_send' id='time-S'></span>
                                 </div>
                             </div>
