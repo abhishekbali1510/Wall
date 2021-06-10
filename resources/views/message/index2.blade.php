@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/w3.css" />
     <link rel="stylesheet" href="stylesheets/footbar.css">
-    <link rel="stylesheet" href="stylesheets/topbar.css">
+    <link rel="stylesheet" href="../../stylesheets/topbar.css">
 </head>
 
 
@@ -167,7 +167,7 @@
                             <div class='d-flex justify-content-start mb-4'>
                                 <div class='msg_cotainer'>
                                     <!-- <p>Hi there</p> -->
-                                    <span class='msg_time' id='time-R'>8:40 AM, Today</span>
+                                    <!-- <span class='msg_time' id='time-L'>8:40 AM, Today</span> -->
                                 </div>
                             </div>
                             <!-- received msgs div end -->
@@ -175,7 +175,7 @@
                             <div class='d-flex justify-content-end mb-4'>
                                 <div class='msg_cotainer_send' id='chat-S'>
                                     <!-- <p>Hi, how are you shivam?</p> -->
-                                    <span class='msg_time_send' id='time-S'></span>
+                                    <!-- <span class='msg_time_send' id='time-R'></span> -->
                                 </div>
                             </div>
                             <!-- send msg div  -->
