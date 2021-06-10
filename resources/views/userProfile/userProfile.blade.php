@@ -85,8 +85,8 @@
                     width="150"
                   />
                   <div class="mt-3">
-                    <h4 class="w3-hover-text-aqua font-weight-bold">Shivam Garg</h4>
-                    <p class="mb-1">User_name</p>
+                    <h4 class="w3-hover-text-aqua font-weight-bold">User_name</h4>
+                    <!-- <p class="mb-1">User_name</p> -->
                     <p class="font-weight-bold font-size-sm">
                       Email@email
                     </p>

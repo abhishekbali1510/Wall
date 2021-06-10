@@ -45,7 +45,7 @@ class UserController extends Controller
             if($dataPass==$checkPass||$dataPass==$checkPass2)
             {
                 if($checkEmail==1)
-                $userSession=User::where('email',$dataId)->value('username');
+                $userSession=User::where('email',$dataId)->value('userName');
                 else
                 $userSession=$dataId;
                 $r->session()->put('login','true');

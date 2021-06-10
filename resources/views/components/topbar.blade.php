@@ -11,7 +11,7 @@
             <div class="projects">
                 <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>
                 <ul>
-                    <li><a href="#">Link #1</a></li>
+                    <li><a href="/../logout">Logout</a></li>
                     <li><a href="#">Link #2</a></li>
                     <li><a href="#">Link #3</a></li>
                     <li><a href="#">Link #4</a></li>

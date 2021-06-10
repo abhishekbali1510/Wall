@@ -37,7 +37,7 @@ Route::post('/registerCheck',[UserController::class,'registerCheck']);
 Route::get('/logout',function(){
     session()->forget('login');
     session()->forget('user');
-    return "Done";
+    return redirect('../');
 });
 
 Route::get('/verify',[UserController::class,'otp']);

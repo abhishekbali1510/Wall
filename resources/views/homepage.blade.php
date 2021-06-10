@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walls</title>
     <link rel="stylesheet" href="../stylesheets/homepage.css">
+   
+    
+
 </head>
 <body>
     <div id="blob1">
@@ -36,4 +39,5 @@
         </div>
     </div>
 </body>
+
 </html>
