@@ -14,28 +14,22 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="../../stylesheets/chat-bootstrap.css" />
+    <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../../stylesheets/style.css" />
-    <link rel="stylesheet" href="../../stylesheets/w3.css" />
-    <link rel="stylesheet" href="../../stylesheets/footbar.css">
-    <link rel="stylesheet" href="../../stylesheets/topbar.css">
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/w3.css" />
+    <link rel="stylesheet" href="stylesheets/footbar.css">
+    <link rel="stylesheet" href="stylesheets/topbar.css">
 </head>
 
 
 
 
 <body>
-<div id="footbar" class="glass">
-    <button><a href="404.html"><img src="../assets/Chat.png" alt="Chat"></a></button>
-    <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
-    <button><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
-    <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>
-    <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 70px; width: 70px; margin-left: -12px;" alt="New Wall"></a></button>
-  </div>
-  <x-topbar />
+
+  <!-- <x-topbar /> -->
   <!-- side bar for bigscreen(>600px) -->
-    <div style="margin-top:200px;">
+    <div id="firstDiv" >
         <div id="main" style="margin-left: 25%" class="col-1">
             <div>
                 <button id="openNav" class="w3-button w3-aqua w3-xlarge burger" onclick="w3_open()" style="display: none">
@@ -167,7 +161,7 @@
                             <div class='d-flex justify-content-start mb-4'>
                                 <div class='msg_cotainer'>
                                     <!-- <p>Hi there</p> -->
-                                    <!-- <span class='msg_time' id='time-L'>8:40 AM, Today</span> -->
+                                    <span class='msg_time' id='time-R'>8:40 AM, Today</span>
                                 </div>
                             </div>
                             <!-- received msgs div end -->
@@ -175,14 +169,14 @@
                             <div class='d-flex justify-content-end mb-4'>
                                 <div class='msg_cotainer_send' id='chat-S'>
                                     <!-- <p>Hi, how are you shivam?</p> -->
-                                    <!-- <span class='msg_time_send' id='time-R'></span> -->
+                                    <span class='msg_time_send' id='time-S'></span>
                                 </div>
                             </div>
                             <!-- send msg div  -->
                         </div>
                     </div>
                     <div class="card-footer">
-                        <form action="../msgSend" id="myForm" method="post">
+                        <form action="/../msgSend" id="myForm" method="post">
                             {{@csrf_field()}}
                             <div class="input-group">
                                 <input name="msg" class="form-control type_msg col-sm-12" placeholder="Type your message..." name="msg" id="msg">
@@ -200,7 +194,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../scripts/msginsert.js"></script>
     <script src="../scripts/displaychat.js"></script>
-    <script src="../js/sidebar.js"></script>
+    <script src="js/sidebar.js"></script>
     <script>
         function w3_open() {
             document.getElementById("main").style.marginLeft = "25%";
