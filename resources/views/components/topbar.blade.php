@@ -11,16 +11,9 @@
             <div class="projects">
                 <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>
                 <ul>
-<<<<<<< HEAD
-                    <li><a href="/../logout">Logout</a></li>
-                    <li><a href="#">Link #2</a></li>
-                    <li><a href="#">Link #3</a></li>
-                    <li><a href="#">Link #4</a></li>
-=======
                     <li><a href="#">Edit Profile</a></li>
                     <li><a href="#">Change Password</a></li>
                     <li><a href="#">Logout</a></li>
->>>>>>> 40bbccf52db01d817fa778f89de59e3919dda1a1
                 </ul>
                 <input type="text" name="search" id="search" placeholder="Search..">
             </div>
