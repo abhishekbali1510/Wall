@@ -23,18 +23,34 @@ class MessageController extends Controller
 
     public function show(Request $r)
     {
-        $allMessages = DB::select('select * from "messages" where "senderId" = ? and "receiverId" = ? or "senderId" = ? and "receiverId" = ?   ',[$r->session()->get('user'),$r->session()->get('receiver'),$r->session()->get('receiver'),$r->session()->get('user')]);// fucking thing
-        // return $r->session()->get('user');
-        return json_encode($allMessages);
-       //return view('message.displaychat',['datas'=>$allMessages]);
+        if($r->session()->get('login')=='true')
+        {
+            $allMessages = DB::select('select * from "messages" where "senderId" = ? and "receiverId" = ? or "senderId" = ? and "receiverId" = ?   ',[$r->session()->get('user'),$r->session()->get('receiver'),$r->session()->get('receiver'),$r->session()->get('user')]);// fucking thing
+            // return $r->session()->get('user');
+            return json_encode($allMessages);
+            //return view('message.displaychat',['datas'=>$allMessages]);
+        }
+        else
+        {
+            return redirect('../');
+        }
     }
 
     public function newIndex($receiver=null,Request $r)
     {
-        $r->session()->put('receiver',$receiver);
-        $users=User::all();
-        return view('message.index2',['users'=>$users]);
-        // return view('message.index2');
+        if($r->session()->get('login')=='true')
+        {
+
+            $r->session()->put('receiver',$receiver);
+            $users=User::all();
+            return view('message.index2',['users'=>$users]);
+            // return view('message.index2');
+
+        }
+        else
+        {
+            return redirect('../');
+        }
 
     }
 

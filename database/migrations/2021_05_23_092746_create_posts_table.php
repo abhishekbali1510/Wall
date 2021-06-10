@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration
             $table->id('postId');
             $table->string('wallName');
             $table->string('title');
+            $table->unsignedInteger('likes')->default(0);
+            $table->string('createdBy');
             $table->string('content')->nullable();
             $table->string('imgName')->nullable();
             $table->timestamps();

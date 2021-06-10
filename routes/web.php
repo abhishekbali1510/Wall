@@ -116,9 +116,6 @@ Route::get('/user',function()
     
 });
 
-//above routes session done 
-// Route::view('/msg','message.index');
-
 Route::post('/msgSend',[MessageController::class,'index']);
 
 Route::get('/msgShow',[MessageController::class,'show']);
@@ -126,4 +123,8 @@ Route::get('/msgShow',[MessageController::class,'show']);
 Route::get('/message/{receiver?}',[MessageController::class,'newindex']);
 
 Route::get('/testing',[messageController::class,'test']);//use for session data
+
+//session done
+
+Route::post()
 
