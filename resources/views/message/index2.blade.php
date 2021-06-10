@@ -18,12 +18,22 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/w3.css" />
+    <link rel="stylesheet" href="stylesheets/footbar.css">
 </head>
 
 
 
 
 <body>
+<div id="footbar" class="glass">
+    <button><a href="404.html"><img src="../assets/Chat.png" alt="Chat"></a></button>
+    <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
+    <button><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
+    <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>
+    <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 70px; width: 70px; margin-left: -12px;" alt="New Wall"></a></button>
+  </div>
+  <x-topbar />
+  <!-- side bar for bigscreen(>600px) -->
     <div style="margin-top:100px;">
         <div id="main" style="margin-left: 25%" class="col-1">
             <div>

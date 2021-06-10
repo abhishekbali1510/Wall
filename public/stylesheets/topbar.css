@@ -151,11 +151,6 @@ body{
     #walls{
         width: 100%;
     }
-    .burger{
-        position: fixed;
-        top:0px;
-        left:10px;
-    }
 }
 #navbar{
     top:0;

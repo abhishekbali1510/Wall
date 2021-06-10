@@ -104,8 +104,8 @@ hr{
     }
     #fixedButton {
         position: fixed;
-        bottom: 30px;
-        right: 40px; 
+        top: 30px;
+        right: 10px; 
     }
     .iconSideBar{
         width: 20px;
