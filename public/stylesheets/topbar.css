@@ -37,6 +37,10 @@ body{
     width: 30%;
 }
 
+#prj{
+    outline: none !important;
+}
+
 #prj img{
     height: 50px;
     width: 50px;
