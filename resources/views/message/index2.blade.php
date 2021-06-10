@@ -14,11 +14,11 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" />
+    <link rel="stylesheet" href="../../stylesheets/chat-bootstrap.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../stylesheets/style.css" />
-    <link rel="stylesheet" href="../stylesheets/w3.css" />
-    <link rel="stylesheet" href="stylesheets/footbar.css">
+    <link rel="stylesheet" href="../../stylesheets/style.css" />
+    <link rel="stylesheet" href="../../stylesheets/w3.css" />
+    <link rel="stylesheet" href="../../stylesheets/footbar.css">
     <link rel="stylesheet" href="../../stylesheets/topbar.css">
 </head>
 
@@ -198,9 +198,9 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../scripts/msginsert.js"></script>
-    <script src="../scripts/displaychat.js"></script>
-    <script src="js/sidebar.js"></script>
+    <script src="../../scripts/msginsert.js"></script>
+    <script src="../../scripts/displaychat.js"></script>
+    <script src="../../js/sidebar.js"></script>
     <script>
         function w3_open() {
             document.getElementById("main").style.marginLeft = "25%";
