@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Chat</title>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -19,23 +18,9 @@
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/w3.css" />
 </head>
-<!--Coded With Love By Mutiullah Samim-->
 
-<body>
 
-    <script src="./Chat_files/jquery.min.js"></script>
-    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
-    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>-->
 
-    <link href="./Chat_files/bootstrap.min(1).css" rel="stylesheet" id="bootstrap-css" />
-    <script src="./Chat_files/bootstrap.min.js"></script>
-    <script src="./Chat_files/jquery.min(1).js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="./Chat_files/style-chat.css" />
-    <link rel="stylesheet" href="./Chat_files/w3.css" />
-    <link rel="stylesheet" href="./Chat_files/style.css" />
-    <link rel="stylesheet" href="./Chat_files/w3(1).css" />
-    </head>
 
     <body>
         <div id="main" style="margin-left: 25%" class="col-1">

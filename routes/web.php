@@ -125,5 +125,5 @@ Route::get('/msgShow',[MessageController::class,'show']);
 
 Route::get('/message/{receiver?}',[MessageController::class,'newindex']);
 
-Route::get('/testing',[messageController::class,'test']);
+Route::get('/testing',[messageController::class,'test']);//use for session data
 
