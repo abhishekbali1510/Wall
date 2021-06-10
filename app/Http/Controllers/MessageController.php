@@ -31,10 +31,10 @@ class MessageController extends Controller
 
     public function newIndex($receiver=null,Request $r)
     {
-        $r->session()->put('receiver',$receiver);
-        $users=User::all();
-        return view('message.index2',['users'=>$users]);
-        // return view('message.index2');
+        // $r->session()->put('receiver',$receiver);
+        // $users=User::all();
+        // return view('message.index2',['users'=>$users]);
+         return view('message.index2');
 
     }
 

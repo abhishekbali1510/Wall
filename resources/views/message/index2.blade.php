@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Chat</title>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -22,20 +23,21 @@
 
 
 
-    <body>
+<body>
+    <div style="margin-top:100px;">
         <div id="main" style="margin-left: 25%" class="col-1">
             <div>
-                <button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" style="display: none">
+                <button id="openNav" class="w3-button w3-aqua w3-xlarge burger" onclick="w3_open()" style="display: none">
                     &#9776;
                 </button>
             </div>
         </div>
 
-        <div class="container-fluid h-100" style="top: -15px">
-            <div class="row justify-content-center h-100">
+        <div class="container-fluid" style="top: -15px">
+            <div class="row justify-content-center ">
                 <div class="chat" style="margin: 0;">
-                    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; width: 35%; background-color: #b7bee9" id="mySidebar">
-                        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">
+                    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9" id="mySidebar">
+                        <button class="w3-bar-item w3-button w3-large mart-100" onclick="w3_close()">
                             Close X
                         </button>
 
@@ -50,7 +52,7 @@
                             </div>
                             <div class="card-body contacts_body">
                                 <ui class="contacts">
-                                @foreach($users as $user)
+                                    @foreach($users as $user)
                                     <li class="active">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
@@ -118,7 +120,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-8 chat" id="chat-main" style="margin:0px;padding-left: 10px; top: 10px; height:400px">
+                <div class="col-12 col-sm-8 chat" id="chat-main" style=" margin: 0px;
+    padding-left: 10px;
+    top: -50px;
+    ">
                     <div class="card" id="card-main" style="margin:0%;">
                         <div class="card-header msg_head">
                             <div class="d-flex bd-highlight">
@@ -128,7 +133,7 @@
                                 </div>
                                 <div class="user_info">
                                     <span>{{session('receiver')}}</span>
-                                    
+
                                 </div>
                                 <div class="video_cam">
                                     <span><i class="fas fa-video"></i></span>
@@ -145,7 +150,7 @@
                                 </ul>
                             </div>
                         </div>
-                       
+
                         <div class="card-body msg_card_body" id="chat-F">
                             <!-- received messaged div start -->
                             <div class='d-flex justify-content-start mb-4'>
@@ -169,7 +174,7 @@
                         <form action="/../msgSend" id="myForm" method="post">
                             {{@csrf_field()}}
                             <div class="input-group">
-                                <textarea name="msg" class="form-control type_msg col-sm-2" placeholder="Type your message..." name="msg" id="msg"></textarea>
+                                <input name="msg" class="form-control type_msg col-sm-12" placeholder="Type your message..." name="msg" id="msg">
 
                                 <button type="submit" class="input-group-text send_btn" id="sub">
                                     <i class="fas fa-location-arrow">send</i>
@@ -180,25 +185,25 @@
                 </div>
             </div>
         </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../scripts/msginsert.js"></script>
+    <script src="../scripts/displaychat.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = "none";
+        }
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="../scripts/msginsert.js"></script>
-        <script src="../scripts/displaychat.js"></script>
-        <script src="js/sidebar.js"></script>
-        <script>
-            function w3_open() {
-                document.getElementById("main").style.marginLeft = "25%";
-                document.getElementById("mySidebar").style.width = "25%";
-                document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("openNav").style.display = "none";
-            }
-
-            function w3_close() {
-                document.getElementById("main").style.marginLeft = "0%";
-                document.getElementById("mySidebar").style.display = "none";
-                document.getElementById("openNav").style.display = "inline-block";
-            }
-        </script>
-    </body>
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+</body>
 
 </html>
