@@ -18,10 +18,11 @@
 
 <body>
   <div id="footbar" class="glass">
-  <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
-                <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
-                <button><a href="404.html"><img src="../assets/Latest.png" alt="Trending"></a></button>
-                <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 70px; width: 70px; margin-left: -12px;" alt="Trending"></a></button>
+    <button><a href="404.html"><img src="../assets/Chat.png" alt="Chat"></a></button>
+    <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
+    <button><a href="404.html"><img src="../assets/Loved.png" alt="Trending"></a></button>
+    <button><a href="404.html"><img src="../assets/Latest.png" alt="Trending"></a></button>
+    <button><a href="/createWall"><img src="../assets/NewWall.png" style="height: 70px; width: 70px; margin-left: -12px;" alt="Trending"></a></button>
   </div>
   <!-- modal -->
   <div id="id01" class="w3-modal">
