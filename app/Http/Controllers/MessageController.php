@@ -26,7 +26,7 @@ class MessageController extends Controller
         if($r->session()->get('login')=='true')
         {
             $allMessages = DB::select('select * from "messages" where "senderId" = ? and "receiverId" = ? or "senderId" = ? and "receiverId" = ?   ',[$r->session()->get('user'),$r->session()->get('receiver'),$r->session()->get('receiver'),$r->session()->get('user')]);// fucking thing
-            // return $r->session()->get('user');
+            return $r->session()->get('user');
             return json_encode($allMessages);
             //return view('message.displaychat',['datas'=>$allMessages]);
         }
