@@ -301,11 +301,9 @@ and (min-width : 321px) {
 
 @media screen and (max-width:600px) {
     
-    msg_card_body{
-        height: 100%;
-    }
+   
     .chat{
-        height: 800px;
+        height: 350px;
         top:-50px;
     }
     .burger{
@@ -315,6 +313,9 @@ and (min-width : 321px) {
     }
     #mySidebar{
         width: 90%;
+    }
+    #card-main{
+        margin-top: 50px;
     }
     
 }
