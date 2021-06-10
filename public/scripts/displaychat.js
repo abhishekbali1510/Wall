@@ -48,13 +48,13 @@ function displayALL(data) {
     for (var i = 0; i < data.length; i++) {
         if (condi2[0].sender === data[i].senderId) {
             console.log("sender cond.");
-            $("#chat-F").append("<div class='d-flex justify-content-end mb-4'> <div class='msg_cotainer_send' id='chat-S'> <p>" + data[i].content + "</p> <span class='msg_time_send' id='time-S'>"+data[i].created_at+" </span> </div> </div>");
+            $("#chat-F").append("<div class='d-flex justify-content-end mb-4'> <div class='msg_cotainer_send' id='chat-S'> <p>" + data[i].content + "</p> <span class='msg_time_send' id='time-S'> </span> </div> </div>");
            
         } //chat- :: Left side fo chat
 
         else if (condi2[0].receiver === data[i].senderId) {
             console.log("receiver cond.");
-            $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>" + data[i].content + "</p><span class='msg_time' id='time-R'>"+data[i].created_at+"</span></div></div>");
+            $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>" + data[i].content + "</p><span class='msg_time' id='time-R'></span></div></div>");
            
         } //chat- :: right side fo chat
 

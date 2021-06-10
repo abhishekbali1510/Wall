@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <form action="/../msgSend" id="myForm" method="post">
+                        <form action="../msgSend" id="myForm" method="post">
                             {{@csrf_field()}}
                             <div class="input-group">
                                 <input name="msg" class="form-control type_msg col-sm-12" placeholder="Type your message..." name="msg" id="msg">
@@ -198,9 +198,9 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../../scripts/msginsert.js"></script>
-    <script src="../../scripts/displaychat.js"></script>
-    <script src="../../js/sidebar.js"></script>
+    <script src="../scripts/msginsert.js"></script>
+    <script src="../scripts/displaychat.js"></script>
+    <script src="../js/sidebar.js"></script>
     <script>
         function w3_open() {
             document.getElementById("main").style.marginLeft = "25%";
