@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/w3.css" />
     <link rel="stylesheet" href="stylesheets/footbar.css">
+    <link rel="stylesheet" href="stylesheets/topbar.css">
 </head>
 
 
