@@ -79,6 +79,10 @@ img#output{
     cursor: pointer;
 }
 
+input#fileInp{
+    display: none;
+}
+
  @media(max-width: 500px){
     .container{
         flex-direction: column;
