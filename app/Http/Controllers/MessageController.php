@@ -38,6 +38,7 @@ class MessageController extends Controller
 
     public function newIndex($receiver=null,Request $r)
     {
+<<<<<<< HEAD
         if($r->session()->get('login')=='true')
         {
 
@@ -51,6 +52,12 @@ class MessageController extends Controller
         {
             return redirect('../');
         }
+=======
+        $r->session()->put('receiver',$receiver);
+        $users=User::all();
+        return view('message.index2',['users'=>$users]);
+        //  return view('message.index2');
+>>>>>>> 0164abda9d1efc8865edab816190ecd877c6f649
 
     }
 
