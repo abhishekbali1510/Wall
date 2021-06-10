@@ -11,15 +11,15 @@
             <div class="projects">
                 <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>
                 <ul>
-                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="/user">Edit Profile</a></li>
                     <li><a href="#">Change Password</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 </ul>
                 <input type="text" name="search" id="search" placeholder="Search..">
             </div>
             <span id="walls"><a href="/home">WALLS</a></span>
             <div class="shortcuts">
-                <button><a href="404.html"><img src="../assets/Chat.png" alt="Chat"></a></button>
+                <button><a href="/message"><img src="../assets/Chat.png" alt="Chat"></a></button>
                 <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
                 <button><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
                 <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>

@@ -65,6 +65,7 @@
                             </div>
                             <div class="card-body contacts_body">
                                 <ui class="contacts">
+                                @foreach($users as $user)
                                     <li class="active">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
@@ -72,12 +73,13 @@
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
-                                                <span>Shivam</span>
-                                                <p>Shivam is online</p>
+                                                <span>{{$user->userName}}</span>
+                                                <!-- <p>Shivam is online</p> -->
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    @endforeach
+                                    <!-- <li>
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
                                                 <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img" />
@@ -124,7 +126,7 @@
                                                 <p>Rashid left 50 mins ago</p>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ui>
                             </div>
                             <div class="card-footer"></div>
