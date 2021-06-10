@@ -82,6 +82,8 @@ hr{
   @media screen and (min-width:600px){
     #fixedButton {
        display: none;
+       bottom: 60px;
+       right: 10px;
     }
 }
 
@@ -104,8 +106,8 @@ hr{
     }
     #fixedButton {
         position: fixed;
-        top: 30px;
-        right: 10px; 
+        bottom: 90px;
+        right: 10px;
     }
     .iconSideBar{
         width: 20px;

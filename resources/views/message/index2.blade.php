@@ -35,7 +35,7 @@
   </div>
   <x-topbar />
   <!-- side bar for bigscreen(>600px) -->
-    <div style="margin-top:100px;">
+    <div style="margin-top:200px;">
         <div id="main" style="margin-left: 25%" class="col-1">
             <div>
                 <button id="openNav" class="w3-button w3-aqua w3-xlarge burger" onclick="w3_open()" style="display: none">

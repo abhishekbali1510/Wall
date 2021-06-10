@@ -308,7 +308,7 @@ and (min-width : 321px) {
     }
     .burger{
         position: fixed;
-        top:0px;
+        bottom:60px;
         left:10px;
     }
     #mySidebar{
