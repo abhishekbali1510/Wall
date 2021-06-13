@@ -54,6 +54,7 @@ class PostController extends Controller
         $post->title=$title;
         $post->wallName=$wallName;
         $post->content=$content;
+        $post->createdBy=$r->session()->get('user');
         $post->save();
         return redirect('/home');
     }
@@ -67,18 +68,18 @@ class PostController extends Controller
         $title=$r->input('title');
         $wallName=$r->input('wallName');
         $imgName=($wallName.".".$title);
+        $content=$r->input('content');
         $r->file('img')->storeAs('public/images/posts',$imgName);
 
         $post= new Post;
         $post->title=$title;
         $post->wallName=$wallName;
-        if(!empty($r->input('content')))
-        {
-            $content=$r->input('content');
-            $post->content=$content;
-        }
-        $post->imgName=$imgName;
         
+        
+        $post->content=$content;
+        
+        $post->imgName=$imgName;
+        $post->createdBy=$r->session()->get('user');
         $post->save();
         return redirect('/home');
     }

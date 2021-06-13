@@ -30,7 +30,7 @@
                 Drop files fere to upload
             </div>
             <input type="file" name="img" id="fileUploadBtn">
-            <input type="text" name="caption" id="caption-field" placeholder="Enter Caption">
+            <input type="text" name="content" id="caption-field" placeholder="Enter Caption">
             <input type="submit" value="Post">
         </form>
     </div>
