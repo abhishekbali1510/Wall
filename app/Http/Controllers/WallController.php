@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Wall;
+use App\Models\Post;
+use DB;
 use Illuminate\Http\Request;
 
 class WallController extends Controller
@@ -17,9 +19,7 @@ class WallController extends Controller
         if($checkName!=1)
         {
             $r->file('img')->storeAs('public/images/wall',$name);
-            $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
-
-            
+                       
 
             $wall=new Wall;
             $wall->name=$name;
@@ -42,7 +42,9 @@ class WallController extends Controller
             if(wall::where('name',$wallName)->exists())
             {
                 $wall=Wall::where('name',$wallName)->first();
-                return view('showWall',['wall'=>$wall]);
+                $posts=DB::select('select * from "posts" where "wallName" = ?',[$wallName]);
+                //return json_encode($posts);
+                 return view('showWall',['wall'=>$wall,'posts'=>$posts]);
             }
             else
             {

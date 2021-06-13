@@ -27,21 +27,21 @@
 
 <body>
 
-  <!-- <x-topbar /> -->
-  <!-- side bar for bigscreen(>600px) -->
-    <div id="firstDiv" >
+    <x-topbar />
+    <!-- side bar for bigscreen(>600px) -->
+    <div id="firstDiv">
         <div id="main" style="margin-left: 25%" class="col-1">
-            <div>
+            <!-- <div>
                 <button id="openNav" class="w3-button w3-aqua w3-xlarge burger" onclick="w3_open()" style="display: none">
                     &#9776;
                 </button>
-            </div>
+            </div> -->
         </div>
 
         <div class="container-fluid" style="top: -15px">
             <div class="row justify-content-center ">
                 <div class="chat" style="margin: 0;">
-                    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9" id="mySidebar">
+                    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9;" id="mySidebar">
                         <button class="w3-bar-item w3-button w3-large mart-100" onclick="w3_close()">
                             Close X
                         </button>
@@ -140,12 +140,16 @@
                                     <span>{{session('receiver')}}</span>
 
                                 </div>
-                                <div class="video_cam">
+                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" style="display: inline-block;right: 0;">
+                                        ☰
+                                    </button></div>
+                                <!-- video call and voice call icons  -->
+                                <!-- <div class="video_cam">
                                     <span><i class="fas fa-video"></i></span>
                                     <span><i class="fas fa-phone"></i></span>
-                                </div>
+                                </div> -->
                             </div>
-                            <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+
                             <div class="action_menu">
                                 <ul>
                                     <li><i class="fas fa-user-circle"></i> View profile</li>
@@ -161,18 +165,19 @@
                             <div class='d-flex justify-content-start mb-4'>
                                 <div class='msg_cotainer'>
                                     <!-- <p>Hi there</p> -->
-                                    <span class='msg_time' id='time-R'>8:40 AM, Today</span>
+                                    <!-- <span class='msg_time' id='time-R'>8:40 AM, Today</span> -->
                                 </div>
                             </div>
                             <!-- received msgs div end -->
-                            <!-- send msg div -->
+                            <!-- sent msg div -->
                             <div class='d-flex justify-content-end mb-4'>
                                 <div class='msg_cotainer_send' id='chat-S'>
+
                                     <!-- <p>Hi, how are you shivam?</p> -->
-                                    <span class='msg_time_send' id='time-S'></span>
+                                    <!-- <span class='msg_time_send' id='time-S'></span> -->
                                 </div>
                             </div>
-                            <!-- send msg div  -->
+                            <!-- sent msg div  -->
                         </div>
                     </div>
                     <div class="card-footer">

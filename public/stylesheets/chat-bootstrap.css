@@ -270,6 +270,13 @@ and (min-width : 321px) {
 .mart-100 {
     margin-top: 100px;
 }
+
+#chat-S{
+ max-width: 60%;;
+}
+#time-S{
+    min-width: 100px;
+}
 /* 
 .chat{
     
@@ -282,36 +289,40 @@ and (min-width : 321px) {
 .burger{
     //margin-top: 100px;
 } */
+#mySidebar {
+    width: 50% !important;
+}
 
 @media screen and (min-width: 601px) {
     .chat {
         height: 400px;
     }
-    #mySidebar {
-        width: 90%;
-    }
+   
     #firstDiv{
-        margin-top: 100px;
+        margin-top: 150px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .chat {
-        height: 350px;
+        height: 400px;
         top: -50px;
     }
     .burger {
         position: fixed;
-        top: 75px;
+        bottom: 0px;
         left: 10px;
     }
-    #mySidebar {
-        width: 90%;
-    }
+   
     #card-main {
-        margin-top: 50px;
+        margin-top: 0px;
     }
     #firstDiv{
-        margin-top: 200px;
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width:425px){
+    .offset-sm-2{
+        margin-left: 18%;
     }
 }
