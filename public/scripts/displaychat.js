@@ -21,7 +21,7 @@ return condi;
 var scrolled = false; //to check if user is crolling 
 function updateScroll(){
    
-        var element = document.getElementById("msg");
+        var element = document.getElementById("chat-F");
         element.onscroll = function(){
             scrolled = true;
         }
@@ -29,7 +29,7 @@ function updateScroll(){
         element.scrollTop = element.scrollHeight;
        else{
        setTimeout(function(){scrolled=false;},3000)
-       
+    //    scrolled= isscroll(element);
 }
 }
 
@@ -60,7 +60,7 @@ function displayALL(data) {
 
 
     }
-    this.scrollTop = this.scrollHeight - this.clientHeight;
+    updateScroll();
 }
 
 
@@ -107,7 +107,7 @@ setInterval(function () {
                // $("#chat").append ="<li>"+data[cou].msg+"</li>"
                 sessionStorage.count= data.length;
                 //console.log("dt cond: "+ data.length+ " sess" + sessionStorage.count)
-               updateScroll();
+              // updateScroll();
             }
            
 
@@ -124,6 +124,17 @@ $("#chat-F").click(function(){
     scrolled=false;
             
   });
+
+// function isscroll(element){
+//     var ret;
+//     $("#chat-F").click(function(){
+//         this.scrollTop = this.scrollHeight - this.clientHeight;
+//         //scrolled =false;
+//         // scrolled=false;
+//                 ret=false;
+//       });
+//       return ret;
+// }
 console.log(3);
 console.log(4);
 
