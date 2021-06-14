@@ -124,6 +124,9 @@ Route::get('/message/{receiver?}',[MessageController::class,'newindex']);
 
 Route::get('/testing',[messageController::class,'test']);//use for session data
 
+Route::get('/updatePassLogin',[UserController::class,'updatePassLogin']);
+
+Route::post('/updatePassLogin',[UserController::class,'updatePassLoginPost']);
 //session done
 
 
