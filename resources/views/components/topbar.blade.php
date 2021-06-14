@@ -12,7 +12,7 @@
                 <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>
                 <ul>
                     <li><a href="/user">Edit Profile</a></li>
-                    <li><a href="#">Change Password</a></li>
+                    <li><a href="/updatePassLogin">Change Password</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>
                 <input type="text" name="search" id="search" placeholder="Search..">

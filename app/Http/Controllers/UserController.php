@@ -208,5 +208,38 @@ class UserController extends Controller
             return redirect('/reset');
         }
     }
+
+    public function updatePassLogin(Request $r)
+    {
+        if($r->session()->has('login'))
+        {
+            //return json_encode($checkPass);
+            return view('updatePass');
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+    public function updatePassLoginPost(Request $r)
+    {
+        $oldPass=$r->input('oldPass');
+        $newPass2=$r->input('newPass');
+        $checkPass=User::where('userName',$r->session()->get('user'))->value('password');
+        // return json_encode($oldPass);
+
+        if($oldPass==$checkPass)
+        {
+        $user=User::where('userName',$r->session()->get('user'))->first();
+        $user->password=$newPass2;
+        $user->save();
+        return redirect('/home');
+        }
+        else
+        {
+            $r->session()->flash('error','Old pawwsord not match');
+            return redirect()->back();
+        }
+    }
     
 }
