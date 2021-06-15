@@ -164,7 +164,7 @@
                             <!-- received messaged div start -->
                             <div class='d-flex justify-content-start mb-4'>
                                 <div class='msg_cotainer'>
-                                    <!-- <p>Hi there</p> -->
+                                    <p>Select a Chat to send message</p> -->
                                     <!-- <span class='msg_time' id='time-R'>8:40 AM, Today</span> -->
                                 </div>
                             </div>

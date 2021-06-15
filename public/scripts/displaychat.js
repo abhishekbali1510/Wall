@@ -6,9 +6,9 @@ const condition = async () => {
     const res = await fetch('/testing');
     var condi = "";
     // console.log("\n");
-    // console.log('respon json \n');
+    console.log('respon json \n');
 
-    // console.log(condi);
+    console.log(condi);
     // console.log("\n");
     condi = await res.json();
     condi2 = condi;
@@ -37,44 +37,54 @@ $("#chat-F").on('scroll', function () {
     scrolled = true;
 });
 function displayALL(data) {
-
-    console.log("var and data len before :" + len + " : " + data.length);
-    if (len < data.length) {
+    if (condi2[0].receiver === null) {
         $("#chat-F").empty();
-        console.log('displayALL fun');
-        var con = condition();
-        // console.log("condi2");
-        console.log(condi2);
-        // console.log(condi2[0].sender);
-        // console.log(data[0].senderId);
-        // console.log(condi2[0].receiver);
-        // console.log(data[0].receiverId);
-        for (var i = 0; i < data.length; i++) {
-            if (condi2[0].sender === data[i].senderId) {
-                console.log("sender cond.");
-                $("#chat-F").append("<div class='d-flex justify-content-end mb-4'> <div class='msg_cotainer_send' id='chat-S'> <p>" + data[i].content + "</p> <span class='msg_time_send' id='time-S'>" + data[i].created_at + " </span> </div> </div>");
-
-            } //chat- :: Left side fo chat
-
-            else if (condi2[0].receiver === data[i].senderId) {
-                console.log("receiver cond.");
-                $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>" + data[i].content + "</p><span class='msg_time' id='time-R'>" + data[i].created_at + "</span></div></div>");
-
-            } //chat- :: right side fo chat
-
-
-        }
-        // $("#chat-F").scrollTop = $("#chat-F").scrollHeight - $("#chat-F").clientHeight;
-        scrolled=false;
-        updateScroll();
+        $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>select a chat & send message </p></div></div>");
+        // console.log("print cmd "+ condi2[0].receiver);
     }
-    len = data.length;
+    else {
+        console.log("var and data len before :" + len + " : " + data.length);
+        if (len < data.length) {
 
-    console.log("var and data len after :" + len + " : " + data.length);
 
-   
+            $("#chat-F").empty();
+
+            console.log('displayALL fun');
+            var con = condition();
+            // console.log("condi2");
+            console.log(condi2);
+            // console.log(condi2[0].sender);
+            // console.log(data[0].senderId);
+            // console.log(condi2[0].receiver);
+            // console.log(data[0].receiverId);
+            for (var i = 0; i < data.length; i++) {
+                if (condi2[0].sender === data[i].senderId) {
+                    console.log("sender cond.");
+                    $("#chat-F").append("<div class='d-flex justify-content-end mb-4'> <div class='msg_cotainer_send' id='chat-S'> <p>" + data[i].content + "</p> <span class='msg_time_send' id='time-S'>" + data[i].created_at + " </span> </div> </div>");
+
+                } //chat- :: right side fo chat
+
+                else if (condi2[0].receiver === data[i].senderId) {
+                    console.log("receiver cond.");
+                    $("#chat-F").append("<div class='d-flex justify-content-start mb-4'> <div class='msg_cotainer'><p>" + data[i].content + "</p><span class='msg_time' id='time-R'>" + data[i].created_at + "</span></div></div>");
+
+                } //chat- :: left side fo chat
+
+
+
+
+            }
+            // $("#chat-F").scrollTop = $("#chat-F").scrollHeight - $("#chat-F").clientHeight;
+            scrolled = false;
+            updateScroll();
+        }
+        len = data.length;
+
+        console.log("var and data len after :" + len + " : " + data.length);
+
+
+    }
 }
-
 
 $.ajaxSetup({
     headers: {

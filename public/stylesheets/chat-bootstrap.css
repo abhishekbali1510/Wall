@@ -125,6 +125,7 @@ html {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
+    max-width: 98px;
 }
 .user_info span {
     font-size: 20px;
@@ -277,7 +278,15 @@ and (min-width : 321px) {
 #time-S{
     min-width: 100px;
 }
-/* 
+
+#chat-R{
+    max-width: 60%;;
+   }
+   #time-R{
+       min-width: 100px;
+   }
+/*
+
 .chat{
     
     margin: 0px;
