@@ -11,6 +11,11 @@ class WallController extends Controller
 {
     public function store(Request $r)
     {
+        $r->validate([
+            'wallName'=>'required|max:50',
+            'img'=>'required',
+            'bio'=>'required|max:250',
+        ]);
         $name=$r->input('wallName');
         $imgName=$r->file('img')->getClientOriginalName();
         $bio=$r->input('bio');

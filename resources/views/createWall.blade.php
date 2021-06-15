@@ -12,10 +12,17 @@
     {{@csrf_field()}}
     <input id="fileInp" type="file" name='img' accept="image/*" onchange="loadFile(event)">
     <img src="../assets/Wall.png" id="output"/>
-
+        @error('img')
+          {{$message}}
+        @enderror
         <input class="field" type="text"  name="wallName" placeholder="Enter Wall name">
+        @error('wallName')
+          {{$message}}
+        @enderror
         <textarea name="bio" id="content-field" cols="30" rows="3" placeholder="Tell us about your wall"></textarea>
-        
+        @error('bio')
+          {{$message}}
+        @enderror
         <span class="error">
         {{session('error')}}
         </span>

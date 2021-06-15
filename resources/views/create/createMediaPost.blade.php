@@ -19,6 +19,9 @@
         {{csrf_field()}}
             <div class="row1">
                 <input type="text" name="title" id="title-field" placeholder="Title of post">
+                @error('title')
+                    {{$message}}
+                @enderror
                 <select name="wallName" id="wall-field">
                 @foreach($walls as $wall)
                     <option value="{{$wall->name}}">{{$wall->name}}</option>
@@ -31,6 +34,9 @@
             </div>
             <input type="file" name="img" id="fileUploadBtn">
             <input type="text" name="content" id="caption-field" placeholder="Enter Caption">
+            @error('content')
+                {{$message}}
+            @enderror
             <input type="submit" value="Post">
         </form>
     </div>

@@ -13,19 +13,19 @@ use Illuminate\Http\Request;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| Here is where you can register web Routes for your application. These
+| Routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
 
 
 
-route::get('/login',[UserController::class,'login']);
+Route::get('/login',[UserController::class,'login']);
 
-route::post('/loginCheck',[UserController::class,'check']);
+Route::post('/loginCheck',[UserController::class,'check']);
 
-route::get('/register',function(){
+Route::get('/register',function(){
     if(session()->get('login')=="true")
     return redirect('/home');
     else
@@ -46,7 +46,7 @@ Route::post('/checkOtp',[UserController::class,'checkOtp']);
 
 Route::view('/test3','UserProfile');
 
-route::get('/',function(){
+Route::get('/',function(){
     if(session()->get('login')=="true")
     return redirect('/home');
     else

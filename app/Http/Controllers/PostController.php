@@ -43,7 +43,7 @@ class PostController extends Controller
         $r->validate([
             'title'=>'required',
             'wallName'=>'required',
-            'content'=>'required',
+            'content'=>'required|max:255',
         ]);
         $title=$r->input('title');
         $wallName=$r->input('wallName');
@@ -63,11 +63,14 @@ class PostController extends Controller
     {
         $r->validate([
             'title'=>'required',
+            'content'=>'max:255',
             
         ]);
+        $lstId=Post::latest()->first();
+        $lstId2=$lstId->postId+1;
         $title=$r->input('title');
         $wallName=$r->input('wallName');
-        $imgName=($wallName.".".$title);
+        $imgName=($wallName.".".$title.".".$lstId2);
         $content=$r->input('content');
         $r->file('img')->storeAs('public/images/posts',$imgName);
 
