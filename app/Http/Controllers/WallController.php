@@ -62,4 +62,11 @@ class WallController extends Controller
     
         }
     }
+
+    public function delete($id)
+    {
+        $post=Post::where('postId',$id)->firstorfail();
+        $post->delete();
+        return "deleted"."$id";///incomplete: delete a wall and delete all its post
+    }
 }

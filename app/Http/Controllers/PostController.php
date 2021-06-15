@@ -86,4 +86,11 @@ class PostController extends Controller
         $post->save();
         return redirect('/home');
     }
+
+    public function delete($id)
+    {
+        $post=Post::where('postId',$id)->firstorfail();
+        $post->delete();
+        return "deleted"."$id";
+    }
 }

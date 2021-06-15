@@ -127,7 +127,7 @@ Route::get('/testing',[messageController::class,'test']);//use for session data
 Route::get('/updatePassLogin',[UserController::class,'updatePassLogin']);
 
 Route::post('/updatePassLogin',[UserController::class,'updatePassLoginPost']);
+
+
 //session done
-
-
-
+Route::delete('/deletePost/{id}',[PostController::class,'delete']);
