@@ -289,9 +289,7 @@ and (min-width : 321px) {
 .burger{
     //margin-top: 100px;
 } */
-#mySidebar {
-    width: 50% !important;
-}
+
 
 @media screen and (min-width: 601px) {
     .chat {
@@ -300,6 +298,9 @@ and (min-width : 321px) {
    
     #firstDiv{
         margin-top: 150px;
+    }
+    #mySidebar {
+        width: 25% ;
     }
 }
 
@@ -320,9 +321,46 @@ and (min-width : 321px) {
     #firstDiv{
         margin-top: 150px;
     }
+    #mySidebar {
+        width: 75% ;
+    }
 }
-@media screen and (max-width:425px){
+@media screen and (max-width:360px){
     .offset-sm-2{
-        margin-left: 18%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width:430px){
+    .offset-sm-2{
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width:775px){
+    .offset-sm-2{
+        margin-left: 50%;
+    }
+}
+
+@media screen and (max-width:330px){
+    .offset-sm-2{
+        margin-left: 10%;
+    }
+}
+@media screen and (min-width:1010px){
+    .offset-sm-2{
+        margin-left: 65%;
+    }
+}
+@media screen and (min-width:1430px){
+    .offset-sm-2{
+        margin-left: 75%;
+    }
+}
+
+@media screen and (min-width:2550px){
+    .offset-sm-2{
+        margin-left: 80%;
     }
 }

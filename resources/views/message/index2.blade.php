@@ -140,7 +140,7 @@
                                     <span>{{session('receiver')}}</span>
 
                                 </div>
-                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" style="display: inline-block;right: 0;">
+                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" >
                                         ☰
                                     </button></div>
                                 <!-- video call and voice call icons  -->
@@ -203,7 +203,7 @@
     <script>
         function w3_open() {
             document.getElementById("main").style.marginLeft = "25%";
-            document.getElementById("mySidebar").style.width = "25%";
+            // document.getElementById("mySidebar").style.width = "25%";
             document.getElementById("mySidebar").style.display = "block";
             document.getElementById("openNav").style.display = "none";
         }
