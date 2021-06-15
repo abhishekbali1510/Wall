@@ -175,7 +175,7 @@
 
   <x-topbar />
   <!-- side bar for bigscreen(>600px) -->
-  <div class="container-fluid " style="margin-top: 1.75rem;">
+  <div class="container-fluid " style="margin-bottom: 5.75rem;">
     <div class="main-body">
 
       <div class="row gutters-sm">
