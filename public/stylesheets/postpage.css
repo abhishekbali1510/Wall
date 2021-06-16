@@ -123,4 +123,13 @@ input{
     .li-cont{
         margin-bottom:30px;
     }
+
+    .btm-mrgn{
+        margin-bottom: 10vh;
+    }
+
+    .w3-sidebar{
+        margin-left: 4.5vw;
+        margin-top: -2vh;
+    }
 }

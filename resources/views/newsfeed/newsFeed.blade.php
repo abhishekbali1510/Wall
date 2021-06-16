@@ -178,7 +178,7 @@
   <div class="container-fluid " style="margin-bottom: 5.75rem;">
     <div class="main-body">
 
-      <div class="row gutters-sm">
+      <div class="row gutters-sm btm-mrgn">
 
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem" id="sideBar">
           <h3 class="w3-bar-item">Menu</h3>
