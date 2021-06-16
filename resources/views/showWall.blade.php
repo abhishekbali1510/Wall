@@ -39,9 +39,9 @@
         <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
           <ul class="rules">
-            <strong>Wall Rules:</strong>
-            <li>Do not post abusive content!</li>
-            <li>Do not post NSFW!</li>
+            <strong>Wall Members:</strong>
+            <li><a href="">User1</a></li>
+            <li><a href="">User2</a></li>
           </ul>
 
       </div><br>
@@ -195,9 +195,9 @@
           <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
           <ul class="rules">
-            <strong>Wall Rules:</strong>
-            <li>Do not post abusive content!</li>
-            <li>Do not post NSFW!</li>
+          <strong>Wall Members:</strong>
+            <li><a href="">User1</a></li>
+            <li><a href="">User2</a></li>
           </ul>
         </div>
 

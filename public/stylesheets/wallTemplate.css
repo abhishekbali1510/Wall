@@ -85,6 +85,8 @@ hr{
 /* freakingud start*/
 
 .rules{
+    list-style: none;
+    text-decoration: none;
     padding: 20px;
 }
 
