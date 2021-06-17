@@ -23,6 +23,8 @@ class CreateUserDetailsTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('insta')->nullable();
             $table->string('facebook')->nullable();
+            $table->json('friends')->nullable();
+            $table->json('follow')->nullable();
             $table->timestamps();
         });
     }

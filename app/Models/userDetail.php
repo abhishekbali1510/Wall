@@ -9,4 +9,8 @@ class userDetail extends Model
 {
     use HasFactory;
     protected $primaryKey = 'userId';
+    protected $casts = [
+        'friends'=>'array',
+        'follow'=>'array'
+    ];
 }

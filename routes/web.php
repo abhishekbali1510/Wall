@@ -131,3 +131,5 @@ Route::post('/updatePassLogin',[UserController::class,'updatePassLoginPost']);
 
 //session done
 Route::delete('/deletePost/{id}',[PostController::class,'delete']);
+
+Route::delete('/deleteWall/{id}'[WallController::class,'delete']);
