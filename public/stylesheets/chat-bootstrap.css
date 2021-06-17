@@ -348,7 +348,7 @@ and (min-width : 321px) {
 
 @media screen and (max-width:775px){
     .offset-sm-2{
-        margin-left: 50%;
+        margin-left: 30%;
     }
 }
 
