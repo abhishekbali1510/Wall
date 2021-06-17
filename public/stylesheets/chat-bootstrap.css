@@ -339,16 +339,16 @@ and (min-width : 321px) {
         margin-left: 10%;
     }
 }
-
-@media screen and (max-width:430px){
+/* 
+@media screen and (min-width:375px) and (max-width:430px){
     .offset-sm-2{
-        margin-left: 15%;
+        margin-left: 35%;
     }
-}
+} */
 
 @media screen and (max-width:775px){
     .offset-sm-2{
-        margin-left: 30%;
+        margin-left: 35%;
     }
 }
 
