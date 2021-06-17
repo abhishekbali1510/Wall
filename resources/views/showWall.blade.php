@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
   <link rel="stylesheet" href="../stylesheets/wallTemplate.css" />
-  <link rel="stylesheet" href="../stylesheets/postpage.css">
+  <link rel="stylesheet" href="../stylesheets/page.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../stylesheets/footbar.css">
 
@@ -29,7 +29,10 @@
     <div class=" w3-card-4 w3-animate-zoom" style="max-width:600px">
 
 
-      <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
+      <div class="w3-sidebar w3-bar-block round glass" style="width: 90%;
+    margin: 0 auto;
+    margin-left: 5%;
+    background: rgba( 255, 255, 255, 0.8 );" id="pqr">
       <span id="wallHead">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
           <img id="wallImg" src="{{ asset('storage/images/wall/'.$wall->imgName) }}">
