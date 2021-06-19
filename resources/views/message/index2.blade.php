@@ -140,7 +140,7 @@
                                     <span>{{session('receiver')}}</span>
 
                                 </div>
-                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" >
+                                <div class="offset-lg-8 offset-md-6 offset-sm-2" style="position: absolute;margin: 0;right: 20px;"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" >
                                         ☰
                                     </button></div>
                                 <!-- video call and voice call icons  -->
