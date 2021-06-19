@@ -41,6 +41,10 @@
         <p class="wall-description">{{$wall->bio}}</p>
         <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
+          <!-- hide follow wall for user who created the wall -->
+          <!-- show "Unfollow" for those who already follow the wall -->
+          <a href="#" class="w3-bar-item w3-button">Delete Wall</a> 
+          <!-- show delete wall only to user who created the wall -->
           <ul class="rules">
             <strong>Wall Members:</strong>
             <li><a href="">User1</a></li>
@@ -189,7 +193,7 @@
 
       <div class="row gutters-sm">
 
-        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 50px;" id="sideBar">
+        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 20px;" id="sideBar">
         <span id="wallHead">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
           <img id="wallImg" src="{{ asset('storage/images/wall/'.$wall->imgName) }}">
@@ -197,6 +201,10 @@
           <p class="wall-description">{{$wall->bio}}</p>
           <a href="#" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
           <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
+          <!-- hide follow wall for user who created the wall -->
+          <!-- show "Unfollow" for those who already follow the wall -->
+          <a href="#" class="w3-bar-item w3-button">Delete Wall</a> 
+          <!-- show delete wall only to user who created the wall -->
           <ul class="rules">
           <strong>Wall Members:</strong>
             <li><a href="">User1</a></li>

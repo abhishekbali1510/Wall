@@ -129,7 +129,7 @@ input{
     }
 
     .w3-sidebar{
-        margin-left: 4.5vw;
-        margin-top: -2vh;
+        margin-left: 4.5vw !important;
+        margin-top: -2vh !important;
     }
 }
