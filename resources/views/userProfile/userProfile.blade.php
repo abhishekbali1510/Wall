@@ -85,10 +85,11 @@
 
 
 
-      <form class="w3-container" action="/action_page.php">
+      <form class="w3-container" method="post" action="/bioChange">
+        {{@csrf_field()}}
         <div class="w3-section">
           <label><b>Bio</b></label>
-          <textarea class="w3-input w3-border w3-margin-bottom" type="text" placeholder="I am ..." name="bio"></textarea>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" value="{{$details->bio}}" name="bio"></input>
 
           <button class="w3-button w3-block w3-section w3-padding" type="submit">Change</button>
         </div>
@@ -112,15 +113,16 @@
               <div class="d-flex flex-column align-items-center text-center">
                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150" />
                 <div class="mt-3">
-                  <h4 class="w3-hover-text-aqua font-weight-bold">User_name</h4>
+                <h4 class="w3-hover-text-aqua font-weight-bold">full name</h4>
+                  <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->userName}}</h4>
                   <!-- <p class="mb-1">User_name</p> -->
                   <p class="font-weight-bold font-size-sm">
-                    Email@email
+                    {{$details->email}}
                   </p>
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
 
-                  <button class="btn btn-outline-primary">Message</button>
+                  <button class="btn btn-outline-primary" href="/message/{{$details->userName}}">Message</button>
                 </div>
               </div>
             </div>
@@ -243,23 +245,13 @@
             </div>
             <hr />
             <div class="row m-2">
-              <div class="col-sm-3">
-                <h6 class="mb-0 ">Bio Disc</h6>
-              </div>
+              
+                <h6 > {{$details->bio}} </h6>
+              
 
             </div>
-            <div class="row m-2">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Bio Disc</h6>
-              </div>
-
-            </div>
-            <div class="row m-2">
-              <div class="col-sm-3">
-                <h6 class="mb-0">Bio Disc</h6>
-              </div>
-
-            </div>
+           
+            
 
             <hr />
             <div class="row">

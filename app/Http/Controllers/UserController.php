@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\userDetail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
@@ -141,6 +142,13 @@ class UserController extends Controller
             $newUser->email=$r->session()->get('mail');
             $newUser->password=$r->session()->get('password');
             $newUser->save();
+
+            //user details
+            $newUserDetails=new userDetail;
+            $newUserDetails->userName=$r->session()->get('userName');
+            $newUserDetails->email=$r->session()->get('mail');
+            $newUserDetails->save();
+            
             // $r->session()->put('login','true');
             $r->session()->forget('register');
             $r->session()->forget('password');

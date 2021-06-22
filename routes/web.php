@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserDetailController;
 use App\Http\Controllers\WallController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\MessageController;
@@ -103,18 +104,7 @@ Route::post('/create',[PostController::class,'store']);
 
 Route::post('/createMedia',[PostController::class,'storeMedia']);
 
-Route::get('/user',function()
-{
-    // if(session()->get('login')=="true")
-    // {
-        return view('userProfile.userProfile');
-    // }
-    // else
-    // {
-    //     return redirect('/');   
-    // }
-    
-});
+Route::get('/user',[UserDetailController::class,'index']);
 
 Route::post('/msgSend',[MessageController::class,'index']);
 
@@ -128,7 +118,7 @@ Route::get('/updatePassLogin',[UserController::class,'updatePassLogin']);
 
 Route::post('/updatePassLogin',[UserController::class,'updatePassLoginPost']);
 
-
+Route::post('/bioChange',[UserDetailController::class,'bio']);
 //session done
 Route::delete('/deletePost/{id}',[PostController::class,'delete']);
 
