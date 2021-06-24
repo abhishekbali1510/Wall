@@ -104,7 +104,11 @@ Route::post('/create',[PostController::class,'store']);
 
 Route::post('/createMedia',[PostController::class,'storeMedia']);
 
-Route::get('/user',[UserDetailController::class,'index']);
+Route::get('/user/{userName}',[UserDetailController::class,'index']);
+
+route::get('/user',function(Request $r){
+return redirect("/user/{$r->session()->get('user')}");
+});
 
 Route::post('/msgSend',[MessageController::class,'index']);
 
@@ -119,6 +123,10 @@ Route::get('/updatePassLogin',[UserController::class,'updatePassLogin']);
 Route::post('/updatePassLogin',[UserController::class,'updatePassLoginPost']);
 
 Route::post('/bioChange',[UserDetailController::class,'bio']);
+
+Route::post('/fullName',[UserDetailController::class,'fullName']);
+
+Route::post('/social',[UserDetailController::class,'social']);
 //session done
 Route::delete('/deletePost/{id}',[PostController::class,'delete']);
 

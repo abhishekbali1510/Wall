@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-  <link rel="stylesheet" href="stylesheets/user-profile.css" />
+  <link rel="stylesheet" href="../stylesheets/user-profile.css" />
 </head>
 
 <body style="background : linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);">
@@ -22,16 +22,17 @@
         <span onclick="document.getElementById('userContacts').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
       </div>
 
-      <form class="w3-container" action="/action_page.php">
+      <form class="w3-container" method="post" action="/social">
+      {{@csrf_field()}}
         <div class="w3-section">
 
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Git" name="Git">
+          <input class="w3-input w3-border w3-margin-bottom" value="{{$details->github}}" type="text" placeholder="Git" name="git">
 
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Twitter" name="Twitter">
+          <input class="w3-input w3-border w3-margin-bottom" value="{{$details->twitter}}" type="text" placeholder="Twitter" name="twitter">
 
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Instagram" name="Instagram">
+          <input class="w3-input w3-border w3-margin-bottom" value="{{$details->insta}}" type="text" placeholder="Instagram" name="instagram">
 
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Facebook" name="Facebook">
+          <input class="w3-input w3-border w3-margin-bottom" value="{{$details->facebook}}" type="text" placeholder="Facebook" name="facebook">
 
 
           <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Confirm</button>
@@ -58,13 +59,14 @@
         <!-- <img src="https://fictionhorizon.com/wp-content/uploads/2021/03/Itachi-Uchiha-1-768x404.jpg" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
       </div>
 
-      <form class="w3-container" action="/action_page.php">
+      <form class="w3-container" method="post" action="/fullName">
+      {{@csrf_field()}}
         <div class="w3-section">
           <label><b>First name</b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter First name" name="fname"> <label><b>last name</b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter last name" name="lname">
-          <label><b>Password</b></label>
-          <input class="w3-input w3-border" type="password" placeholder="Confirm Password" name="psw" required>
+          <!-- <label><b>Password</b></label>
+          <input class="w3-input w3-border" type="password" placeholder="Confirm Password" name="psw" required> -->
           <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Change</button>
 
         </div>
@@ -113,15 +115,18 @@
               <div class="d-flex flex-column align-items-center text-center">
                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150" />
                 <div class="mt-3">
-                <h4 class="w3-hover-text-aqua font-weight-bold">full name</h4>
+                <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->fullName}}</h4>
                   <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->userName}}</h4>
                   <!-- <p class="mb-1">User_name</p> -->
                   <p class="font-weight-bold font-size-sm">
                     {{$details->email}}
                   </p>
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
+                  @if($user)
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
-
+                  @else
+                  <!-- button to friend add -->
+                  @endif
                   <button class="btn btn-outline-primary" href="/message/{{$details->userName}}">Message</button>
                 </div>
               </div>
@@ -144,7 +149,7 @@
                   </svg>
                   Github
                 </h6>
-                <span class="text-secondary">shivam</span>
+                <span class="text-secondary">{{$details->github}}</span>
               </li>
               <li class="
                     list-group-item
@@ -160,7 +165,7 @@
                   </svg>
                   Twitter
                 </h6>
-                <span class="text-secondary">@shivam</span>
+                <span class="text-secondary">{{$details->twitter}}</span>
               </li>
               <li class="
                     list-group-item
@@ -183,7 +188,7 @@
                   </svg>
                   Instagram
                 </h6>
-                <span class="text-secondary">shivam</span>
+                <span class="text-secondary">{{$details->insta}}</span>
               </li>
               <li class="
                     list-group-item
@@ -206,7 +211,7 @@
                   </svg>
                   Facebook
                 </h6>
-                <span class="text-secondary">shivam</span>
+                <span class="text-secondary">{{$details->facebook}}</span>
               </li>
               <li class="
                     list-group-item
@@ -220,7 +225,11 @@
 
                   <img src="../assets/edit.ico" style="width: 21px;" alt="Chat"></a>
                 </h6>
+                @if($user)
                 <button onclick="document.getElementById('userContacts').style.display='block'" class="btn w3- w3-hover-border-blue-grey text-secondary">edit</button>
+                @else
+                @endif
+                
                 <!-- <span class="text-secondary">change</span> -->
               </li>
             </ul>
@@ -257,11 +266,15 @@
             <div class="row">
 
               <div class="col-sm-2 text-secondary offset-7 offset-md-8">
+              @if($user)
                 <button class="mb-0 btn" style="background-color: transparent;" onclick="document.getElementById('bio101').style.display='block'">Change
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                     <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
                   </svg>
                 </button>
+                @else
+
+                @endif
 
               </div>
             </div>
