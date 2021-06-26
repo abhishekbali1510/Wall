@@ -32,12 +32,13 @@
       <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
         <h3 class="w3-bar-item">Menu</h3>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-        @foreach($walls as $wall)
+      
+        @forelse($walls as $wall)
 
         <a href="/wall/{{$wall}}" class="w3-bar-item w3-button">{{$wall}}</a>
-        <!-- <a href="#" class="w3-bar-item w3-button">Wall 2</a>
-        <a href="#" class="w3-bar-item w3-button">Wall 3</a> -->
-        @endforeach
+       @empty
+        @endforelse
+       
       </div><br>
     </div>
   </div>
@@ -182,11 +183,11 @@
 
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem" id="sideBar">
           <h3 class="w3-bar-item">Menu</h3>
-          @foreach($walls as $wall)
+          @forelse($walls as $wall)
           <a href="/wall/{{$wall}}" class="w3-bar-item w3-button">{{$wall}}</a>
-          <!-- <a href="#" class="w3-bar-item w3-button">Wall 2</a>
-          <a href="#" class="w3-bar-item w3-button">Wall 3</a> -->
-          @endforeach
+         
+          @empty
+          @endforelse
         </div>
 
         <!-- create post link div -->
