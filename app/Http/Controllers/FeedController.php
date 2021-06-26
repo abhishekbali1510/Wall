@@ -17,7 +17,13 @@ class FeedController extends Controller
             
             $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
             $walls=$userDetails->follow;
-            $posts=DB::select('select * from "posts" where "wallName" = ARRAY[$walls]');
+            // $tmp=['1','2'];
+            // dd($walls);
+            $walls = "'".implode("',' ", $walls)."'";
+            //$posts=Post::all();
+            // dd($walls);
+            $posts=DB::select('select * from "posts" where "wallName" in ('.$walls.') ');
+            $walls=$userDetails->follow;
             return view('newsfeed.newsFeed',['posts'=>$posts,'walls'=>$walls]);
             //return view('newsfeed.newsFeed');
         }  
