@@ -19,7 +19,7 @@ class FeedController extends Controller
             $walls=$userDetails->follow;
             if($walls)
             {
-                $walls = "'".implode("',' ", $walls)."'";
+                $walls = "'".implode("','", $walls)."'";
                 $posts=DB::select('select * from "posts" where "wallName" in ('.$walls.') ');
             }
             else
