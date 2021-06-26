@@ -32,13 +32,13 @@
       <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
         <h3 class="w3-bar-item">Menu</h3>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-      
-        @forelse($walls as $wall)
+      @if($walls)
+        @foreach($walls as $wall)
 
         <a href="/wall/{{$wall}}" class="w3-bar-item w3-button">{{$wall}}</a>
-       @empty
-        @endforelse
        
+        @endforeach
+       @endif
       </div><br>
     </div>
   </div>
@@ -183,11 +183,14 @@
 
         <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem" id="sideBar">
           <h3 class="w3-bar-item">Menu</h3>
-          @forelse($walls as $wall)
+          @if($walls)
+          @foreach($walls as $wall)
           <a href="/wall/{{$wall}}" class="w3-bar-item w3-button">{{$wall}}</a>
          
-          @empty
-          @endforelse
+          
+          
+          @endforeach
+          @endif
         </div>
 
         <!-- create post link div -->
@@ -208,6 +211,7 @@
 
         </div>
         <!-- sidebar end -->
+        @if($posts)
         @foreach($posts as $post)
         @if($post->imgName!=null)
         <!-- post with media div -->
@@ -291,6 +295,7 @@
         </div>
         @endif
         @endforeach
+        @endif
         <!-- post without media end -->
       </div>
 
