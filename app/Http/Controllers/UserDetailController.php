@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use App\Models\userDetail;
 
 class UserDetailController extends Controller
 {
-    public function index(Request $r,$userName="")
+    public function index(Request $r,$userName)
     {
         if(session()->get('login')=="true")
      {
         $userDetails=userDetail::where('userName',$userName)->first();
-        if($userName==$r->session()->get('userName'))
+        if($userName==$r->session()->get('user'))
         $user=1;
         else
         $user=0;
@@ -66,5 +67,20 @@ class UserDetailController extends Controller
         $userDetails->twitter=$r->input('twitter');
         $userDetails->save();   
         return back();
+    }
+
+    public function follow(Request $r)
+    {
+        $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+       
+       $new=$userDetails->follow;
+       //$new=["rohan"=>"rohan"];
+        //$new=Arr::collapse([$new,['abhishek'=>"abhishek"]]);
+        $new=Arr::except($new, ['rohan']);
+        $userDetails->follow=$new;
+        $userDetails->save();
+       
+         //$contains = Arr::get($new,"rohan1");
+         return dd($userDetails->follow);
     }
 }

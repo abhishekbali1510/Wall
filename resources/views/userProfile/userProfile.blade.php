@@ -288,10 +288,9 @@
                   <i class=" w3-text-black mr-2" style="font-size:20px"> <b>Walls Joined</b></i>
                 </h6>
                 <ul style="list-style: none;">
-                  <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black font-weight-light">Wallname</li>
-                  <li><a href="" class="w3-text-black font-weight-light">WallNAME</a></li>
+                @foreach($details->follow as $follow)
+                  <li><a href="/wall/{{$follow}}" class="w3-text-black font-weight-light"> {{$follow}} </a></li>
+                  @endforeach
                 </ul>
 
               </div>

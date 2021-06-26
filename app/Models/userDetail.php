@@ -11,6 +11,6 @@ class userDetail extends Model
     protected $primaryKey = 'userId';
     protected $casts = [
         'friends'=>'array',
-        'follow'=>'array'
+        'follow'=>'array',
     ];
 }

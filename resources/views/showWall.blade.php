@@ -200,7 +200,11 @@
         </span>
           <p class="wall-description">{{$wall->bio}}</p>
           <a href="/user/{{$wall->createdBy}}" class="w3-bar-item w3-button">Created by: {{$wall->createdBy}}</a>
-          <a href="#" class="w3-bar-item w3-button">Follow Wall</a>
+          @if(!$show)
+          <a href="/followWall/{{$wall->name}}" class="w3-bar-item w3-button">Follow Wall</a>
+          @else
+          <a href="/unfollowWall/{{$wall->name}}" class="w3-bar-item w3-button">Unfollow Wall</a>
+          @endif
           <!-- hide follow wall for user who created the wall -->
           <!-- show "Unfollow" for those who already follow the wall -->
           <a href="#" class="w3-bar-item w3-button">Delete Wall</a> 

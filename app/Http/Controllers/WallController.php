@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Wall;
 use App\Models\Post;
 use DB;
+use Illuminate\Support\Arr;
+use App\Models\userDetail;
 use Illuminate\Http\Request;
 
 class WallController extends Controller
@@ -40,7 +42,7 @@ class WallController extends Controller
             return redirect('/createWall');
         }
     }
-    public function show($wallName)
+    public function show(Request $r,$wallName)
     {
         if(session()->get('login')=="true")
         {
@@ -49,7 +51,19 @@ class WallController extends Controller
                 $wall=Wall::where('name',$wallName)->first();
                 $posts=DB::select('select * from "posts" where "wallName" = ?',[$wallName]);
                 //return json_encode($posts);
-                 return view('showWall',['wall'=>$wall,'posts'=>$posts]);
+                $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+                $follow=$userDetails->follow;
+                $contains = Arr::has($follow,$wallName);
+                if($contains)
+                {
+                    $show=1;
+                }
+                else
+                {
+                    $show=0;
+                    
+                }
+                 return view('showWall',['wall'=>$wall,'posts'=>$posts,'show'=>$show]);
             }
             else
             {
@@ -71,4 +85,25 @@ class WallController extends Controller
         
         return "deleted"."$id";///incomplete: delete a wall and delete all its post
     }
+
+    public function follow(Request $r,$wallName)
+    {
+        $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+        $follow=$userDetails->follow;
+        $follow=Arr::collapse([$follow,[$wallName=>$wallName]]);
+        $userDetails->follow=$follow;
+        $userDetails->save();
+        return back();
+    }
+
+    public function unfollow(Request $r,$wallName)
+    {
+        $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+        $follow=$userDetails->follow;
+        $follow=Arr::except($follow, [$wallName]);
+        $userDetails->follow=$follow;
+        $userDetails->save();
+        return back();
+    }
+
 }

@@ -130,4 +130,8 @@ Route::post('/social',[UserDetailController::class,'social']);
 //session done
 Route::delete('/deletePost/{id}',[PostController::class,'delete']);
 
-Route::delete('/deleteWall/{id}',[WallController::class,'delete']);
+Route::delete('/deleteWall/{id}',[WallController::class,'delete']);//incomplete
+
+Route::get('/followWall/{wallName}',[WallController::class,'follow']);
+
+Route::get('/unfollowWall/{wallName}',[WallController::class,'unfollow']);
