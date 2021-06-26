@@ -125,7 +125,7 @@ html {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 15px;
-    max-width: 98px;
+    max-width: 110px;
 }
 .user_info span {
     font-size: 20px;
@@ -247,6 +247,7 @@ body::-webkit-scrollbar-thumb {
 
 #chat-main {
     margin: 0;
+   
 }
 
 /* @media only screen 
@@ -306,7 +307,7 @@ and (min-width : 321px) {
     }
    
     #firstDiv{
-        margin-top: 150px;
+        margin-top: 100px;
     }
     #mySidebar {
         width: 25% ;
@@ -328,48 +329,82 @@ and (min-width : 321px) {
         margin-top: 0px;
     }
     #firstDiv{
-        margin-top: 150px;
+        margin-top: 100px;
     }
     #mySidebar {
         width: 75% ;
     }
 }
-@media screen and (max-width:360px){
+/* @media screen and (max-width:360px){
     .offset-sm-2{
         margin-left: 10%;
     }
+} */
+
+
+
+@media screen and (max-width:430px){
+    .offset-sm-2{
+        margin-left: 35%;
+    }
 }
+
+@media screen and (max-width:375px){
+    
+    .offset-sm-2{
+         
+       margin-left: 25%;
+        }
+    }
+
+@media screen and (max-width:330px){
+    
+    .offset-sm-2{
+         
+       margin-left: 10%;
+        }
+    .large-screen{
+        display: none;
+    }
+    }
+    @media screen and (max-width:768px) {
+        .large-screen{
+            display: none;
+        }
+        
+    }
+    
+@media screen and (min-width:775px){
+    .offset-sm-2{
+       display: none;
+    }
+    .large-screen{
+        display: inline-block;
+    }
+} 
+
+
 /* 
-@media screen and (min-width:375px) and (max-width:430px){
+@media screen and (max-width:775px){
     .offset-sm-2{
         margin-left: 35%;
     }
 } */
 
-@media screen and (max-width:775px){
-    .offset-sm-2{
-        margin-left: 35%;
-    }
-}
-
-@media screen and (max-width:330px){
-    .offset-sm-2{
-        margin-left: 10%;
-    }
-}
+/* }
 @media screen and (min-width:1010px){
     .offset-sm-2{
         margin-left: 65%;
     }
-}
-@media screen and (min-width:1430px){
+} */
+/* @media screen and (min-width:1430px){
     .offset-sm-2{
         margin-left: 75%;
     }
-}
-
+} */
+/* 
 @media screen and (min-width:2550px){
     .offset-sm-2{
         margin-left: 80%;
     }
-}
+} */

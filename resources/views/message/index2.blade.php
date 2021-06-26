@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stylesheets/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">-->
     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>-->
@@ -14,12 +15,13 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-    <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" />
+    <!-- <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" /> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/w3.css" />
     <link rel="stylesheet" href="stylesheets/footbar.css">
     <link rel="stylesheet" href="stylesheets/topbar.css">
+    <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" />
 </head>
 
 
@@ -39,6 +41,11 @@
         </div>
 
         <div class="container-fluid" style="top: -15px">
+            <div class=" large-screen">
+                <button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()">
+                    ☰
+                </button>
+            </div>
             <div class="row justify-content-center ">
                 <div class="chat" style="margin: 0;">
                     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9;" id="mySidebar">
@@ -140,7 +147,11 @@
                                     <span>{{session('receiver')}}</span>
 
                                 </div>
+<<<<<<< HEAD
+                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()">
+=======
                                 <div class="offset-lg-8 offset-md-6 offset-sm-2" style="position: absolute;margin: 0;right: 20px;"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" >
+>>>>>>> a455b3990aecb10d89451db14ffd43e265ba16f9
                                         ☰
                                     </button></div>
                                 <!-- video call and voice call icons  -->
