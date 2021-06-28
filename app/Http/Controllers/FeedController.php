@@ -29,6 +29,7 @@ class FeedController extends Controller
                     $posts=null;
                }
               $walls=$userDetails->follow;
+              $allWalls=Wall::all();
             return view('newsfeed.newsFeed',['posts'=>$posts,'walls'=>$walls,'allWalls'=>$allWalls]);
             //return view('newsfeed.newsFeed');
         }  

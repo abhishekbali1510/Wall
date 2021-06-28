@@ -64,6 +64,7 @@
                             </div>
                             <div class="card-body contacts_body">
                                 <ui class="contacts">
+                                @if($users)
                                     @foreach($users as $user)
                                     <li class="active">
                                         <div class="d-flex bd-highlight">
@@ -72,12 +73,13 @@
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
-                                                <span><a href="/message/{{$user->userName}}">{{$user->userName}}</a></span>
+                                                <span><a href="/message/{{$user}}">{{$user}}</a></span>
                                                 <!-- <p>Shivam is online</p> -->
                                             </div>
                                         </div>
                                     </li>
                                     @endforeach
+                                    @endif
                                     <!-- <li>
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
@@ -147,11 +149,7 @@
                                     <span>{{session('receiver')}}</span>
 
                                 </div>
-<<<<<<< HEAD
-                                <div class="offset-lg-8 offset-md-6 offset-sm-2"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()">
-=======
                                 <div class="offset-lg-8 offset-md-6 offset-sm-2" style="position: absolute;margin: 0;right: 20px;"><button id="openNav" class="w3-button w3-aqua w3-xlarge" onclick="w3_open()" >
->>>>>>> a455b3990aecb10d89451db14ffd43e265ba16f9
                                         ☰
                                     </button></div>
                                 <!-- video call and voice call icons  -->

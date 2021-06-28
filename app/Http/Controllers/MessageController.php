@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\Message;
 use App\Models\User;
+use App\Models\userDetail;
 
 class MessageController extends Controller
 {
@@ -42,7 +43,9 @@ class MessageController extends Controller
         {
 
             $r->session()->put('receiver',$receiver);
-            $users=User::all();
+            $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+            $users=$userDetails->friends;
+            
             return view('message.index2',['users'=>$users]);
             // return view('message.index2');
 
