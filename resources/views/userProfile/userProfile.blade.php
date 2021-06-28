@@ -126,8 +126,14 @@
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
                   @else
                   <!-- button to friend add -->
+                  @if($show)
+                  <a href="/message/{{$details->userName}}"><button class="btn btn-outline-primary"> Message </button></a>
+                  <a href="/removeFriend/{{$details->userName}}" ><button class="btn btn-primary"  >remove friend</button></a>
+                  @else
+                  <a href="/addFriend/{{$details->userName}}" ><button class="btn btn-primary"  >Add friend</button></a>
                   @endif
-                  <button class="btn btn-outline-primary" href="/message/{{$details->userName}}">Message</button>
+                  @endif
+                  
                 </div>
               </div>
             </div>
@@ -285,7 +291,7 @@
             <div class="card scroll glass">
               <div class="card-body font-weight-bold">
                 <h6 class="d-flex align-items-center mb-3">
-                  <i class=" w3-text-black mr-2" style="font-size:20px"> <b>Walls Joined</b></i>
+                  <i class=" w3-text-black mr-2" style="font-size:20px"> <b>Walls Follow</b></i>
                 </h6>
                 <ul style="list-style: none;">
                 @foreach($details->follow as $follow)

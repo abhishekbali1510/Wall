@@ -135,3 +135,7 @@ Route::delete('/deleteWall/{id}',[WallController::class,'delete']);//incomplete
 Route::get('/followWall/{wallName}',[WallController::class,'follow']);
 
 Route::get('/unfollowWall/{wallName}',[WallController::class,'unfollow']);
+
+Route::get('/addFriend/{userName}',[UserDetailController::class,'addFriend']);
+
+Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend']);

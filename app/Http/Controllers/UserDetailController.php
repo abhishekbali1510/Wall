@@ -13,11 +13,32 @@ class UserDetailController extends Controller
         if(session()->get('login')=="true")
      {
         $userDetails=userDetail::where('userName',$userName)->first();
+        $userDetailsLogUser=userDetail::where('userName',$r->session()->get('user'))->first();
+        
         if($userName==$r->session()->get('user'))
-        $user=1;
+        {
+            $user=1;
+            $show=0;
+        }
         else
-        $user=0;
-        return view('userProfile.userProfile',['details'=>$userDetails,'user'=>$user]);
+        {
+            $user=0;
+            $friend=$userDetailsLogUser->friends;
+            $contains = Arr::has($friend,$userName);
+           // dd($contains);
+                if($contains)
+                {
+                    $show=1;
+                }
+                else
+                {
+                    $show=0;
+                    
+                }
+        }
+        
+        
+        return view('userProfile.userProfile',['details'=>$userDetails,'user'=>$user,'show'=>$show]);
      }
      else
      {
@@ -69,18 +90,37 @@ class UserDetailController extends Controller
         return back();
     }
 
-    public function follow(Request $r)
+    // public function follow(Request $r)
+    // {
+    //     $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+       
+    //    $new=$userDetails->follow;
+    //    //$new=["rohan"=>"rohan"];
+    //     //$new=Arr::collapse([$new,['abhishek'=>"abhishek"]]);
+    //     $new=Arr::except($new, ['rohan']);
+    //     $userDetails->follow=$new;
+    //     $userDetails->save();
+       
+    //      //$contains = Arr::get($new,"rohan1");
+    //      return dd($userDetails->follow);
+    // }
+
+    public function addFriend(Request $r,$userName)
     {
         $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
-       
-       $new=$userDetails->follow;
-       //$new=["rohan"=>"rohan"];
-        //$new=Arr::collapse([$new,['abhishek'=>"abhishek"]]);
-        $new=Arr::except($new, ['rohan']);
-        $userDetails->follow=$new;
+        $friend=$userDetails->friends;
+        $friend=Arr::collapse([$friend,[$userName=>$userName]]);
+        $userDetails->friends=$friend;
         $userDetails->save();
-       
-         //$contains = Arr::get($new,"rohan1");
-         return dd($userDetails->follow);
+        return back();
+    }
+    public function removeFriend(Request $r,$userName)
+    {
+        $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+        $friend=$userDetails->friends;
+        $friend=Arr::except($friend,[$userName]);
+        $userDetails->friends=$friend;
+        $userDetails->save();
+        return back();
     }
 }

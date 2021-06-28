@@ -106,5 +106,5 @@ class WallController extends Controller
         $userDetails->save();
         return back();
     }
-
+ 
 }
