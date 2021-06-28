@@ -197,12 +197,10 @@
 
           <hr>
           <h3 class="w3-bar-item">suggested walls</h3>
-
-          <a href="" class="w3-bar-item w3-button">Wall1</a>
-          <a href="" class="w3-bar-item w3-button">Wall1</a>
-          <a href="" class="w3-bar-item w3-button">Wall1</a>
-          <a href="" class="w3-bar-item w3-button">Wall1</a>
-          
+          @foreach($allWalls as $wall)
+          <a href="/wall/{{$wall->name}}" class="w3-bar-item w3-button"> {{$wall->name}} </a>
+         
+          @endforeach
 
 
 

@@ -66,10 +66,15 @@ class PostController extends Controller
             'content'=>'max:255',
             
         ]);
-        $lstId=Post::latest()->first();
-        $lstId2=$lstId->postId+1;
         $title=$r->input('title');
         $wallName=$r->input('wallName');
+        $lstId=Post::where('wallName',$wallName)->orderBy('updated_at','DESC')->first();
+       
+        if($lstId)
+        $lstId2=($lstId->postId)+1;
+        else
+        $lstId2=1;
+        
         $imgName=($wallName.".".$title.".".$lstId2);
         $content=$r->input('content');
         $r->file('img')->storeAs('public/images/posts',$imgName);

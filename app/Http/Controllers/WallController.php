@@ -49,6 +49,7 @@ class WallController extends Controller
             if(wall::where('name',$wallName)->exists())
             {
                 $wall=Wall::where('name',$wallName)->first();
+                
                 $posts=DB::select('select * from "posts" where "wallName" = ?',[$wallName]);
                 //return json_encode($posts);
                 $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();

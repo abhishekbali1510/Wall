@@ -19,6 +19,7 @@ class FeedController extends Controller
             $walls=$userDetails->follow;
             if($walls)
             {
+                $allWalls=Wall::all();
                 $walls = "'".implode("','", $walls)."'";
                 $posts=DB::select('select * from "posts" where "wallName" in ('.$walls.') ');
             }
@@ -28,7 +29,7 @@ class FeedController extends Controller
                     $posts=null;
                }
               $walls=$userDetails->follow;
-            return view('newsfeed.newsFeed',['posts'=>$posts,'walls'=>$walls]);
+            return view('newsfeed.newsFeed',['posts'=>$posts,'walls'=>$walls,'allWalls'=>$allWalls]);
             //return view('newsfeed.newsFeed');
         }  
         else
