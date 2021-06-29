@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Wall;
+use App\Models\userDetail;
 use Illuminate\Http\Request;
+
 
 class PostController extends Controller
 {
     
-    public function show()
+    public function show(Request $r)
     {
         if(session()->get('login')=="true")
         {
-            $walls=Wall::all();
+            $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+            $walls=$userDetails->follow;
             return view('create.createPost',['walls'=>$walls]);
         }
         else
@@ -24,11 +27,12 @@ class PostController extends Controller
         
     }
 
-    public function showMedia()
+    public function showMedia(Request $r)
     {
         if(session()->get('login')=="true")
         {
-            $walls=Wall::all();
+            $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+            $walls=$userDetails->follow;
             return view('create.createMediaPost',['walls'=>$walls]);
         }
         else

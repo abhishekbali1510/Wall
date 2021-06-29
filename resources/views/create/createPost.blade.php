@@ -23,7 +23,7 @@
                 @enderror
                 <select name="wallName" id="wall-field">
                 @foreach($walls as $wall)
-                    <option value="{{$wall->name}}">{{$wall->name}}</option>
+                    <option value="{{$wall}}">{{$wall}}</option>
                 @endforeach
                 </select>
             </div>
