@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>walls</title>
+  <title>Walls</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -251,7 +251,7 @@
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
                     </div>
                     <div class="post-delete">
-                      <<i class="fa fa-trash" aria-hidden="true"></i>
+                      <i class="fa fa-trash" aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>
@@ -292,6 +292,9 @@
                     </div>
                     <div class="post-info-div">
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
+                    </div>
+                    <div class="post-delete">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>

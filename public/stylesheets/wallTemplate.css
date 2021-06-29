@@ -113,6 +113,11 @@ hr{
       padding-bottom: 5px;
   }
 
+.post-delete{
+    position: absolute;
+    right: 0px;
+}
+
   @media screen and (min-width:600px){
     #fixedButton {
        display: none;
