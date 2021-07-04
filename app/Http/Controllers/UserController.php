@@ -178,7 +178,7 @@ class UserController extends Controller
         if($checkEmail==1)
         {
             $rqst->session()->put('pin',rand(1001,9999));
-            $data=['pin'=>$rqst->session()->get('pin')];
+            $data=array('pin'=>$rqst->session()->get('pin'),'mail'=>$email);
             $users['to']=$email;
             Mail::send('signUp.mail',$data,function($messages) use ($users)
             {

@@ -23,10 +23,15 @@
                     {{$message}}
                 @enderror
                 <select name="wallName" id="wall-field">
+                @if($walls)
                 @foreach($walls as $wall)
                     <option value="{{$wall}}">{{$wall}}</option>
                 @endforeach
+                @endif
                 </select>
+                @error('wallName')
+                    {{$message}}
+                 @enderror
             </div>
             <div id="uploads"></div>
             <div class="dropzone" id="dropzone">

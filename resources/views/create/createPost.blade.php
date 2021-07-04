@@ -22,10 +22,15 @@
                     {{$message}}
                 @enderror
                 <select name="wallName" id="wall-field">
+                @if($walls)
                 @foreach($walls as $wall)
                     <option value="{{$wall}}">{{$wall}}</option>
                 @endforeach
+                @endif
                 </select>
+                @error('wallName')
+                    {{$message}}
+                @enderror
             </div>
             <textarea name="content" id="content-field" cols="30" rows="9" placeholder="What you gonna share today?"></textarea>
             <br>

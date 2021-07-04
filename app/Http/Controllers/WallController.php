@@ -34,6 +34,11 @@ class WallController extends Controller
             $wall->bio=$bio;
             $wall->createdBy=$r->session()->get('user');
             $wall->save();
+            $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
+            $follow=$userDetails->follow;
+            $follow=Arr::collapse([$follow,[$name=>$name]]);
+            $userDetails->follow=$follow;
+            $userDetails->save();
             return redirect('/home');
         }
         else
