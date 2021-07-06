@@ -28,7 +28,7 @@ class UserDetailController extends Controller
            // dd($contains);
                 if($contains)
                 {
-                    $show=1;
+                    $show=1;  //add and remove frnd
                 }
                 else
                 {

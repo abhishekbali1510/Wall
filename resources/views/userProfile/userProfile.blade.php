@@ -219,6 +219,7 @@
                 </h6>
                 <span class="text-secondary">{{$details->facebook}}</span>
               </li>
+              @if($user)
               <li class="
                     list-group-item
                     d-flex
@@ -231,13 +232,14 @@
 
                   <img src="../assets/edit.ico" style="width: 21px;" alt="Chat"></a>
                 </h6>
-                @if($user)
+                
                 <button onclick="document.getElementById('userContacts').style.display='block'" class="btn w3- w3-hover-border-blue-grey text-secondary">edit</button>
-                @else
-                @endif
+                
+               
                 
                 <!-- <span class="text-secondary">change</span> -->
               </li>
+              @endif
             </ul>
           </div>
         </div>
@@ -294,9 +296,11 @@
                   <i class=" w3-text-black mr-2" style="font-size:20px"> <b>Walls Follow</b></i>
                 </h6>
                 <ul style="list-style: none;">
+                @if($details->follow)
                 @foreach($details->follow as $follow)
                   <li><a href="/wall/{{$follow}}" class="w3-text-black font-weight-light"> {{$follow}} </a></li>
                   @endforeach
+                  @endif
                 </ul>
 
               </div>
@@ -306,25 +310,14 @@
             <div class="card scroll glass post">
               <div class="card-body">
                 <h6 class="d-flex align-items-center mb-3">
-                  <i class=" w3-text-black mr-2" style="font-size:20px"><b>Post created</b></i>
+                  <i class=" w3-text-black mr-2" style="font-size:20px"><b>Friends</b></i>
                 </h6>
                 <ul style="list-style: none;">
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">Wallname</li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                </ul>
-                <ul style="list-style: none;">
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">Wallname</li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                </ul>
-                <ul style="list-style: none;">
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
-                  <li><a href="" class="w3-text-black">Wallname</li>
-                  <li><a href="" class="w3-text-black">WallNAME</a></li>
+                @if($details->friends)
+                @foreach($details->friends as $friend)
+                  <li><a href="/user/{{$friend}}" class="w3-text-black"> {{$friend}} </a></li>
+                @endforeach
+                @endif
                 </ul>
               </div>
 
