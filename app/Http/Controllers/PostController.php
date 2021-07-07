@@ -98,8 +98,7 @@ class PostController extends Controller
 
     public function delete($id)
     {
-        $post=Post::where('postId',$id)->firstorfail();
-        $post->delete();
-        return "deleted"."$id";
+        $post=Post::where('postId',$id)->firstorfail()->delete();
+        return back();
     }
 }

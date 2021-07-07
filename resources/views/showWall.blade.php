@@ -207,7 +207,13 @@
           @endif
           <!-- hide follow wall for user who created the wall -->
           <!-- show "Unfollow" for those who already follow the wall -->
-          <a href="#" class="w3-bar-item w3-button">Delete Wall</a> 
+          <!-- <a href="#" class="w3-bar-item w3-button">Delete Wall</a>  -->
+          <form method="post" action="/deleteWall/{{$wall->wallId}}">
+                        {{csrf_field()}}
+              <button type="submit" class="w3-bar-item w3-button"> 
+                      Delete Wall
+              </button>
+          </form>
           <!-- show delete wall only to user who created the wall -->
           <ul class="rules">
           <strong>Wall Members:</strong>
@@ -251,7 +257,13 @@
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
                     </div>
                     <div class="post-delete">
+                        <form method="post" action="/deletePost/{{$post->postId}}">
+                        {{csrf_field()}}
+                    <button type="submit"> 
                       <i class="fa fa-trash" aria-hidden="true"></i>
+                      <!-- </a> -->
+                      </button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -294,7 +306,13 @@
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
                     </div>
                     <div class="post-delete">
+                    <form method="post" action="/deletePost/{{$post->postId}}">
+                        {{csrf_field()}}
+                    <button type="submit"> 
                       <i class="fa fa-trash" aria-hidden="true"></i>
+                      
+                      </button>
+                      </form>
                     </div>
                   </div>
                 </div>

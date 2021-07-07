@@ -21,7 +21,7 @@ class FeedController extends Controller
             {
                 $allWalls=Wall::all();
                 $walls = "'".implode("','", $walls)."'";
-                $posts=DB::select('select * from "posts" where "wallName" in ('.$walls.') ');
+                $posts=DB::select('select * from "posts" where "wallName" in ('.$walls.') order By "updated_at" DESC ');
             }
             else
                 {

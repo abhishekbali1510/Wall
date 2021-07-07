@@ -55,7 +55,7 @@ class WallController extends Controller
             {
                 $wall=Wall::where('name',$wallName)->first();
                 
-                $posts=DB::select('select * from "posts" where "wallName" = ?',[$wallName]);
+                $posts=DB::select('select * from "posts" where "wallName" = ? order by "created_at" desc',[$wallName]);
                 //return json_encode($posts);
                 $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
                 $follow=$userDetails->follow;
@@ -85,12 +85,22 @@ class WallController extends Controller
 
     public function delete($id)
     {
-        $wallName=Post::where('postId',$id)->value('wallName');
-        $wallName=Wall::where('name',$wallName)->firstorfail();
-        $wallName->delete();
+        $wallName=Wall::where('wallId',$id)->first();
         
-        return "deleted"."$id";///incomplete: delete a wall and delete all its post
-    }
+
+        $userDetails=userDetail::all();
+        foreach($userDetails as $userDetail){
+        $follow=$userDetail->follow;
+        $follow=Arr::except($follow, [$wallName->name]);
+        $userDetail->follow=$follow;
+        $userDetail->save();
+        }
+        
+        $post=Post::where('wallName',$wallName->name)->delete();
+        $wallDel=Wall::where('name',$wallName->name)->first()->delete();
+        return redirect('/home');
+    
+     }
 
     public function follow(Request $r,$wallName)
     {

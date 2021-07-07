@@ -128,9 +128,9 @@ Route::post('/fullName',[UserDetailController::class,'fullName']);
 
 Route::post('/social',[UserDetailController::class,'social']);
 //session done
-Route::delete('/deletePost/{id}',[PostController::class,'delete']);
+Route::post('/deletePost/{id}',[PostController::class,'delete']);
 
-Route::delete('/deleteWall/{id}',[WallController::class,'delete']);//incomplete
+Route::post('/deleteWall/{id}',[WallController::class,'delete']);//incomplete
 
 Route::get('/followWall/{wallName}',[WallController::class,'follow']);
 
@@ -139,3 +139,4 @@ Route::get('/unfollowWall/{wallName}',[WallController::class,'unfollow']);
 Route::get('/addFriend/{userName}',[UserDetailController::class,'addFriend']);
 
 Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend']);
+
