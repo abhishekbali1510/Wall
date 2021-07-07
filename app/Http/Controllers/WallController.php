@@ -69,7 +69,14 @@ class WallController extends Controller
                     $show=0;
                     
                 }
-                 return view('showWall',['wall'=>$wall,'posts'=>$posts,'show'=>$show]);
+                if($r->session()->get('user')==$wall->createdBy)
+                {
+                    $del=1;
+                }
+                else{
+                    $del=0;
+                }
+                 return view('showWall',['wall'=>$wall,'posts'=>$posts,'show'=>$show,'del'=>$del]);
             }
             else
             {
