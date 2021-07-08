@@ -140,3 +140,5 @@ Route::get('/addFriend/{userName}',[UserDetailController::class,'addFriend']);
 
 Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend']);
 
+
+

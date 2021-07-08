@@ -37,7 +37,7 @@ class MessageController extends Controller
         }
     }
 
-    public function newIndex($receiver=null,Request $r)
+    public function newIndex(Request $r,$receiver=null)
     {
         if($r->session()->get('login')=='true')
         {

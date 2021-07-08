@@ -259,7 +259,8 @@
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
                     </div>
                     <div class="post-delete">
-                    @if($del)
+                    @if($del OR ($user === $post->createdBy) )
+                    
                         <form method="post" action="/deletePost/{{$post->postId}}">
                         {{csrf_field()}}
                     <button type="submit"> 
@@ -267,6 +268,7 @@
                       <!-- </a> -->
                       </button>
                       </form>
+                      
                       @endif
                     </div>
                   </div>
@@ -310,7 +312,7 @@
                       <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey" href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a class="info-link w3-hover-text-dark-grey" href="/home">{{$post->wallName}}</a></h6>
                     </div>
                     <div class="post-delete">
-                    @if($del)
+                    @if($del OR ($user === $post->createdBy))
                     <form method="post" action="/deletePost/{{$post->postId}}">
                         {{csrf_field()}}
                     <button type="submit"> 

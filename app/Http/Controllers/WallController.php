@@ -76,7 +76,7 @@ class WallController extends Controller
                 else{
                     $del=0;
                 }
-                 return view('showWall',['wall'=>$wall,'posts'=>$posts,'show'=>$show,'del'=>$del]);
+                 return view('showWall',['wall'=>$wall,'posts'=>$posts,'show'=>$show,'del'=>$del,'user'=>$r->session()->get('user')]);
             }
             else
             {
