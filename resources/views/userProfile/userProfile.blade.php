@@ -113,7 +113,8 @@
           <div class="card glass  w3-hover-black">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150" />
+               <input id="fileInp" type="file" name='img' accept="image/*" onchange="loadFile(event)" style="display:none">
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" id="pimg" alt="Admin" class="rounded-circle" width="150" />
                 <div class="mt-3">
                 <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->fullName}}</h4>
                   <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->userName}}</h4>
@@ -335,5 +336,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/c329d01e30.js"></script>
 </body>
+<script>
+ var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('pimg');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
 
+  var selector = document.getElementById('pimg');
+  selector.addEventListener("click", function(){
+  document.getElementById("fileInp").click();
+});
+</script>
 </html>
