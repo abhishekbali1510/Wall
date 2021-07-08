@@ -92,7 +92,10 @@ hr{
         right: 10px;
     }
 }
-
+.font-b{
+  text-decoration:none;
+  color: black;
+}
 /* freakingud end*/
 
 @media screen and (min-width: 600px) {
