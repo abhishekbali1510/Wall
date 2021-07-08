@@ -7,6 +7,7 @@ use App\Http\Controllers\WallController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\FeedController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Http\Request;
 
 /*
@@ -88,13 +89,7 @@ Route::get('/wall/{wallName}',[WallController::class,'show']);
 
 Route::get('/home',[FeedController::class,'index']);
 
-Route::get('/post',function()
-{
-    if(session()->get('login')=="true")
-    return view('postpage.postpage');
-    else
-    return redirect('/');
-});
+Route::get('/post/{id}',[PostController::class,'showPost']);
 
 Route::get('/create',[PostController::class,'show']);
 
@@ -140,5 +135,5 @@ Route::get('/addFriend/{userName}',[UserDetailController::class,'addFriend']);
 
 Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend']);
 
-
+Route::post('/postComment/{id}',[CommentController::class,'store']);
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Wall;
+use App\Models\comment;
 use App\Models\userDetail;
 use Illuminate\Http\Request;
 
@@ -100,5 +101,19 @@ class PostController extends Controller
     {
         $post=Post::where('postId',$id)->firstorfail()->delete();
         return back();
+    }
+
+    public function showPost(request $r,$id)
+    {
+        if(session()->get('login')=="true")
+        {
+            $post=Post::where('postId',$id)->first();
+            $comment=comment::where('postId',$id)->get();
+           //return json_encode($comment);
+            return view('postpage.postpage',['post'=>$post,'comments'=>$comment]);
+        }
+    
+    else
+    return redirect('/');
     }
 }
