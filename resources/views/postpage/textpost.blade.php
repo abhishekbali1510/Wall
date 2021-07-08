@@ -74,10 +74,10 @@
                                                         href="/home">{{$post->createdBy}}</a> | <a
                                                         class="info-link w3-hover-text-dark-grey" href="/home">
                                                         {{$post->wallName}} </a></h6>
-                                                <span style="float: right;"
+                                                <!-- <span style="float: right;"
                                                     onclick="document.getElementById('cmnt01').style.display='none'"
                                                     class="w3-button w3-display-topright">&times;</span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <!--user infor -->
