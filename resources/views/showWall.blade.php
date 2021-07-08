@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Walls</title>
+  <title>{{$wall->name}}</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -193,7 +193,7 @@
 
       <div class="row gutters-sm">
 
-        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; overflow-x: hidden; margin-top: 20px;" id="sideBar">
+        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; width: fit-content; overflow-x: hidden; margin-top: 20px;" id="sideBar">
         <span id="wallHead">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
           <img id="wallImg" src="{{ asset('storage/images/wall/'.$wall->imgName) }}">

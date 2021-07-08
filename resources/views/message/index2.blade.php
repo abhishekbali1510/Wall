@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-12 col-sm-8 chat" id="chat-main" style=" margin: 0px;
     padding-left: 10px;
-    top: -50px;
+    top: 50px;
     ">
                     <div class="card" id="card-main" style="margin:0%;">
                         <div class="card-header msg_head">

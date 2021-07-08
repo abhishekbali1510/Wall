@@ -118,6 +118,17 @@ hr{
     right: 0px;
 }
 
+button.cmnt-btn{
+    background: none;
+    border: none;
+}
+
+body > div.container-fluid > div > div > div.offset-md-5.c-90.col-md-6.h-100.mb-2.p-0.glass > div > div > div > div > div > div.post-delete > form > button{
+    margin-right: 20px;
+    background: none;
+    border: none;
+}
+
   @media screen and (min-width:600px){
     #fixedButton {
        display: none;
