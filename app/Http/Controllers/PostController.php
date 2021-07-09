@@ -109,8 +109,11 @@ class PostController extends Controller
         {
             $post=Post::where('postId',$id)->first();
             $comment=comment::where('postId',$id)->get();
-           //return json_encode($comment);
-            return view('postpage.postpage',['post'=>$post,'comments'=>$comment]);
+            //return json_encode($comment);
+            if($post->imgName)
+                return view('postpage.postpage',['post'=>$post,'comments'=>$comment]);
+            else
+            return view('postpage.textpost',['post'=>$post,'comments'=>$comment]);
         }
     
     else
