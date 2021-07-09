@@ -193,7 +193,7 @@
 
       <div class="row gutters-sm">
 
-        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; width: fit-content; overflow-x: hidden; margin-top: 20px;" id="sideBar">
+        <div class="w3-sidebar w3-bar-block round glass" style="width:25%;margin-left:5rem; height: fit-content; min-width: fit-content; overflow-x: hidden; margin-top: 20px;" id="sideBar">
         <span id="wallHead">
           <h3 class="w3-bar-item wallname">{{$wall->name}}</h3>
           <img id="wallImg" src="{{ asset('storage/images/wall/'.$wall->imgName) }}">
