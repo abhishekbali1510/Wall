@@ -285,7 +285,7 @@
                                     class="fa fa-thumbs-up"></i><span class="likesNo">20</span></div>
                             <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-                            <div class="offset-1 col-3 p-2 text-center"> <a href="#" class="cmnt-btn"><i
+                            <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
 
@@ -331,7 +331,7 @@
                                     class="fa fa-thumbs-up"></i></div>
                             <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-                            <div class="offset-1 col-3 p-2 text-center"> <a href="#" class="cmnt-btn"><i
+                            <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
 
