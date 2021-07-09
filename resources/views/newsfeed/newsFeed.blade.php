@@ -21,7 +21,7 @@
     <div id="footbar" class="glass">
         <button><a href="/message"><img src="../assets/Chat.png" alt="Chat"></a></button>
         <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
-        <button><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
+        <button style="display: none;"><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
         <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>
         <button><a href="/createWall"><img src="../assets/NewWall.png"
                     style="height: 70px; width: 70px; margin-left: -12px;" alt="New Wall"></a></button>
