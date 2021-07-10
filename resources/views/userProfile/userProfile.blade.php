@@ -135,7 +135,7 @@
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
                   @if($user)
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
-                  <button class="btn btn-primary" type="submit" >Change DP</button>
+                  <button class="btn btn-primary" id="dpChange" type="submit" >Change DP</button>
                   
                   @else
                   <!-- button to friend add -->
@@ -357,6 +357,7 @@
       output.src = reader.result;
     };
     reader.readAsDataURL(event.target.files[0]);
+    document.getElementById('dpChange').click(); // to simulate click
   };
 
   var selector = document.getElementById('pimg');
