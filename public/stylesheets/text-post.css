@@ -55,7 +55,7 @@ body {
     font-size: medium;
 }
 .cmnt-info-div {
-    height: 2.6rem;
+    height: fit-content;
 }
 .cmnt-info {
     margin-top: 0.8rem;
@@ -139,7 +139,7 @@ input{
   }
 @media screen and (max-width: 599px) {
     .li-cont{
-        margin-bottom:30px;
+        margin-bottom:auto;
     }
 
     .btm-mrgn{
