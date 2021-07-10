@@ -320,7 +320,8 @@
                                             <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey"
                                                     href="/user/{{$post->createdBy}}">{{$post->createdBy}}</a> | <a
                                                     class="info-link w3-hover-text-dark-grey"
-                                                    href="/wall/{{$post->wallName}}">{{$post->wallName}}</a></h6>
+                                                    href="/wall/{{$post->wallName}}">{{$post->wallName}}</a>
+                                                </h6>
                                         </div>
                                     </div>
                                 </div>
