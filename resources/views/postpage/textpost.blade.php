@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-12">
                     <div class="col-12">
-                        <div class="card own-card glass">
+                        <div class="card own-card ">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
                                     <div class="container p-2">
