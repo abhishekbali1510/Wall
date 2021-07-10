@@ -104,7 +104,7 @@ input#fileInp{
 
     #wallForm input[type="text"]{
         width: 150%;
-        align-self: center;
+        align-self: center; 
     }
 
     textarea{

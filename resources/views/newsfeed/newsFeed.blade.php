@@ -103,13 +103,13 @@
                                     <div class="class=" d-flex flex-column align-items-center text-center"">
                                         <div class="container">
                                             <div class="row">
-
+<!-- 
                                                 <div class="col-3 p-2 text-center"><i onclick="myFunction(this)"
                                                         class="fa fa-thumbs-up"></i><span class="likesNo">20</span>
-                                                </div>
+                                                </div> -->
                                                 <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                                        and remove like div-->
-                                                <div class="offset-1 col-3 p-2 text-center"><i
+                                                <div class="offset-1 col-5 p-2 text-center"><i
                                                         class="fa fa-comment"></i></div>
                                                 <div class="offset-1 col-3 p-2 text-center"><button onclick="share()"><i class="fa fa-share"></i></button>
                                                 </div>
@@ -283,11 +283,11 @@
                         <hr>
                         <div class="row">
 
-                            <div class="col-3 p-2 text-center"><i onclick="myFunction(this)"
-                                    class="fa fa-thumbs-up"></i><span class="likesNo">20</span></div>
+                            <!-- <div class="col-3 p-2 text-center"><i onclick="myFunction(this)"
+                                    class="fa fa-thumbs-up"></i><span class="likesNo">20</span></div> -->
                             <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-                            <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
+                            <div class="offset-1 col-5 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             
                             <div class="offset-1 col-3 p-2 text-center">
@@ -337,11 +337,11 @@
                         <hr>
                         <div class="row">
 
-                            <div class="col-3 p-2 text-center"><i onclick="myFunction(this)"
-                                    class="fa fa-thumbs-up"></i></div>
+                            <!-- <div class="col-3 p-2 text-center"><i onclick="myFunction(this)"
+                                    class="fa fa-thumbs-up"></i></div> -->
                             <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                  and remove like div-->
-                            <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
+                            <div class="offset-1 col-5 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             <div class="offset-1 col-3 p-2 text-center">
                             <button class="shareButton" onclick="share(this.getAttribute('name'))" name="/wallsnetwork.me/post/{{$post->postId}}">
