@@ -292,7 +292,7 @@
                             
                             <div class="offset-1 col-3 p-2 text-center">
                             <input type="text" style="width:0px" value="/wallsnetwork.me/post/{{$post->postId}}" id="share">
-                            <button class="shareButton" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="/wallsnetwork.me/post/{{$post->postId}}">
                             
                             <i class="fa fa-share"></i>
                             </button>
@@ -343,7 +343,7 @@
                             <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             <div class="offset-1 col-3 p-2 text-center">
-                            <button class="shareButton" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="/wallsnetwork.me/post/{{$post->postId}}">
                             
                             <i class="fa fa-share"></i>
                             </button>
@@ -392,19 +392,26 @@
             location.href("https://walls-network.herokuapp.com/create")
         }
 
-        function share() {
-            var copyText = document.getElementById("share");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); 
-            document.execCommand("copy");
-            alert("Copied the text: " + copyText.value);
+        function share(copyText) {
+            // var copyText = ;
+            // console.log(copyText);
+            // // copyText.select();
+            // //copyText.setSelectionRange(0, 99999); 
+            // document.execCommand("copy");
+            // alert("Copied the text: " + copyText);
+            // const copyToClipboard = str => {
+            const el = document.createElement('textarea');
+            el.value = copyText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert(" link copied to clipboard")
+// };
             
         }      
 
-        const shareVar=document.getElementsByClassName('shareButton');
-        shareVar.addEventListener('click',function(){
-            console.log(this.getAttribute('name'));
-        })
+        
 
     </script>
 </body>
