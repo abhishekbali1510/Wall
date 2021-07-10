@@ -1,7 +1,17 @@
-<style>.post-dp {
+.post-dp {
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 1.4rem;
+}
+.shareButton{
+    background-color: transparent;
+    border: 0;
+
+}
+.c-90{
+    margin-left: auto;
+    margin-right: auto;
+    width: 94%;
 }
         body {
     background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
@@ -157,4 +167,3 @@ input{
         margin-top: -2vh !important;
     }
 }
-    </style>
