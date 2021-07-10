@@ -138,3 +138,7 @@ Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend
 Route::post('/postComment/{id}',[CommentController::class,'store']);
 
 Route::post('/userImage',[UserDetailController::class,'userImage']);
+
+Route::get('/trending',[FeedController::class,'trendfeed']);
+
+Route::get('/newfeed',[FeedController::class,'newfeed']);
