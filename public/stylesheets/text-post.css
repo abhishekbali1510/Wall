@@ -1,4 +1,9 @@
-body {
+<style>.post-dp {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 1.4rem;
+}
+        body {
     background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 }
 #text-div{
@@ -64,7 +69,8 @@ body {
 
 .cmnt-li {
     list-style-type: none;
-    padding: 1rem;
+    /* padding: 1rem; */
+    height: fit-content;
 }
 
 hr {
@@ -151,3 +157,4 @@ input{
         margin-top: -2vh !important;
     }
 }
+    </style>
