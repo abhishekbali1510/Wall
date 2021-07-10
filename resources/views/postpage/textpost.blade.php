@@ -29,7 +29,7 @@
             <div class="row gutters-sm">
                 <div id="text-div">
                     <div class="col-12 mb-3 p-0 glass">
-                        <div class="card h-3">
+                        <div class="card glass h-3">
                             <div class="scroll card-body p-0">
                                 <div class="d-flex flex-column align-items-center text-center h-2">
                                     <!-- <img src="https://wallpapercave.com/wp/yEJgDW8.jpg" class="col-12 p-0" alt=""> -->
