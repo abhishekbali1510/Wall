@@ -113,8 +113,16 @@
           <div class="card glass  w3-hover-black">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
-               <input id="fileInp" type="file" name='img' accept="image/*" onchange="loadFile(event)" style="display:none">
+              @if($user)
+              <form method="post" action="/userImage">
+               <input id="fileInp" type="file" name='userImg' accept="image/*" onchange="loadFile(event)" style="display:none">
+               </form>
+               @endif
+               @if($details->userImg)
+                <img src=" {{ asset('storage/images/users/'.$details->userImg) }}" id="pimg" alt="Admin" class="rounded-circle" width="150" />
+                @else
                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" id="pimg" alt="Admin" class="rounded-circle" width="150" />
+                @endif
                 <div class="mt-3">
                 <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->fullName}}</h4>
                   <h4 class="w3-hover-text-aqua font-weight-bold">{{$details->userName}}</h4>

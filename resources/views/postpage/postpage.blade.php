@@ -32,7 +32,7 @@
                         <div class="card h-5">
                             <div class="card-body p-0">
                                 <div class="d-flex flex-column align-items-center text-center h-5">
-                                    <img src="https://wallpapercave.com/wp/yEJgDW8.jpg" class="col-12 p-0" alt="">
+                                    <img src="{{ asset('storage/images/posts/'.$post->imgName) }}" class="col-12 p-0" alt="">
 
                                 </div>
                             </div>

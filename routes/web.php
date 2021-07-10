@@ -137,3 +137,4 @@ Route::get('/removeFriend/{userName}',[UserDetailController::class,'removeFriend
 
 Route::post('/postComment/{id}',[CommentController::class,'store']);
 
+Route::post('/userImage',[UserDetailController::class,'userImage']);

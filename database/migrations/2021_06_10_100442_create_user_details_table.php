@@ -19,6 +19,7 @@ class CreateUserDetailsTable extends Migration
             $table->string('email');
             $table->string('fullName')->nullable();
             $table->string('bio')->nullable();
+            $table->string('userImg')->nullable();
             $table->string('github')->nullable();
             $table->string('twitter')->nullable();
             $table->string('insta')->nullable();
