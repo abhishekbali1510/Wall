@@ -124,11 +124,11 @@ class UserDetailController extends Controller
         return back();
     }
 
-    public function userImage()
+    public function userImage(Request $r)
     {
         $userDetails=userDetail::where('userName',$r->session()->get('user'))->first();
         $userDetails->userImg=$r->session()->get('user');
-        $r->file('userImg')->storeAs('public/images/users',$imgName);
+        $r->file('userImg')->storeAs('public/images/users',$r->session()->get('user'));
         $userDetails->save();   
         return back();
     }

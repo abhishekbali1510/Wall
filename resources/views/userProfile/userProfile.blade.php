@@ -113,10 +113,12 @@
           <div class="card glass  w3-hover-black">
             <div class="card-body">
               <div class="d-flex flex-column align-items-center text-center">
+              <form method="post" action="/userImage" enctype="multipart/form-data" >
+              {{csrf_field()}}
               @if($user)
-              <form method="post" action="/userImage">
+             
                <input id="fileInp" type="file" name='userImg' accept="image/*" onchange="loadFile(event)" style="display:none">
-               </form>
+               
                @endif
                @if($details->userImg)
                 <img src=" {{ asset('storage/images/users/'.$details->userImg) }}" id="pimg" alt="Admin" class="rounded-circle" width="150" />
@@ -133,7 +135,7 @@
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
                   @if($user)
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
-                  <button class="btn btn-primary" onclick="window.location.href='#'">Change DP</button>
+                  <button class="btn btn-primary" type="submit" >Change DP</button>
                   
                   @else
                   <!-- button to friend add -->
@@ -144,8 +146,9 @@
                   <a href="/addFriend/{{$details->userName}}" ><button class="btn btn-primary"  >Add friend</button></a>
                   @endif
                   @endif
-                  
+                 
                 </div>
+                </form>
               </div>
             </div>
           </div>

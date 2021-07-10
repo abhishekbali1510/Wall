@@ -20,9 +20,9 @@
 <body>
     <div id="footbar" class="glass">
         <button><a href="/message"><img src="../assets/Chat.png" alt="Chat"></a></button>
-        <button><a href="404.html"><img src="../assets/Trending.png" alt="Trending"></a></button>
+        <button><a href="/trending"><img src="../assets/Trending.png" alt="Trending"></a></button>
         <button style="display: none;"><a href="404.html"><img src="../assets/Loved.png" alt="Loved"></a></button>
-        <button><a href="404.html"><img src="../assets/Latest.png" alt="Latest"></a></button>
+        <button><a href="/newfeed"><img src="../assets/Latest.png" alt="Latest"></a></button>
         <button><a href="/createWall"><img src="../assets/NewWall.png"
                     style="height: 70px; width: 70px; margin-left: -12px;" alt="New Wall"></a></button>
     </div>
@@ -111,7 +111,7 @@
                                        and remove like div-->
                                                 <div class="offset-1 col-3 p-2 text-center"><i
                                                         class="fa fa-comment"></i></div>
-                                                <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i>
+                                                <div class="offset-1 col-3 p-2 text-center"><button onclick="share()"><i class="fa fa-share"></i></button>
                                                 </div>
 
                                             </div>
@@ -247,6 +247,8 @@
                 <!-- sidebar end -->
                 @if($posts)
                 @foreach($posts as $post)
+                
+               
                 @if($post->imgName!=null)
                 <!-- post with media div -->
                 <div class="offset-md-5 c-90 col-md-6 h-100 mb-2 p-0 glass ">
@@ -287,7 +289,14 @@
                  and remove like div-->
                             <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
-                            <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
+                            
+                            <div class="offset-1 col-3 p-2 text-center">
+                            <input type="text" style="width:0px" value="/wallsnetwork.me/post/{{$post->postId}}" id="share">
+                            <button class="shareButton" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            
+                            <i class="fa fa-share"></i>
+                            </button>
+                            </div>
 
                         </div>
                     </div>
@@ -333,7 +342,12 @@
                  and remove like div-->
                             <div class="offset-1 col-3 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
-                            <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div>
+                            <div class="offset-1 col-3 p-2 text-center">
+                            <button class="shareButton" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            
+                            <i class="fa fa-share"></i>
+                            </button>
+                            </div>
 
                         </div>
                     </div>
@@ -377,6 +391,20 @@
         function redirector() {
             location.href("https://walls-network.herokuapp.com/create")
         }
+
+        function share() {
+            var copyText = document.getElementById("share");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); 
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+            
+        }      
+
+        const shareVar=document.getElementsByClassName('shareButton');
+        shareVar.addEventListener('click',function(){
+            console.log(this.getAttribute('name'));
+        })
 
     </script>
 </body>
