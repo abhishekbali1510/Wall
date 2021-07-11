@@ -14,7 +14,6 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
     <!-- <link rel="stylesheet" href="../stylesheets/chat-bootstrap.css" /> -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="../stylesheets/style.css" />
@@ -46,7 +45,7 @@
                     ☰
                 </button>
             </div>
-            <div class="row justify-content-center ">
+            <div class="row mart justify-content-center ">
                 <div class="chat" style="margin: 0;">
                     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9;" id="mySidebar">
                         <button class="w3-bar-item w3-button w3-large mart-100" onclick="w3_close()">
@@ -69,12 +68,12 @@
                                     <li class="active">
                                         <div class="d-flex bd-highlight">
                                             <div class="img_cont">
-                                            <img src="{{ asset('storage/images/users/'.$user) }}" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'"  class="rounded-circle user_img" />
+                                                <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img" />
                                                 <span class="online_icon"></span>
                                             </div>
                                             <div class="user_info">
                                                 <span><a href="/message/{{$user}}">{{$user}}</a></span>
-                                                <!-- <p>Shivam is online</p> -->
+                                                <!-- <p>Shivam</p> -->
                                             </div>
                                         </div>
                                     </li>
@@ -142,7 +141,7 @@
                         <div class="card-header msg_head">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="{{ asset('storage/images/users/'.session('receiver')) }}" onerror="this.onerror=null; this.src='https://bootdey.com/img/Content/avatar/avatar7.png'"  class="rounded-circle user_img" />
+                                    <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img" />
                                     <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
@@ -159,14 +158,7 @@
                                 </div> -->
                             </div>
 
-                            <div class="action_menu">
-                                <ul>
-                                    <li><i class="fas fa-user-circle"></i> View profile</li>
-                                    <li><i class="fas fa-users"></i> Add to close friends</li>
-                                    <li><i class="fas fa-plus"></i> Add to group</li>
-                                    <li><i class="fas fa-ban"></i> Block</li>
-                                </ul>
-                            </div>
+                           
                         </div>
 
                         <div class="card-body msg_card_body" id="chat-F">
