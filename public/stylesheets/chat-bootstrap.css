@@ -305,6 +305,10 @@ and (min-width : 321px) {
     .chat {
         height: 400px;
     }
+
+    .mart{
+        margin-top:100px;       
+    }
    
     #firstDiv{
         margin-top: 100px;
@@ -324,7 +328,9 @@ and (min-width : 321px) {
         bottom: 0px;
         left: 10px;
     }
-   
+   .mart{
+       margin-top: 72px;
+   }
     #card-main {
         margin-top: 0px;
     }
