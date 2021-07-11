@@ -26,8 +26,12 @@ class topbar extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
+    public function render(Request $r)
     {
+        if($r->session()->get('user'))
+        $this->name=$r->session()->get('user');  
+        else
+        $this->name="hey";
         return view('components.topbar');
     }
 }
