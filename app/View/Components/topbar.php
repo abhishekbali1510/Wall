@@ -18,7 +18,7 @@ class topbar extends Component
         if($r->session()->get('user'))
         $this->name=$r->session()->get('user');  
         else
-        $this->name="";
+        $this->name="hey";
     }
 
     /**
