@@ -2,7 +2,7 @@
 <html lang="en">
 
 <!-- include topbar     -->
-<x-topbar />
+<x-topbar name="{{session('user') }}"/>
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/amelia/bootstrap.min.css">
 <link rel="stylesheet" href="stylesheets/register.css">
 <link rel="stylesheet" href="stylesheets/createWall.css">

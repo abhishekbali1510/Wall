@@ -3,7 +3,7 @@
 
  <!-- include('topbar.php');   -->
  <meta content="width=device-width, initial-scale=1" name="viewport" />
- <x-topbar /> 
+ <x-topbar name="{{session('user') }}"/>
  <link rel="stylesheet" href="../stylesheets/createPost.css">
 <link rel="stylesheet" href="../stylesheets/upload-style.css">
 

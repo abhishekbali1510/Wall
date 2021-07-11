@@ -29,7 +29,7 @@
 
 <body>
 
-    <x-topbar />
+<x-topbar name="{{session('user') }}"/>
     <!-- side bar for bigscreen(>600px) -->
     <div id="firstDiv">
         <div id="main" style="margin-left: 25%" class="col-1">

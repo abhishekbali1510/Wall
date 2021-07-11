@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <x-topbar />
+<x-topbar name="{{session('user') }}"/>
 
     <!-- side bar for bigscreen(>600px) -->
     <div class="container mart-100" onclick="redirector()">

@@ -104,7 +104,7 @@
     </div>
   </div>
   </div>
-  <x-topbar />
+  <x-topbar name="{{session('user') }}"/>
   <div class="container mart-6r">
     <div class="main-body">
 
