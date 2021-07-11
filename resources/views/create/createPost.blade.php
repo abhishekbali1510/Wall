@@ -44,7 +44,7 @@
         
     </div>
 
-    <div class="footer">Give your valuable feedback <a href="#">here</a>.</div>
+    <div class="footer">Give your valuable feedback <a href="freakingud1@gmail.com">here</a>.</div>
 </div>
 </body>
 </html>
