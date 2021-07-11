@@ -133,7 +133,8 @@
                     {{$details->email}}
                   </p>
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
-                  <button class="btn btn-primary" type="submit" >Change DP</button>  
+                  <button id="dpChange" style="display:none" class="btn btn-primary" type="submit" >Change DP</button>  
+                  </div>
                 </form>
                 
                   @if($user)
@@ -144,13 +145,14 @@
                   <!-- button to friend add -->
                   @if($show)
                   <a href="/message/{{$details->userName}}"><button class="btn btn-outline-primary"> Message </button></a>
-                  <a href="/removeFriend/{{$details->userName}}" ><button class="btn btn-primary"  >remove friend</button></a>
+                 <br>
+                  <a href="/removeFriend/{{$details->userName}}" ><button class="btn btn-primary"  >Remove Friend</button></a>
                   @else
                   <a href="/addFriend/{{$details->userName}}" ><button class="btn btn-primary"  >Add friend</button></a>
                   @endif
                   @endif
                  
-                </div>
+                
                 
               </div>
             </div>
@@ -360,7 +362,7 @@
       output.src = reader.result;
     };
     reader.readAsDataURL(event.target.files[0]);
-    // document.getElementById('dpChange').click(); // to simulate click
+    document.getElementById('dpChange').click(); // to simulate click
   };
 
   var selector = document.getElementById('pimg');

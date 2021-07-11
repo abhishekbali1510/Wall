@@ -10,6 +10,9 @@ class CommentController extends Controller
 {
     public function store(Request $r,$id)
     {
+        $r->validate([
+            'content'=>'required|max:200',
+        ]);
         $comment=new comment;
         $comment->postId=$id;
         $comment->content=$r->input('content');

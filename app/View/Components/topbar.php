@@ -15,7 +15,7 @@ class topbar extends Component
     public $name;
     public function __construct(Request $r)
     {
-        $this->name=$r->session()->get('user');
+        $this->name=$r->session()->get('user'); 
     }
 
     /**

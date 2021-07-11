@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- include topbar     -->
-<x-topbar />
+
 
 <link rel="stylesheet" href="stylesheets/register.css">
 
