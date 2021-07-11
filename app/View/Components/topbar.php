@@ -13,12 +13,10 @@ class topbar extends Component
      * @return void
      */
     public $name;
-    public function __construct(Request $r)
+    public function __construct($name)
     {
-        if($r->session()->get('user'))
-        $this->name=$r->session()->get('user');  
-        else
-        $this->name="hey";
+        
+        $this->name=$name;
     }
 
     /**
@@ -26,12 +24,9 @@ class topbar extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render(Request $r)
+    public function render()
     {
-        if($r->session()->get('user'))
-        $this->name=$r->session()->get('user');  
-        else
-        $this->name="hey";
+       
         return view('components.topbar');
     }
 }

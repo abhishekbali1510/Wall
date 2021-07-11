@@ -199,7 +199,7 @@
     <!-- post modal end -->
 
 
-    <x-topbar />
+    <x-topbar name="{{session('user') }}"/>
     <!-- side bar for bigscreen(>600px) -->
     <div class="container-fluid " style="margin-bottom: 5.75rem;">
         <div class="main-body">
