@@ -85,6 +85,11 @@ hr{
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+.shareButton{
+    background-color: transparent;
+    border: 0;
+}
+
 @media screen and (min-width: 600px) {
     #fixedButton {
         display: none;

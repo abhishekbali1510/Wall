@@ -14,7 +14,9 @@ body {
     font-size: medium;
 }
 .own-info-div {
-    height: 2.6rem;
+    height: fit-content;
+    margin-left: 5px;
+
 }
 .own-info {
     margin-top: 0.8rem;
@@ -40,7 +42,9 @@ body {
     font-size: medium;
 }
 .cmnt-info-div {
-    height: 2.6rem;
+    height: fit-content;
+    margin-left: 5px;
+
 }
 .cmnt-info {
     margin-top: 0.8rem;
