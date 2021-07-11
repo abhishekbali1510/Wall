@@ -307,7 +307,7 @@ and (min-width : 321px) {
     }
 
     .mart{
-        margin-top:100px;       
+        margin-top:-100px;       
     }
    
     #firstDiv{
@@ -329,7 +329,7 @@ and (min-width : 321px) {
         left: 10px;
     }
    .mart{
-       margin-top: 72px;
+       margin-top: -72px;
    }
     #card-main {
         margin-top: 0px;
