@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Http\Request;
 
 class topbar extends Component
 {
@@ -11,9 +12,10 @@ class topbar extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $name;
+    public function __construct(Request $r)
     {
-        //
+        $this->name=$r->session()->get('user');
     }
 
     /**

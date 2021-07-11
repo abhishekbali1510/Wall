@@ -9,9 +9,10 @@
     <nav id="topbar">
         <div class="dropdown">
             <div class="projects">
-                <button id="prj"><img src="../assets/profile.png" alt="Profile"></button>
+                <button id="prj"><img src="{{ asset('storage/images/users/'.$name) }}" onerror="this.onerror=null; this.src='{{ asset('storage/images/users/download') }}'" alt="Profile"></button>
                 <ul>
                     <li><a href="/user">Edit Profile</a></li>
+                    
                     <li><a href="/updatePassLogin">Change Password</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>

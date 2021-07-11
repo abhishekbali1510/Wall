@@ -262,7 +262,7 @@
                                     <div class="row" style="max-height :2.8rem;">
                                         <div class="post-dp-div">
                                             <img src="{{ asset('storage/images/users/'.$post->createdBy) }}"
-                                                alt="" onerror=this.src="{{ asset('storage/images/users/download') }}" class="post-dp">
+                                                alt="" onerror="this.onerror=null; this.src='{{ asset('storage/images/users/download') }}'"  class="post-dp">
                                         </div>
                                         <div class="post-info-div">
                                             <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey"
@@ -316,7 +316,7 @@
                                     <div class="row" style="max-height :2.8rem;">
                                         <div class="post-dp-div">
                                             <img src="{{ asset('storage/images/users/'.$post->createdBy) }}"
-                                                alt=" " class="post-dp">
+                                                alt=" " onerror="this.onerror=null; this.src='{{ asset('storage/images/users/download') }}'" class="post-dp">
                                         </div>
                                         <div class="post-info-div">
                                             <h6 class="post-info"><a class="info-link w3-hover-text-dark-grey"

@@ -133,9 +133,12 @@
                     {{$details->email}}
                   </p>
                   <!--if someone else accessing user id page then display "Follow" otherwise display :'EDIT Profile'-->
+                  <button class="btn btn-primary" type="submit" >Change DP</button>  
+                </form>
+                
                   @if($user)
                   <button class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'">Edit</button>
-                  <button class="btn btn-primary" type="submit" >Change DP</button>
+                  
                   
                   @else
                   <!-- button to friend add -->
@@ -148,7 +151,7 @@
                   @endif
                  
                 </div>
-                </form>
+                
               </div>
             </div>
           </div>
