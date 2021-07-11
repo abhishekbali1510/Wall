@@ -30,7 +30,7 @@
 
             <div class="row gutters-sm">
 
-                <div class="offset-1 c-90 col-md-12 h-100 mg mb-2 p-0 glass">
+                <div class="offset-1 c-90 minh-300 col-md-12 h-100 mg mb-2 p-0 glass">
                     <div class="container">
                         <div class="row">
                             <div class="post col-12 ">
@@ -149,7 +149,7 @@
 
 
                 </div>
-                <div class="card glass cmnt-div">
+                <div class="card glass cmnt-div mb-3">
                     <form method="post" action="/postComment/{{$post->postId}}">
                         {{csrf_field()}}
                         <input type="text" name="content" class="col-8 cmnt-input" placeholder="Add comment">

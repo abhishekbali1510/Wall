@@ -109,7 +109,7 @@
                                                 </div> -->
                                                 <!-- if you want to delete like div change classed of div below to offset-1 col-5 
                                        and remove like div-->
-                                       <div class="offset-1 col-5 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
+                                       <div class="offset-1 col-5 p-2 text-center"> <a href="/#" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                                                 <!-- pqrst start: copy this to showWall share div -->
                                                 <div class="offset-1 col-3 p-2 text-center"><button onclick="share()"><i class="fa fa-share"></i></button>
