@@ -45,7 +45,7 @@
                     ☰
                 </button>
             </div>
-            <div class="row justify-content-center ">
+            <div class="row mart justify-content-center ">
                 <div class="chat" style="margin: 0;">
                     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display: block; background-color: #b7bee9;" id="mySidebar">
                         <button class="w3-bar-item w3-button w3-large mart-100" onclick="w3_close()">
@@ -171,7 +171,7 @@
                             </div>
                             <!-- received msgs div end -->
                             <!-- sent msg div -->
-                            <div class='d-flex mart justify-content-end mb-4'>
+                            <div class='d-flex justify-content-end mb-4'>
                                 <div class='msg_cotainer_send' id='chat-S'>
 
                                     <!-- <p>Hi, how are you shivam?</p> -->
