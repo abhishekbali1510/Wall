@@ -145,10 +145,15 @@ body{
 }
 
 @media(max-width: 500px){
-    .projects, .shortcuts{
+    .shortcuts{
         display: none;
     }
 
+    .projects{
+        display: block;
+        position: absolute;
+    }
+    
     #walls{
         width: 100%;
     }
