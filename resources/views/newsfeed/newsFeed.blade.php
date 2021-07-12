@@ -28,7 +28,7 @@
     </div>
     <!-- modal -->
     <div id="id01" class="w3-modal">
-        <div class=" w3-card-4 w3-animate-zoom" style="max-width:600px">
+        <div class=" w3-card-4 w3-animate-zoom modal-bar" style="max-width:600px">
 
 
             <div class="w3-sidebar w3-bar-block round glass" style="width:90%;margin:0" id="pqr">
@@ -42,6 +42,15 @@
 
                 @endforeach
                 @endif
+
+                <!-- suggested walls -->
+                <hr>
+                    <h3 class="w3-bar-item">suggested walls</h3>
+                    @foreach($allWalls as $wall)
+                    <a href="/wall/{{$wall->name}}" class="w3-bar-item w3-button"> {{$wall->name}} </a>
+
+                    @endforeach
+                <!-- suggested wall end -->
             </div><br>
         </div>
     </div>
@@ -227,7 +236,7 @@
 
 
                 </div>
-
+                <!-- side bar end -->
                 <!-- create post link div -->
                 <div class="offset-5 c-90 col-md-6 h-100 mb-5 p-0 glass ">
                     <a href="/create" style="text-decoration:none ">
@@ -246,7 +255,7 @@
                     </a>
 
                 </div>
-                <!-- sidebar end -->
+                <!-- creatte post div end -->
                 @if($posts)
                 @foreach($posts as $post)
                 
