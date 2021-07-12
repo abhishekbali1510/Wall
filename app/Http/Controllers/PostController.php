@@ -46,7 +46,7 @@ class PostController extends Controller
     public function store(Request $r)
     {
         $r->validate([
-            'title'=>'required',
+            'title'=>'required|regex:/^[a-zA-Z]+$/u',
             'wallName'=>'required',
             'content'=>'required|max:255',
         ]);
@@ -67,10 +67,14 @@ class PostController extends Controller
     public function storeMedia(Request $r)
     {
         $r->validate([
-            'title'=>'required',
+            'title'=>'required|regex:/^[a-zA-Z]+$/u',
             'content'=>'max:255',
+            'img'=>'max:2048|image|mimes:jpg,png,jpeg,gif,svg',
             
         ]);
+
+        
+
         $title=$r->input('title');
         $wallName=$r->input('wallName');
         $lstId=Post::where('wallName',$wallName)->orderBy('updated_at','DESC')->first();

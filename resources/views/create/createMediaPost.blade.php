@@ -37,6 +37,9 @@
             <div class="dropzone" id="dropzone">
                 Drop files fere to upload
             </div>
+            @error('img')
+                    {{$message}}
+                @enderror
             <input type="file" name="img" id="fileUploadBtn">
             <input type="text" name="content" id="caption-field" placeholder="Enter Caption">
             @error('content')

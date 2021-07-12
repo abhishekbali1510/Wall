@@ -293,8 +293,8 @@
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             
                             <div class="offset-1 col-3 p-2 text-center">
-                            <input type="text" style="width:0px" value="/wallsnetwork.me/post/{{$post->postId}}" id="share">
-                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            <!-- <input type="text" style="width:0px" value="/wallsnetwork.me/post/{{$post->postId}}" id="share"> -->
+                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="wallsnetwork.me/post/{{$post->postId}}">
                             
                             <i class="fa fa-share"></i>
                             </button>
@@ -346,7 +346,7 @@
                             <div class="offset-1 col-5 p-2 text-center"> <a href="/post/{{$post->postId}}" class="cmnt-btn"><i
                                         style="color:black;" class="fa fa-comment"></i></a></div>
                             <div class="offset-1 col-3 p-2 text-center">
-                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="/wallsnetwork.me/post/{{$post->postId}}">
+                            <button class="shareButton" onclick="share(this.getAttribute('name'))" name="wallsnetwork.me/post/{{$post->postId}}">
                             
                             <i class="fa fa-share"></i>
                             </button>

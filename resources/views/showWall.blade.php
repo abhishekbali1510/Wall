@@ -101,7 +101,7 @@
                                                             href="/home">Shivam</a> | <a
                                                             class="info-link w3-hover-text-dark-grey" href="/home">Wall
                                                             name</a></h6>
-                                                            <div class="offset-1 col-3 p-2 text-center"><button onclick="share()"><i class="fa fa-share"></i></button>
+                                                          
                                                
                                                </div>
                                                 </div>
@@ -121,8 +121,7 @@
                                        and remove like div-->
                                                 <div class="offset-1 col-5 p-2 text-center"><i
                                                         class="fa fa-comment"></i></div>
-                                                <div class="offset-1 col-3 p-2 text-center"><button  class="shareButton" onclick="share()"><i
-                                                            class="fa fa-share"></i></button>
+                                                <div class="offset-1 col-3 p-2 text-center">
                                                 </div>44
 
                                             </div>
@@ -232,7 +231,7 @@
                     @endif
                     <!-- hide follow wall for user who created the wall -->
                     <!-- show "Unfollow" for those who already follow the wall -->
-                    <!-- <a href="#" class="w3-bar-item w3-button">Delete Wall</a>  -->
+                    <!-- <a href="#" class="w3-bar-item w3-button">Delete Wall</a>  --> 
                     @if($del)
                     <form method="post" action="/deleteWall/{{$wall->wallId}}">
                         {{csrf_field()}}
@@ -323,8 +322,10 @@
                             <div class="offset-1 col-5 p-2 text-center"> <a href="/post/{{$post->postId}}"
                                     class="cmnt-btn"><i style="color:black;" class="fa fa-comment"></i></a></div>
 
-                            <div class="offset-1 col-3 p-2 text-center"><button class="shareButton" onclick="share()"><i
-                                        class="fa fa-share"></i></button>
+                            <div class="offset-1 col-3 p-2 text-center"><button class="shareButton" onclick="share(this.getAttribute('name'))" name="wallsnetwork.me/post/{{$post->postId}}">
+                            
+                            <i class="fa fa-share"></i>
+                            </button>
                             </div>
 
                         </div>
@@ -384,8 +385,10 @@
 
                             <!-- <div class="offset-1 col-3 p-2 text-center"><i class="fa fa-share"></i></div> -->
 
-                            <div class="offset-1 col-3 p-2 text-center"><button class="shareButton" onclick="share()"><i
-                                        class="fa fa-share"></i></button>
+                            <div class="offset-1 col-3 p-2 text-center"><button class="shareButton" onclick="share(this.getAttribute('name'))" name="wallsnetwork.me/post/{{$post->postId}}">
+                            
+                            <i class="fa fa-share"></i>
+                            </button>
                             </div>
                         </div>
                     </div>
@@ -430,6 +433,25 @@
             location.href("https://walls-network.herokuapp.com/create")
         }
 
+
+        function share(copyText) {
+            // var copyText = ;
+            // console.log(copyText);
+            // // copyText.select();
+            // //copyText.setSelectionRange(0, 99999); 
+            // document.execCommand("copy");
+            // alert("Copied the text: " + copyText);
+            // const copyToClipboard = str => {
+            const el = document.createElement('textarea');
+            el.value = copyText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert(" link copied to clipboard")
+// };
+            
+        }  
     </script>
 </body>
 
