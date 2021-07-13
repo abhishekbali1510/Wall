@@ -107,7 +107,7 @@ class WallController extends Controller
         }
         
         $post=Post::where('wallName',$wallName)->delete();
-        $wallDel=Wall::where('name',$wallName->name)->first()->delete();
+        $wallDel=Wall::where('name',$wallName)->first()->delete();
         return redirect('/home');
     
      }
