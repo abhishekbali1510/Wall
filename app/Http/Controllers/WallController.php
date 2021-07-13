@@ -92,21 +92,21 @@ class WallController extends Controller
 
     public function delete($id)
     {
-        $wallName=Wall::where('wallId',$id)->get();
+        $wallName=Wall::where('wallId',$id)->get('name');
         
 
         $userDetails=userDetail::all();
 
         foreach($userDetails as $userDetail){
         $follow=$userDetail->follow;
-        $del=$wallName->name;
+        $del=$wallName;
         $follow=Arr::except($follow, [$del]);
         $userDetail->follow=$follow;
         $userDetail->save();
         }
         
-        $post=Post::where('wallName',$wallName->name)->delete();
-        $wallDel=Wall::where('name',$wallName->name)->first()->delete();
+        $post=Post::where('wallName',$wallName)->delete();
+        $wallDel=Wall::where('name',$wallName)->first()->delete();
         return redirect('/home');
     
      }
