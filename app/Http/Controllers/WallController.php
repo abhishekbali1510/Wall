@@ -99,15 +99,14 @@ class WallController extends Controller
 
         foreach($userDetails as $userDetail){
         $follow=$userDetail->follow;
-        
         $del=$wallName->name;
         $follow=Arr::except($follow, [$del]);
         $userDetail->follow=$follow;
         $userDetail->save();
         }
         
-        $post=Post::where('wallName',$wallName)->delete();
-        $wallDel=Wall::where('name',$wallName)->first()->delete();
+        $post=Post::where('wallName',$wallName->name)->delete();
+        $wallDel=Wall::where('name',$wallName->name)->first()->delete();
         return redirect('/home');
     
      }
