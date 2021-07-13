@@ -92,7 +92,7 @@ class WallController extends Controller
 
     public function delete($id)
     {
-        $wallName=Wall::where('wallId',$id)->first();
+        $wallName=Wall::where('wallId',$id)->first()->get();
         
 
         $userDetails=userDetail::all();
