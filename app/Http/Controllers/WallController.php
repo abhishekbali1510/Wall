@@ -100,8 +100,8 @@ class WallController extends Controller
         foreach($userDetails as $userDetail){
         $follow=$userDetail->follow;
         
-        
-        $follow=Arr::except($follow, [$wallName->name]);
+        $del=$wallName->name;
+        $follow=Arr::except($follow, [$del]);
         $userDetail->follow=$follow;
         $userDetail->save();
         }
