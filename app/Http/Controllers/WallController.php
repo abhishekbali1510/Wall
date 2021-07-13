@@ -96,8 +96,11 @@ class WallController extends Controller
         
 
         $userDetails=userDetail::all();
+
         foreach($userDetails as $userDetail){
         $follow=$userDetail->follow;
+        
+        
         $follow=Arr::except($follow, [$wallName->name]);
         $userDetail->follow=$follow;
         $userDetail->save();
